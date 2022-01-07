@@ -1,12 +1,20 @@
 # sd-0x-project-trybers-and-dragons
 
+#### O que é uma classe ("arquétipo")
+A classe descreve de modo geral a vocação de um personagem, seus talentos especiais e quais táticas empregará com maior probabilidade ao explorar uma masmorra, combater monstros ou se envolver em uma negociação acalorada.
+
+Todo ser possui uma `Raça` e um `Arquétipo`. Esse ser vai ser uma interface e tanto `Raça` quanto `Arquétipo` serão interfaces.
+
 ## Requisitos:
 
 ### Requisito para criar um objeto
 
-
+* Criar alguns objetos de uma classe que já existe e acessar alguns métodos (abstração)
+  Ter uma interface inicial com `Raça` (com as classes humano, elfo, hobbit implementando-a) e `Arquétipo` (Bárbaro, ranger, mago, bardo)
 
 ### Requisito para criar uma classe
+
+Criar a classe `Personagem` que implementa as duas interfaces acima
 
 ### Teste do pilar Abstração
 
@@ -31,10 +39,11 @@ A pessoa deverá tornar a função mais genérica por meio da aplicação do pri
 
 
 * Requisito obrigatório
-! Requisito opcional
+! Requisito bônus
 - Separa um tema
 - 
 Requisitos:
+
 * Criar alguns objetos de uma classe que já existe e acessar alguns métodos (abstração)
 - Criar uma classe (abstração)
   * Colocar atributos públicos
