@@ -7,12 +7,41 @@ Todo ser possui uma `Raça` e um `Arquétipo`. Esse ser vai ser uma interface e 
 
 ## Requisitos:
 
+### 1 - Crie uma interface `Personagem`
+
+Crie uma interface `Personagem`, que deve possuir os atributos:
+
+- força: number
+- inteligência: number
+- agilidade: number
+- destreza: number
+- ataqueEspecial(): void // Do arquétipo
+- energia: 'mana' | 'stamina' // Do arquétipo Mago com mana, Guerreiro com stamina
+
+### ? PRINCÍPIO L - Segregue a interface `Personagem` nas interfaces `Raça` e `Arquétipo`
+
+A interface `Raça` deve ficar com os atributos:
+
+- força
+- inteligência
+- agilidade
+- destreza
+
+A interface `Arquétipo` deve ficar com os atributos:
+
+- ataqueEspecial
+- energia
+
+A interface `Personagem` deve estender as interfaces `Raça` e `Arquétipo`
+
+Crie uma coisa que implemente somente a `Raça`
+
 ### Requisito para criar um objeto
 
 * Criar alguns objetos de uma classe que já existe e acessar alguns métodos (abstração)
   Ter uma interface inicial com `Raça` (com as classes humano, elfo, hobbit implementando-a) e `Arquétipo` (Bárbaro, ranger, mago, bardo)
 
-### Requisito para criar uma classe
+### Crie uma classe
 
 Criar a classe `Personagem` que implementa as duas interfaces acima
 
