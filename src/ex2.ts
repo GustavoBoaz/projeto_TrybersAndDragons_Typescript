@@ -21,6 +21,7 @@ class Mago implements Arquétipo {
   constructor(public nome: string) { }
 }
 
+// Antes do princípio D
 class Personagem {
   public raça: Elfo;
   public tipo: Mago;
