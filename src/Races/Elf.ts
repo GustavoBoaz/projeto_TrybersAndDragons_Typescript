@@ -1,4 +1,4 @@
-import Race from '.';
+import Race from './Race';
 
 class Elf extends Race {
   private $maxLifePoints = 99;

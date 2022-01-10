@@ -1,13 +1,6 @@
-abstract class Race {
-  private $name: string;
-
-  constructor(name: string) {
-    this.$name = name;
-  }
-
-  get name() { return this.$name; }
-
-  abstract get maxLifePoints(): number;
-}
+import Race from "./Race";
+import Human from "./Human";
+import Elf from "./Elf";
 
 export default Race;
+export { Race, Human, Elf };

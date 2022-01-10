@@ -19,6 +19,6 @@ describe('2 - Crie classes que herdam de Archetype', function () {
   it('Tem o nome correto', () => {
     const mage = new Archetypes.Mage('Ramon');
     class ArchetypeChild extends Archetype { }
-    expect(mage.name).toEqual('Aloha');
+    expect(mage.name).toEqual('Ramon');
   });
 });
