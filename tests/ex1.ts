@@ -18,3 +18,4 @@ class Personagem {
 }
 
 const personagem = new Personagem(elfo, mago);
+export { };
