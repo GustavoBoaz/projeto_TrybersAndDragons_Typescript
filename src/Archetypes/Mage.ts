@@ -1,4 +1,4 @@
-import Archetype from '.';
+import Archetype from './Archetype';
 
 class Mage extends Archetype { }
 

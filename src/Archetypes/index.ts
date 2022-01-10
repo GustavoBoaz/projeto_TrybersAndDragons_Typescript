@@ -1,5 +1,5 @@
-abstract class Archetype {
-  constructor(public nome: string) { }
-}
+import Archetype from './Archetype';
+import Mage from './Mage';
 
 export default Archetype;
+export { Archetype, Mage };
