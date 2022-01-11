@@ -1,7 +1,11 @@
-import Character from "./Character";
-class Battle {
-  static Fight(player: Character): void {
+import Fighter from './Fighter';
 
+class Battle {
+  private $figthers
+
+  constructor(fighters: Fighter[]) {
+  }
+  static Fight( ): void {
   }
 }
 
