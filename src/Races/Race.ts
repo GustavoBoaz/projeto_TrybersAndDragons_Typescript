@@ -1,13 +1,13 @@
 abstract class Race {
-    private $name: string;
+  private $name: string;
 
-    constructor(name: string) {
-        this.$name = name;
-    }
+  constructor(name: string) {
+    this.$name = name;
+  }
 
-    get name() { return this.$name; }
+  get name() { return this.$name; }
 
-    abstract get maxLifePoints(): number;
+  abstract get maxLifePoints(): number;
 }
 
 export default Race;
