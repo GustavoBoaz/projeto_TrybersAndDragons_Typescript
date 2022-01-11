@@ -105,6 +105,14 @@ Requisitos:
 Sugestões de implementação:
 L: Um player precisa poder saber somente alguns atributos específicos do inimigo, portanto precisa de uma interface duplicada, uma pra um readonly e outra contendo todas as informações.
 
+## Entrando no Universo de T&D
+
+### Personagens
+
+ - No universo de T&D, cada ser que anda por estas terras pertence a uma **raça** e possui um **arquétipo**.
+ - As diversas raças (como, por exemplo, a Élfica, a Orc ou Placeholder) definem as características de um personagem desde a sua criação, como sua vida, força ou agilidade.
+ - Já os arquétipos definem, de modo geral, a vocação de um personagem, suas habilidades e visão de mundo: como enfrentam as situações, exploram masmorras e cavernas ou enfrentam monstros ~~fofinhos~~. Aqui, as pessoas podem ser guerreiras, magas ou "tanques".
+ - Cabe a você, nobre ~~dev~~ ser, explorar essas terras e cumprir as quests que surgirão ao longo de sua incrível ~~jornada~~ leitura do README:
 
 ### 1 - Crie a classe `Archetype`
 
