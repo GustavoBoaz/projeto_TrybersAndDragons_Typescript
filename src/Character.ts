@@ -27,6 +27,14 @@ class Character {
     return this.$strength * 5;
     // Pega um dos possíveis especiais que existem no Arquétipo
   }
+
+  attack(enemy: Character): void {
+    enemy.receiveDamage(this.$strength);
+  }
+
+  receiveDamage(amount: number): void {
+
+  }
 }
 
 export default Character;

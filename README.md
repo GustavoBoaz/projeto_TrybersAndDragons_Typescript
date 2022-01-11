@@ -28,7 +28,7 @@ A interface `Raça` deve ficar com os atributos:
 - força
 - inteligência
 - agilidade
-- destreza
+- furtividade
 
 A interface `Arquétipo` deve ficar com os atributos:
 
@@ -120,7 +120,7 @@ L: Um player precisa poder saber somente alguns atributos específicos do inimig
  - Dentro do nosso universo, cada pessoa terá sua função. Por isso, sua primeira quest será criar uma classe abstrata `Archetype`, onde deverá ter todos os atributos e métodos listados abaixo:
 
  ```typescript
- name:string
+ name: string
  ```
 
  - Além disso, será verificado se:
@@ -148,11 +148,34 @@ L: Um player precisa poder saber somente alguns atributos específicos do inimig
  - Por isso, sua terceira quest será criar uma classe abstrata `Race`, onde deverá ter todos os atributos e métodos listados abaixo:
 
  ```typescript
- name:string // O atributo deverá ser privado, acessado por um get()
- maxLifePoints(): number // O método deverá ser um get()
+ name: string
+ maxLifePoints(): number
  ```
 
  - Além disso, será verificado se:
    - A classe `Race` existe;
    - O parâmetro `name` da classe `Race` pode ser lido
    - O método `maxLifePoints` retorna um valor numérico
+
+### 4 - Crie raças que herdam de `Race`
+
+ - Testar polimorfismo
+
+### 5 - Crie a classe `Character`
+
+ - O atributo `life` deve ser privado, acessado por um `get()` e um `set()`;
+ - O atributo `life` não pode ser maior que o máximo definido pela raça;
+ 
+
+### 6 - Estenda a classe `Battle`
+
+ - Testar LSP
+ - O arquivo está em `src/placeholder`
+
+### 7
+
+### 8
+
+### 9
+
+### 10
