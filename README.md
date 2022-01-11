@@ -104,3 +104,47 @@ Requisitos:
     * D: A criação de um objeto de uma das 3 classes criadas deixa de ser feita dentro de uma classe que a utiliza, e esta passa a receber o objeto criado como parâmetro
 Sugestões de implementação:
 L: Um player precisa poder saber somente alguns atributos específicos do inimigo, portanto precisa de uma interface duplicada, uma pra um readonly e outra contendo todas as informações.
+
+
+### 1 - Crie a classe `Archetype`
+
+ - O arquivo deverá estar na pasta `src/Archetypes`.
+ - Dentro do nosso universo, cada pessoa terá sua função. Por isso, sua primeira quest será criar uma classe abstrata `Archetype`, onde deverá ter todos os atributos e métodos listados abaixo:
+
+ ```typescript
+ name:string
+ ```
+
+ - Além disso, será verificado se:
+   - A classe `Archetype` existe;
+   - O parâmetro `name` da classe `Archetype` pode ser lido;
+
+### 2 - Crie classes que herdam de `Archetype`
+
+ - Os arquivos deverão estar na pasta `src/Archetypes`.
+ - Dentre as funções que uma pessoa pode escolher, ela poderá ser uma **guerreira**, **maga** ou **"tanque"**.
+ - São características das pessoas guerreiras causar dano com sua força, usando ``stamina``;
+ - São características das pessoas magas causar dano com magia, usando ``mana``;
+ - São características das pessoas "tanques" ter defesas altas, mas com pouco ataque;
+ - Será verificado se:
+   - A classe `Mage` existe;
+   - É possível criar um objeto da classe `Mage` corretamente;
+   - A classe `Warrior` existe;
+   - É possível criar um objeto da classe `Warrior` corretamente;
+   - A classe `Tank` existe;
+   - É possível criar um objeto da classe `Tank` corretamente;
+
+### 3 - Crie a classe `Race`
+
+ - Nesse universo, viajantes de todas as suas partes chegam em nosso reino. Não há algo melhor do que vermos a incrível diversidade que temos, com características únicas de cada pessoa.
+ - Por isso, sua terceira quest será criar uma classe abstrata `Race`, onde deverá ter todos os atributos e métodos listados abaixo:
+
+ ```typescript
+ name:string // O atributo deverá ser privado, acessado por um get()
+ maxLifePoints(): number // O método deverá ser um get()
+ ```
+
+ - Além disso, será verificado se:
+   - A classe `Race` existe;
+   - O parâmetro `name` da classe `Race` pode ser lido
+   - O método `maxLifePoints` retorna um valor numérico
