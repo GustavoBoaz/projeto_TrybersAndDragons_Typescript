@@ -1,4 +1,4 @@
-import Archetype, * as Archetypes from '../src/Archetypes';
+import Archetype, * as Archetypes from '../../src/Archetypes';
 describe('3 - Crie a classe Mage que herda de Archetype', function () {
   it('A classe Mage existe', () => {
     const mage = new Archetypes.Mage('');

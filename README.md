@@ -160,6 +160,7 @@ L: Um player precisa poder saber somente alguns atributos específicos do inimig
 ### 4 - Crie raças que herdam de `Race`
 
  - Testar polimorfismo
+ - 
 
 ### 5 - Crie a classe `Character`
 

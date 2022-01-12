@@ -1,11 +1,11 @@
 import Race from './Race';
 
-class Human extends Race {
-  private $maxLifePoints = 36;
+class Halfling extends Race {
+  private $maxLifePoints = 75;
 
   get maxLifePoints(): number {
     return this.$maxLifePoints;
   }
 }
 
-export default Human;
+export default Halfling;

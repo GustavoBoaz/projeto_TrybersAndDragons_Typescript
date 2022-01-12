@@ -1,4 +1,4 @@
-import Race, * as Races from '../src/Races';
+import Race, * as Races from '../../src/Races';
 
 class RaceChild extends Race {
   get maxLifePoints(): number {
