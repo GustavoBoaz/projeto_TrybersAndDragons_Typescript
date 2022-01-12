@@ -114,26 +114,84 @@ L: Um player precisa poder saber somente alguns atributos específicos do inimig
  - Já os arquétipos definem, de modo geral, a vocação de um personagem, suas habilidades e visão de mundo: como enfrentam as situações, exploram masmorras e cavernas ou enfrentam monstros ~~fofinhos~~. Aqui, as pessoas podem ser guerreiras, magas ou "tanques".
  - Cabe a você, nobre ~~dev~~ ser, explorar essas terras e cumprir as quests que surgirão ao longo de sua incrível ~~jornada~~ leitura do README:
 
-### 1 - Crie a classe `Archetype`
+### 1 - Crie a classe `Race`
 
-Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua primeira quest será criar a classe abstrata `Archetype`.
+Todo ser necessariamente pertence a uma raça. No universo de Trybers and Dragons, embora todas as raças de personagens sejam humanóides, cada uma tem suas particularidades. A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos seres deste universo.
+
+Para entender melhor um pouco da incrível diversidade que temos e as características únicas de algumas das raças de T&D, vamos começar nossa jornada com a missão de criar a classe abstrata `Race`.
+
+Para que você tenha sucesso nesta quest, deve se certificar que:
+
+ - Os arquivos sejam criados no diretório `src/Races`.
+ - As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc`
+ - Cada uma dessas classes deverá conter o atributo privado `maxLifePoints`;
+ - As classes deverão ter um `getter` chamado `maxLifePoints`, que retorna a quantidade máxima de pontos de vida da raça.
+
+
+ ```typescript
+ name: string
+ maxLifePoints(): number
+ ```
+
+  - O que será verificado:
+   - A classe `Race` existe;
+   - O parâmetro `name` da classe `Race` pode ser lido
+   - O método `maxLifePoints` retorna um valor numérico;
+
+### 2 - Crie raças que herdam de `Race`
+
+Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda quest, você irá criar classes para quatro raças que existem no mundo de T&D.
+
+Para que você não É muito importante que você saiba que:
+
+ - Os arquivos deverão ser criados no diretório `src/Races`.
+ - Todas as raças estendem a classe `Race`;
+ - As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc`
+ 
+ - O que será verificado:
+   - A classe `Dwarf` existe;
+   - A classe `Elf` existe;
+   - A classe `Halfling` existe;
+   - A classe `Orc` existe;
+   - É possível criar um objeto da classe `Dwarf` corretamente;
+   - É possível criar um objeto da classe `Elf` corretamente;
+   - É possível criar um objeto da classe `Halfling` corretamente;
+   - É possível criar um objeto da classe `Orc` corretamente;
+   - O parâmetro name da classe `Dwarf` pode ser lido;
+   - O parâmetro name da classe `Elf` pode ser lido;
+   - O parâmetro name da classe `Halfling` pode ser lido;
+   - O parâmetro name da classe `Orc` pode ser lido;
+   - O parâmetro `maxLifePoints` existe na classe `Dwarf`e é igual a 40;
+   - O parâmetro `maxLifePoints` existe na classe `Elf`e é igual a 99;
+   - O parâmetro `maxLifePoints` existe na classe `Halfling`e é igual a 36;
+   - O parâmetro `maxLifePoints` existe na classe `Orc`e é igual a 75;
+
+// TODO: nivelar `maxLifePoints` das raças existentes
+
+
+ - Testar polimorfismo
+
+### 3 - Crie a classe `Archetype`
+
+Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua próxima quest será criar a classe abstrata `Archetype`.
  - O arquivo deverá ser criado no diretório `src/Archetypes`.
  - Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
  - A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
  - O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
 
-// TODO: Discutir se a EnergyType será disponibilizado ou criado pelas pessoas estudantes. Se for a segunda opção, tem que ter um requisito prévio para isso.
+// TODO: Discutir se a `EnergyType` será disponibilizado ou criado pelas pessoas estudantes. Se for a segunda opção, tem que ter um requisito prévio para isso.
 
  - O que será verificado:
    - A classe `Archetype` existe;
    - O parâmetro `name` da classe `Archetype` pode ser lido;
 
-### 2 - Crie classes que herdam de `Archetype`
+### 4 - Crie classes que herdam de `Archetype`
 
 Como você pode imaginar, há diversos arquétipos diferentes no mundo de Trybers and Dragons, cada um com suas peculiaridades e alinhamentos. Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor para isso do que criar classes para eles? Mas antes disso, tenha atenção às seguintes instruções:
 
- - Os arquivos deverão ser criados no diretório `src/Archetypes`.
- - No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: **Mage** 🧙‍♀️, **Necromancer** ☠️, **Warrior** ⚔️ ou **Ranger** 🍃.
+ - Os arquivos deverão ser criados no diretório `src/Archetypes`;
+ - Todas os arquétipos estendem a classe `Archetype`;
+ - No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: **Mage** 🧙‍♀️, **Necromancer** ☠️, **Warrior** ⚔️ ou **Ranger** 🍃;
  - São características dos seres dos arquétipos `Mage` e `Necromancer` causar dano em seus inimigos por meio de magia, através do uso de`mana`;
  - São características dos seres dos arquétipos `Warrior` e `Ranger` causar dano em seus inimigos por meio de sua força, usando `stamina` para isso;
 
@@ -150,27 +208,6 @@ Como você pode imaginar, há diversos arquétipos diferentes no mundo de Tryber
    - O tipo de energia do arquétipo `Necromancer` é 'mana';
    - O tipo de energia do arquétipo `Warrior` é 'stamina';
    - O tipo de energia do arquétipo `Ranger` é 'stamina';
-
-
-### 3 - Crie a classe `Race`
-
- - Nesse universo, viajantes de todas as suas partes chegam em nosso reino. Não há algo melhor do que vermos a incrível diversidade que temos, com características únicas de cada pessoa.
- - Por isso, sua terceira quest será criar uma classe abstrata `Race`, onde deverá ter todos os atributos e métodos listados abaixo:
-
- ```typescript
- name: string
- maxLifePoints(): number
- ```
-
- - Além disso, será verificado se:
-   - A classe `Race` existe;
-   - O parâmetro `name` da classe `Race` pode ser lido
-   - O método `maxLifePoints` retorna um valor numérico
-
-### 4 - Crie raças que herdam de `Race`
-
- - Testar polimorfismo
- - 
 
 ### 5 - Crie a classe `Character`
 
