@@ -1,9 +1,4 @@
-type EnergyType = 'mana' | 'stamina';
-
-type Energy = {
-  type_: EnergyType,
-  amount: number;
-};
+import Energy from './Energy';
 
 interface Fighter {
   lifePoints: number;
@@ -15,4 +10,3 @@ interface Fighter {
 }
 
 export default Fighter;
-export { Energy, EnergyType };

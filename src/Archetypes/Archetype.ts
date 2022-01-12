@@ -1,4 +1,4 @@
-import { EnergyType } from '../Fighter';
+import { EnergyType } from '../Energy';
 
 abstract class Archetype {
   special = 4;

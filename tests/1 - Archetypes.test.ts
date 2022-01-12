@@ -1,5 +1,5 @@
 import Archetype, * as Archetypes from '../src/Archetypes';
-import { EnergyType } from '../src/Fighter';
+import { EnergyType } from '../src/Energy';
 
 class ArchetypeChild extends Archetype {
   get energyType(): EnergyType {
@@ -19,12 +19,19 @@ describe('1 - Crie a classe Archetype', function () {
 });
 
 describe('2 - Crie classes que herdam de Archetype', function () {
-  it('A classe Mage existe', () => {
-    const mage = new Archetypes.Mage('');
-    expect(mage).toBeDefined();
+  it('A classe Warrior existe', () => {
+    const warrior = new Archetypes.Warrior('');
+    expect(warrior).toBeDefined();
   });
-  it('Tem o nome correto', () => {
-    const mage = new Archetypes.Mage('Ramon');
-    expect(mage.name).toEqual('Ramon');
+
+  it('O parâmetro name da classe Warrior pode ser lido', () => {
+    const warrior = new Archetypes.Warrior('Ramon');
+    expect(warrior.name).toEqual('Ramon');
   });
+
+  it('A classe Warrior herda de Archetype', () => {
+    const warrior = new Archetypes.Warrior('');
+    expect(warrior).toBeInstanceOf(Archetype);
+  });
+
 });
