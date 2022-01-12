@@ -116,31 +116,41 @@ L: Um player precisa poder saber somente alguns atributos específicos do inimig
 
 ### 1 - Crie a classe `Archetype`
 
- - O arquivo deverá estar na pasta `src/Archetypes`.
- - Dentro do nosso universo, cada pessoa terá sua função. Por isso, sua primeira quest será criar uma classe abstrata `Archetype`, onde deverá ter todos os atributos e métodos listados abaixo:
+Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua primeira quest será criar a classe abstrata `Archetype`.
+ - O arquivo deverá ser criado no diretório `src/Archetypes`.
+ - Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
+ - A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
+ - O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
 
- ```typescript
- name: string
- ```
+// TODO: Discutir se a EnergyType será disponibilizado ou criado pelas pessoas estudantes. Se for a segunda opção, tem que ter um requisito prévio para isso.
 
- - Além disso, será verificado se:
+ - O que será verificado:
    - A classe `Archetype` existe;
    - O parâmetro `name` da classe `Archetype` pode ser lido;
 
 ### 2 - Crie classes que herdam de `Archetype`
 
- - Os arquivos deverão estar na pasta `src/Archetypes`.
- - Dentre as funções que uma pessoa pode escolher, ela poderá ser uma **guerreira**, **maga** ou **"tanque"**.
- - São características das pessoas guerreiras causar dano com sua força, usando ``stamina``;
- - São características das pessoas magas causar dano com magia, usando ``mana``;
- - São características das pessoas "tanques" ter defesas altas, mas com pouco ataque;
- - Será verificado se:
+Como você pode imaginar, há diversos arquétipos diferentes no mundo de Trybers and Dragons, cada um com suas peculiaridades e alinhamentos. Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor para isso do que criar classes para eles? Mas antes disso, tenha atenção às seguintes instruções:
+
+ - Os arquivos deverão ser criados no diretório `src/Archetypes`.
+ - No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: **Mage** 🧙‍♀️, **Necromancer** ☠️, **Warrior** ⚔️ ou **Ranger** 🍃.
+ - São características dos seres dos arquétipos `Mage` e `Necromancer` causar dano em seus inimigos por meio de magia, através do uso de`mana`;
+ - São características dos seres dos arquétipos `Warrior` e `Ranger` causar dano em seus inimigos por meio de sua força, usando `stamina` para isso;
+
+ - O que será verificado:
    - A classe `Mage` existe;
-   - É possível criar um objeto da classe `Mage` corretamente;
+   - A classe `Necromancer` existe;
    - A classe `Warrior` existe;
+   - A classe `Ranger` existe;
+   - É possível criar um objeto da classe `Mage` corretamente;
+   - É possível criar um objeto da classe `Necromancer` corretamente;
    - É possível criar um objeto da classe `Warrior` corretamente;
-   - A classe `Tank` existe;
-   - É possível criar um objeto da classe `Tank` corretamente;
+   - É possível criar um objeto da classe `Ranger` corretamente;
+   - O tipo de energia do arquétipo `Mage` é 'mana';
+   - O tipo de energia do arquétipo `Necromancer` é 'mana';
+   - O tipo de energia do arquétipo `Warrior` é 'stamina';
+   - O tipo de energia do arquétipo `Ranger` é 'stamina';
+
 
 ### 3 - Crie a classe `Race`
 
