@@ -209,18 +209,37 @@ Como você pode imaginar, há diversos arquétipos diferentes no mundo de Tryber
    - O tipo de energia do arquétipo `Warrior` é 'stamina';
    - O tipo de energia do arquétipo `Ranger` é 'stamina';
 
-### 5 - Crie a classe `Character`
+### 5 - Criar a interface `Fighter`
+Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável. Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas. Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
+
+Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`. Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
+
+ - O arquivo deverá ser criado na raiz do diretório `src/`;
+ - A interface deverá ter os atributos:
+
+  ```typescript
+  lifePoints: number;
+  strength: number;
+  defense: number;
+  agility: number;
+  energy: Energy;
+  ```
+ - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`.
+ - A interface deverá ter o método receiveDamage, que recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number`;
+
+
+### 6 - Crie a classe `Character`
+
+Maravilha! Agora já temos tanto nossas raças quanto nossos arquétipos e interface definidos, mas antes de sair por aí entrando em tavernas e calabouços, temos outra quest: criar um personagem!
 
  - O atributo `life` deve ser privado, acessado por um `get()` e um `set()`;
  - O atributo `life` não pode ser maior que o máximo definido pela raça;
  
 
-### 6 - Estenda a classe `Battle`
+### 7 - Estenda a classe `Battle`
 
  - Testar LSP
  - O arquivo está em `src/placeholder`
-
-### 7
 
 ### 8
 
