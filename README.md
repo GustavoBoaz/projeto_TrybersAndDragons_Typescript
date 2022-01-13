@@ -122,62 +122,61 @@ Para entender melhor um pouco da incrível diversidade que temos e as caracterí
 
 Para que você tenha sucesso nesta quest, deve se certificar que:
 
- - Os arquivos sejam criados no diretório `src/Races`.
- - As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc`
- - Cada uma dessas classes deverá conter o atributo privado `maxLifePoints`;
- - As classes deverão ter um `getter` chamado `maxLifePoints`, que retorna a quantidade máxima de pontos de vida da raça.
-
+- Os arquivos sejam criados no diretório `src/Races`.
+- As classes deverão ter um `getter` chamado `maxLifePoints`, que retorna a quantidade máxima de pontos de vida da raça.
 
  ```typescript
  name: string
  maxLifePoints(): number
  ```
 
-  - O que será verificado:
-   - A classe `Race` existe;
-   - O parâmetro `name` da classe `Race` pode ser lido
-   - O método `maxLifePoints` retorna um valor numérico;
+- O que será verificado:
+  - A classe `Race` existe;
+  - O parâmetro `name` da classe `Race` pode ser lido
+  - O método `maxLifePoints` retorna um valor numérico;
+
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser exportada de forma padrão (export default) no arquivo `src/Races/index.ts` ⚠
 
 ### 2 - Crie raças que herdam de `Race`
 
 Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda quest, você irá criar classes para quatro raças que existem no mundo de T&D.
 
-Para que você não É muito importante que você saiba que:
+Para que você não É muito importante que você saiba que: <!-- TODO: Corrigir linha -->
 
- - Os arquivos deverão ser criados no diretório `src/Races`.
- - Todas as raças estendem a classe `Race`;
- - As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc`
- 
- - O que será verificado:
-   - A classe `Dwarf` existe;
-   - A classe `Elf` existe;
-   - A classe `Halfling` existe;
-   - A classe `Orc` existe;
-   - É possível criar um objeto da classe `Dwarf` corretamente;
-   - É possível criar um objeto da classe `Elf` corretamente;
-   - É possível criar um objeto da classe `Halfling` corretamente;
-   - É possível criar um objeto da classe `Orc` corretamente;
-   - O parâmetro name da classe `Dwarf` pode ser lido;
-   - O parâmetro name da classe `Elf` pode ser lido;
-   - O parâmetro name da classe `Halfling` pode ser lido;
-   - O parâmetro name da classe `Orc` pode ser lido;
-   - O parâmetro `maxLifePoints` existe na classe `Dwarf`e é igual a 40;
-   - O parâmetro `maxLifePoints` existe na classe `Elf`e é igual a 99;
-   - O parâmetro `maxLifePoints` existe na classe `Halfling`e é igual a 36;
-   - O parâmetro `maxLifePoints` existe na classe `Orc`e é igual a 75;
+- Os arquivos deverão ser criados no diretório `src/Races`.
+- Todas as raças estendem a classe `Race`;
+- As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc`
 
-// TODO: nivelar `maxLifePoints` das raças existentes
+- O que será verificado:
+  - A classe `Dwarf` existe;
+  - A classe `Elf` existe;
+  - A classe `Halfling` existe;
+  - A classe `Orc` existe;
+  - É possível criar um objeto da classe `Dwarf` corretamente;
+  - É possível criar um objeto da classe `Elf` corretamente;
+  - É possível criar um objeto da classe `Halfling` corretamente;
+  - É possível criar um objeto da classe `Orc` corretamente;
+  - O parâmetro name da classe `Dwarf` pode ser lido;
+  - O parâmetro name da classe `Elf` pode ser lido;
+  - O parâmetro name da classe `Halfling` pode ser lido;
+  - O parâmetro name da classe `Orc` pode ser lido;
+  - O parâmetro `maxLifePoints` existe na classe `Dwarf`e é igual a 40;
+  - O parâmetro `maxLifePoints` existe na classe `Elf`e é igual a 99;
+  - O parâmetro `maxLifePoints` existe na classe `Halfling`e é igual a 36;
+  - O parâmetro `maxLifePoints` existe na classe `Orc`e é igual a 75;
 
+<!-- TODO: nivelar `maxLifePoints` das raças existentes -->
 
- - Testar polimorfismo
+- Testar polimorfismo
 
 ### 3 - Crie a classe `Archetype`
 
 Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua próxima quest será criar a classe abstrata `Archetype`.
- - O arquivo deverá ser criado no diretório `src/Archetypes`.
- - Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
- - A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
- - O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
+
+- O arquivo deverá ser criado no diretório `src/Archetypes`.
+- Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
+- A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
+- O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
 
 // TODO: Discutir se a `EnergyType` será disponibilizado ou criado pelas pessoas estudantes. Se for a segunda opção, tem que ter um requisito prévio para isso.
 
