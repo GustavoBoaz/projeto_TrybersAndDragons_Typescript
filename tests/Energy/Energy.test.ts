@@ -1,34 +1,34 @@
 import Energy, { EnergyType } from '../../src/Energy';
 
 describe('Energy', () => {
-  describe('EnergyType', () => {
-    it('Cria variável para guardar o EnergyType "mana"', () => {
+  describe('Tipo EnergyType', () => {
+    it('É possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "mana"', () => {
       let x: EnergyType = 'mana';
     });
-    it('Cria variável para guardar o EnergyType "stamina"', () => {
+    it('É possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "stamina"', () => {
       let x: EnergyType = 'stamina';
     });
   });
-  describe('Energy', () => {
-    it('Cria variável para guardar o Energy 1', () => {
+  describe('Interface Energy', () => {
+    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 10, type_: 'stamina'}", () => {
       let x: Energy = {
         amount: 10,
         type_: 'stamina'
       };
     });
-    it('Cria variável para guardar o Energy 2', () => {
+    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 10, type_: 'mana'}", () => {
       let x: Energy = {
         amount: 10,
         type_: 'mana'
       };
     });
-    it('Cria variável para guardar o Energy 3', () => {
+    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 100, type_: 'stamina'}", () => {
       let x: Energy = {
         amount: 45,
         type_: 'stamina'
       };
     });
-    it('Cria variável para guardar o Energy 4', () => {
+    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 10, type_: 'mana'}", () => {
       let x: Energy = {
         amount: 45,
         type_: 'mana'
