@@ -15,9 +15,9 @@ describe(' - Crie a classe Dwarf que herda de Race', function () {
     expect(dwarf.name).toEqual('Dáin Iron Foot');
   });
 
-  it.skip('O parâmetro maxLifePoints existe e é igual a 40', () => {
+  it('O parâmetro maxLifePoints existe e é igual a 80', () => {
     const dwarf = new Races.Dwarf('');
-    expect(dwarf.maxLifePoints).toEqual(40);
+    expect(dwarf.maxLifePoints).toEqual(80);
   });
 
   it('O parâmetro maxLifePoints existe e possui valor entre 75 e 80', () => {
