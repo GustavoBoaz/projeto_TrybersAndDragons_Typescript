@@ -15,8 +15,14 @@ describe(' - Crie a classe Orc que herda de Race', function () {
     expect(orc.name).toEqual('Shagrat');
   });
 
-  it('O parâmetro maxLifePoints existe e é igual a 75', () => {
+  it.skip('O parâmetro maxLifePoints existe e é igual a 75', () => {
     const orc = new Races.Orc('');
     expect(orc.maxLifePoints).toEqual(75);
+  });
+
+  it('O parâmetro maxLifePoints existe e possui valor entre 70 e 80', () => {
+    const orc = new Races.Orc('');
+    expect(orc.maxLifePoints).toBeGreaterThanOrEqual(70);
+    expect(orc.maxLifePoints).toBeLessThanOrEqual(80);
   });
 });
