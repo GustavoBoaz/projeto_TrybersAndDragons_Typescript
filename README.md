@@ -125,6 +125,8 @@ Para que você tenha sucesso nesta quest, deve se certificar que:
 - Os arquivos sejam criados no diretório `src/Races`.
 - As classes deverão ter um `getter` chamado `maxLifePoints`, que retorna a quantidade máxima de pontos de vida da raça.
 
+ <!-- TODO: Caso a interface Fighter seja mesmo desnecessária para o projeto, seus atributos deverão ser transferidos para a classe `Race` -->
+
  ```typescript
  name: string
  maxLifePoints(): number
@@ -141,7 +143,7 @@ Para que você tenha sucesso nesta quest, deve se certificar que:
 
 Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda quest, você irá criar classes para quatro raças que existem no mundo de T&D.
 
-Para que você não É muito importante que você saiba que: <!-- TODO: Corrigir linha -->
+Antes de prosseguir com a missão, é muito importante que você saiba que:
 
 - Os arquivos deverão ser criados no diretório `src/Races`.
 - Todas as raças estendem a classe `Race`;
@@ -223,12 +225,14 @@ Como você pode imaginar, há diversos arquétipos diferentes no mundo de Tryber
    - O tipo de energia do arquétipo `Ranger` é 'stamina';
 
 ### 6 - Criar a interface `Fighter`
+
+<!-- TODO: Confirmar a necessidade dessa interface para o andamento geral do projeto -->
+
 Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável. Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas. Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
 
 Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`. Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
 
-⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado na raiz do diretório `src`, a interface `Fighter` deve ser exportada de forma padrão (export default) ⚠
-
+ - O arquivo deverá ser criado na raiz do diretório `src`;
  - A interface deverá ter os atributos:
 
   ```typescript
@@ -239,7 +243,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   energy: Energy;
   ```
  - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`.
- - A interface deverá ter o método receiveDamage, que recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number`;
+ - A interface deverá ter o método `receiveDamage`, que recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number`;
 
 
 ### 7 - Crie a classe `Character`
@@ -256,6 +260,8 @@ Maravilha! Agora já temos tanto nossas raças quanto nossos arquétipos e inter
  - O arquivo está em `src/placeholder`
 
 ### 9
+⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado na raiz do diretório `src`, a interface `Fighter` deve ser exportada de forma padrão (export default) ⚠
+
 
 ### 10
 
