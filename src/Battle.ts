@@ -2,18 +2,14 @@ import Fighter from './Fighter';
 
 class Battle {
   static enterDungeon(invader: Fighter, owner: Fighter): Fighter {
-    while (true) {
+    while (invader.lifePoints > 0) {
       invader.attack(owner);
-      if (owner.lifePoints > 0) {
-        owner.attack(invader);
-        if (invader.lifePoints <= 0) {
-          return owner;
-        }
-      }
-      else {
+      if (owner.lifePoints <= 0) {
         return invader;
       }
+      owner.attack(invader);
     }
+    return invader;
   }
 }
 
