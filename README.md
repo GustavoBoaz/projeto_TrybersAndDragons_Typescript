@@ -161,10 +161,10 @@ Para que você não É muito importante que você saiba que:
    - O parâmetro name da classe `Elf` pode ser lido;
    - O parâmetro name da classe `Halfling` pode ser lido;
    - O parâmetro name da classe `Orc` pode ser lido;
-   - O parâmetro `maxLifePoints` existe na classe `Dwarf`e é igual a 40;
-   - O parâmetro `maxLifePoints` existe na classe `Elf`e é igual a 99;
-   - O parâmetro `maxLifePoints` existe na classe `Halfling`e é igual a 36;
-   - O parâmetro `maxLifePoints` existe na classe `Orc`e é igual a 75;
+   - O parâmetro `maxLifePoints` existe na classe `Dwarf`e possui valor entre 75 e 80;
+   - O parâmetro `maxLifePoints` existe na classe `Elf`e possui valor entre 95 e 99;
+   - O parâmetro `maxLifePoints` existe na classe `Halfling`e possui valor entre 50 e 60;
+   - O parâmetro `maxLifePoints` existe na classe `Orc`e possui valor entre 70 e 80;
 
 // TODO: nivelar `maxLifePoints` das raças existentes
 
