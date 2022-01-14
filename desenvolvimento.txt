@@ -1,16 +1,16 @@
 @isquicha ------------------------------
-simpleFighter (interface):
+livingBeing (interface):
     - lifePoints
     - strength
-    - defense
 Archetype (classe):
     - energy
     - special
-fighter (interface estende simpleFighter, aplicando princípio I):
+fighter (interface estende livingBeing, aplicando princípio I):
     - agility
-Race (classe implementa fighter):
+    - defense
+Race (classe implements livingBeing):
     - 
-Monster (classe implementa simpleFighter):
+Monster (classe implementa livingBeing):
     -
 Character (classe implementa fighter):
     - arquétipo
@@ -36,7 +36,13 @@ batalha:
         }
 
         --- depois da inversão ---
-        fight(c: Fighter, n: simpleFighter) {}
+        fight(c: Fighter, n: livingBeing) {
+            while(1){
+                c ataca n
+                n ataca c 
+                checa se alguém morreu
+            }
+        }
         pvp = this.fight
         pve = this.fight
 
