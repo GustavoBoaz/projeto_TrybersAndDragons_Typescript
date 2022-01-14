@@ -4,10 +4,9 @@ import Archetype from './Archetypes';
 import Mage from './Archetypes/Mage';
 import Race from './Races';
 import Elf from './Races/Elf';
+import getRandomInt from './utils';
 
 class Character implements Fighter {
-  private $level: number;
-
   private $lifePoints: number;
 
   private $maxLifePoints: number;
@@ -27,7 +26,6 @@ class Character implements Fighter {
   ) {
     this.$maxLifePoints = this.race.maxLifePoints / 2;
     this.$lifePoints = this.$maxLifePoints;
-    this.$level = 1;
     this.$strength = 1;
     this.$defense = 1;
     this.$agility = 1;
@@ -51,8 +49,10 @@ class Character implements Fighter {
   }
 
   receiveDamage(amount: number): number {
-    // TODO: Defender
-    this.$lifePoints -= amount;
+    const defense = getRandomInt(0, 50) < this.$agility ? this.$defense : 0;
+    let life = this.lifePoints + defense * (getRandomInt(0, 100) / 100);
+    life -= amount;
+    this.$lifePoints = life <= this.lifePoints ? life : this.lifePoints;
     if (this.$lifePoints <= 0) this.$lifePoints = -1;
     return this.$lifePoints;
   }
