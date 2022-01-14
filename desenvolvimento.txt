@@ -1,37 +1,44 @@
 @isquicha ------------------------------
 simpleFighter (interface):
-    - vida
-    - ataque
-    - defesa
-archetype (classe):
+    - lifePoints
+    - strength
+    - defense
+Archetype (classe):
     - energy
+    - special
 fighter (interface estende simpleFighter, aplicando princípio I):
-    - agilidade
-raça (classe implementa fighter):
+    - agility
+Race (classe implementa fighter):
     - 
-monster (classe implementa simpleFighter):
+Monster (classe implementa simpleFighter):
     -
-character (classe implementa fighter):
+Character (classe implementa fighter):
     - arquétipo
     - raça
 
 batalha:
-    Teste do princípio D:
+    Teste do princípio D, O:
         --- antes ---
-        pve(c: character) {
+        pve(c: Character) {
             const m = new Monster()
             this.fight(c, m)
         }
-
+        pvp(c: Character) {
+            const n = new Character()
+            this.fight(c, n)
+        } 
         --- depois da injeção ---
-        pve(c: character, m: monster) {
+        pve(c: Character, m: Monster) {
             this.fight(c, m)
+        }
+        pvp(c: Character, n: Character) {
+            this.fight(c, n)
         }
 
         --- depois da inversão ---
-        pve(c: Fighter, m: Fighter) {
-            this.fight(c, m)
-        }
+        fight(c: Fighter, n: simpleFighter) {}
+        pvp = this.fight
+        pve = this.fight
 
 @natanaelneto ------------------------------
 fighter (interface):
@@ -40,28 +47,28 @@ fighter (interface):
     - defense
     - attack()
     - receiveDamage()
-archetype (classe):
+Archetype (classe):
     - energy
 race (classe não implementa nada):
     - name (o da raça, não do personagem)
     - maxLifePoints
     - agility
-character (classe implementa fighter):
-    - archetype
+Character (classe implementa fighter):
+    - Archetype
     - race
     - level (se pá a gente apaga)
-monster (classe implementa fighter):
+Monster (classe implementa fighter):
     - NADA
 
 battle:
     Teste do princípio D:
         --- antes ---
-        entrar na dungeon(c: character) {
+        entrar na dungeon(c: Character) {
             const m = new Monster()
             this.fight(c, m)
         }
         --- depois da injeção ---
-        entrar na dungeon(c: character, m: monster) {
+        entrar na dungeon(c: Character, m: Monster) {
             this.fight(c, m)
         }
         --- depois da inversão ---
@@ -74,7 +81,7 @@ fighter (interface):
     - defense
     - attack()
     - receiveDamage()
-archetype (classe):
+Archetype (classe):
     - energy
     - special() (não sei se é um método ou objeto)
 race (classe):
@@ -83,11 +90,11 @@ race (classe):
     - lifePoints
     - strength
     - agility
-character (classe):
-    - archetype
+Character (classe):
+    - Archetype
     - race
     - level (se pá a gente apaga)
-monster (classe estende raça e implementa fighter):
+Monster (classe estende raça e implementa fighter):
     - NADA
 item (classe):
 weapon(classe estende item):
@@ -98,12 +105,12 @@ battle:
 
     Teste do princípio D:
         --- antes ---
-        entrar na dungeon(c: character) {
+        entrar na dungeon(c: Character) {
             const m = new Monster()
             this.fight(c, m)
         }
         --- depois da injeção ---
-        entrar na dungeon(c: character, m: monster) {
+        entrar na dungeon(c: Character, m: Monster) {
             this.fight(c, m)
         }
         --- depois da inversão ---
