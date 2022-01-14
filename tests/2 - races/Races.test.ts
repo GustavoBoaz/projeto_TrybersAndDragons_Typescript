@@ -17,6 +17,5 @@ describe('3 - Crie a classe Race', function () {
   it('O método maxLifePoints retorna um valor numérico', () => {
     const race = new RaceChild('Aloha');
     expect(typeof race.maxLifePoints).toEqual('number');
-    expect(race.maxLifePoints).toEqual(99);
   });
 });

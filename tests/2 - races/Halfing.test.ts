@@ -15,9 +15,9 @@ describe(' - Crie a classe Halfling que herda de Race', function () {
     expect(Halfling.name).toEqual('Lobélia Sacola-Bolseiro');
   });
 
-  it.skip('O parâmetro maxLifePoints existe e é igual a 36', () => {
+  it('O parâmetro maxLifePoints existe e é igual a 60', () => {
     const Halfling = new Races.Halfling('');
-    expect(Halfling.maxLifePoints).toEqual(36);
+    expect(Halfling.maxLifePoints).toEqual(60);
   });
 
   it('O parâmetro maxLifePoints existe e possui valor entre 50 e 60', () => {

@@ -1,4 +1,5 @@
-import Fighter, { Energy } from './Fighter';
+import Fighter from './Fighter';
+import Energy from './Energy';
 import Archetype from './Archetypes';
 import Mage from './Archetypes/Mage';
 import Race from './Races';
@@ -8,6 +9,8 @@ class Character implements Fighter {
   private $level: number;
 
   private $lifePoints: number;
+
+  private $maxLifePoints: number;
 
   private $strength: number;
 
@@ -22,7 +25,8 @@ class Character implements Fighter {
     public race: Race = new Elf(name),
     public archetype: Archetype = new Mage(name),
   ) {
-    this.$lifePoints = this.race.maxLifePoints / 2;
+    this.$maxLifePoints = this.race.maxLifePoints / 2;
+    this.$lifePoints = this.$maxLifePoints;
     this.$level = 1;
     this.$strength = 1;
     this.$defense = 1;
