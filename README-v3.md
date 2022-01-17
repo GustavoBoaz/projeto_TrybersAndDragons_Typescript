@@ -357,6 +357,7 @@ O personagem será composto tanto por uma raça quanto por um arquétipo. Ele é
 ### 9 - Criar a classe `Monster` segrega interface
 
  - O arquivo deverá ser criado na raiz do diretório `src`;
+ - classe `Monster` deverá exportada de forma padrão (export default).
  - A classe `Monster` deve implementar a interface `Fighter`
   - A classe `Monster` deverá ter os seguintes atributos:
     - `lifePoints` deve ser privado e possuir o valor 85;
