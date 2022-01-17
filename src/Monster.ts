@@ -7,26 +7,24 @@ class Monster implements Fighter {
 
   private $defense: number;
   
-  receiveDamage(amount: number): number {
-    this.$lifePoints -= amount;
-    if (this.$lifePoints <= 0) this.$lifePoints = -1;
-    return this.$lifePoints;
-  }
-  
-  constructor(
-    public name: string,
-  ) {
-    this.$lifePoints = this.lifePoints;
-    this.$strength = this.strength;
+  constructor() {
+    this.$lifePoints = 85;
+    this.$strength = 63;
     this.$defense = 0;
   }
     
   attack(enemy: Fighter): void {
     enemy.receiveDamage(this.$strength);
   }
+
+  receiveDamage(amount: number): number {
+    this.$lifePoints -= amount;
+    if (this.$lifePoints <= 0) this.$lifePoints = -1;
+    return this.$lifePoints;
+  }
     
   get strength(): number {
-    return this.strength;
+    return this.$strength;
   }
 
   public get defense(): number {
