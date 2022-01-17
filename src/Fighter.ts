@@ -1,9 +1,8 @@
-interface Fighter {
-  lifePoints: number;
+import SimpleFighter from './SimpleFighter';
+
+interface Fighter extends SimpleFighter {
   strength: number;
   defense: number;
-  attack(enemy: Fighter): void;
-  receiveDamage(amount: number): number;
 }
 
 export default Fighter;
