@@ -356,6 +356,29 @@ O personagem será composto tanto por uma raça quanto por um arquétipo. Ele é
 
 ### 9 - Criar a classe `Monster` segrega interface
 
+ - O arquivo deverá ser criado na raiz do diretório `src`;
+ - A classe `Monster` deve implementar a interface `Fighter`
+  - A classe `Monster` deverá ter os seguintes atributos:
+    - `lifePoints` deve ser privado e possuir o valor 85;
+    - `strength` deve ser privado e possuir o valor 63;
+    - `defense` deve ser privado e possuir o valor 0;
+ - A classe `Monster` deverá implementar o método `attack`;
+ - A classe `Monster` deverá implementar o método `receiveDamage`;
+
+- O método `attack`, recebe como parâmetro outro ser do tipo `Fighter` como parâmetro e deverá causar danos ao mesmo;
+  - exemplo: Após `Monster` atacar um `Character` o `lifePoints` de `Character` deverá ser menor do que antes do ataque.
+
+- O método `receiveDamage`, recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number` que se refere ao `lifePoints` após receber um ataque;
+  - exemplo: Após `Monster` sofrer um ataque de `Character` o `lifePoints` de `Monster` deverá ser menor do que antes de receber o ataque.
+
+ O que será verificado:
+   - A classe `Monster` existe;
+   - O atributo `lifePoints` existe;
+   - O atributo `strength` existe;
+   - O atributo `defense` existe;
+   - `Monster` pode sofrer um ataque;
+   - `Monster` pode realizar um ataque;
+
 ### 10 - Criar objetos `Monster` e `Character`
 
 ### 11- volta pra battle
