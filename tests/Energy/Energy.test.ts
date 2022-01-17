@@ -1,18 +1,12 @@
 import Energy, { EnergyType } from '../../src/Energy';
-import cp from 'child_process';
-import path from 'path';
 
 describe('Energy', () => {
   describe.only('Tipo EnergyType', () => {
     it('É possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "mana"', () => {
-      expect(() => {
-        cp.exec(`npx tsc ${path.resolve(path.join(__dirname, 'Energy.mana.ts'))}`);
-      }).not.toThrow();
+      expect('Energy.mana.ts').toCompile();
     });
     it('Não possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "mani"', () => {
-      expect(() => {
-        cp.exec(`npx tsc ${path.resolve(path.join(__dirname, 'Energy.mani.ts'))}`);
-      }).toThrow();
+      expect('Energy.mani.ts').not.toCompile();
     });
     it('É possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "stamina"', () => {
       let x: EnergyType = 'stamina';
