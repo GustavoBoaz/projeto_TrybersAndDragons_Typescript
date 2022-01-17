@@ -6,7 +6,7 @@ Archetype (classe):
     - energy
     - special
 fighter (interface estende livingBeing, aplicando princípio I):
-    - agility
+    - dexterity
     - defense
 Race (classe implements livingBeing):
     - 
@@ -58,7 +58,7 @@ Archetype (classe):
 race (classe não implementa nada):
     - name (o da raça, não do personagem)
     - maxLifePoints
-    - agility
+    - dexterity
 Character (classe implementa fighter):
     - Archetype
     - race
@@ -95,7 +95,7 @@ race (classe):
     - maxLifePoints
     - lifePoints
     - strength
-    - agility
+    - dexterity
 Character (classe):
     - Archetype
     - race

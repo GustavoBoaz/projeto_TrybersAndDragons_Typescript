@@ -239,7 +239,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   lifePoints: number;
   strength: number;
   defense: number;
-  agility: number;
+  dexterity: number;
   energy: Energy;
   ```
  - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`.

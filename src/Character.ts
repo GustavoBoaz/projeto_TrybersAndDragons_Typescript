@@ -15,20 +15,17 @@ class Character implements Fighter {
 
   private $defense: number;
 
-  private $agility: number; // TODO: Chamar isso de destreza @thayscosta3
-
   private $energy: Energy;
 
   constructor(
     public name: string,
-    public race: Race = new Elf(name),
+    public race: Race = new Elf(name, 150),
     public archetype: Archetype = new Mage(name),
   ) {
     this.$maxLifePoints = this.race.maxLifePoints / 2;
     this.$lifePoints = this.$maxLifePoints;
     this.$strength = 1;
     this.$defense = 1;
-    this.$agility = 1;
     this.$energy = {
       amount: 10,
       type_: archetype.energyType,
@@ -49,7 +46,7 @@ class Character implements Fighter {
   }
 
   receiveDamage(amount: number): number {
-    const defense = getRandomInt(0, 50) < this.$agility ? this.$defense : 0;
+    const defense = getRandomInt(0, 50) < this.dexterity ? this.$defense : 0;
     let life = this.lifePoints + defense * (getRandomInt(0, 100) / 100);
     life -= amount;
     this.$lifePoints = life <= this.lifePoints ? life : this.lifePoints;
@@ -65,8 +62,8 @@ class Character implements Fighter {
     return this.$defense;
   }
 
-  public get agility(): number {
-    return this.$agility;
+  public get dexterity(): number {
+    return this.dexterity;
   }
 
   public get lifePoints(): number {
