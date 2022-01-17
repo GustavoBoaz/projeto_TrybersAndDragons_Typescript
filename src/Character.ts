@@ -17,6 +17,8 @@ class Character implements Fighter {
 
   private $energy: Energy;
 
+  private $dexterity: number;
+
   constructor(
     public name: string,
     public race: Race = new Elf(name, 150),
@@ -26,6 +28,7 @@ class Character implements Fighter {
     this.$lifePoints = this.$maxLifePoints;
     this.$strength = 1;
     this.$defense = 1;
+    this.$dexterity = 10;
     this.$energy = {
       amount: 10,
       type_: archetype.energyType,
@@ -55,7 +58,7 @@ class Character implements Fighter {
   }
 
   get strength(): number {
-    return this.strength;
+    return this.$strength;
   }
 
   public get defense(): number {
@@ -63,7 +66,7 @@ class Character implements Fighter {
   }
 
   public get dexterity(): number {
-    return this.dexterity;
+    return this.$dexterity;
   }
 
   public get lifePoints(): number {
