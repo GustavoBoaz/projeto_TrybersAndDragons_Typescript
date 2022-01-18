@@ -1,8 +1,7 @@
-import Fighter from './Fighter';
 import SimpleFighter from './SimpleFighter';
 
 class Battle {
-  static fight(player: Fighter, enemies: SimpleFighter[]): void {
+  static fight(player: SimpleFighter, enemies: SimpleFighter[]): void {
     let focus = 0;
     while (player.lifePoints > 0 && enemies.length > 0) {
       player.attack(enemies[focus]);

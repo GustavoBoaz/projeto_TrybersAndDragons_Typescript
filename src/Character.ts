@@ -5,6 +5,7 @@ import Mage from './Archetypes/Mage';
 import Race from './Races';
 import Elf from './Races/Elf';
 import getRandomInt from './utils';
+import SimpleFighter from './SimpleFighter';
 
 class Character implements Fighter {
   private $lifePoints: number;
@@ -35,7 +36,7 @@ class Character implements Fighter {
     };
   }
 
-  special(enemy: Fighter): void {
+  special(enemy: SimpleFighter): void {
     if (this.$energy.amount >= this.archetype.cost) {
       this.$energy.amount -= this.archetype.cost;
       enemy.receiveDamage(this.$strength * this.archetype.special);
@@ -44,7 +45,7 @@ class Character implements Fighter {
     }
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this.$strength);
   }
 
