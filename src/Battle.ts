@@ -21,11 +21,16 @@ class Battle {
     while (this.player.lifePoints > 0 && this.enemies.length > 0) {
       this.player.attack(this.enemies[this.focus]);
       if (this.enemies[this.focus].lifePoints < 0) {
-        Battle.$inBattle.filter((f) => f !== this.enemies[this.focus]);
+        Battle.$inBattle = Battle.$inBattle.filter(
+          (f) => f !== this.enemies[this.focus],
+        );
       }
       this.enemies[this.focus].attack(this.player);
       this.upFocus(this.enemies);
     }
+    Battle.$inBattle = Battle.$inBattle.filter(
+      (f) => ![this.player, ...this.enemies].find((fighter) => f === fighter),
+    );
   }
 
   private upFocus(arr: SimpleFighter[]): void {
