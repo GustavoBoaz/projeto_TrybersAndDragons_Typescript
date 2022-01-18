@@ -1,36 +1,36 @@
 import SimpleFighter from './SimpleFighter';
 
 class Battle {
-  static fight(player: SimpleFighter, enemies: SimpleFighter[]): void {
-    let focus = 0;
-    while (player.lifePoints > 0 && enemies.length > 0) {
-      player.attack(enemies[focus]);
-      if (enemies[focus].lifePoints < 0) {
-        enemies.splice(focus, 1);
+  private static $inBattle: SimpleFighter[] = [];
+
+  private focus = 0;
+
+  constructor(private player: SimpleFighter, private enemies: SimpleFighter[]) {
+    [player, ...enemies].forEach((fighter) => {
+      if (Battle.$inBattle.find((f) => f === fighter)) {
+        throw new Error(
+          'Cada fighter só pode estar em uma batalha ao mesmo tempo',
+        );
       }
-      enemies[focus].attack(player);
-      focus = this.upFocus(enemies, focus);
+      Battle.$inBattle.push(fighter);
+    });
+  }
+
+  fight(): void {
+    this.focus = 0;
+    while (this.player.lifePoints > 0 && this.enemies.length > 0) {
+      this.player.attack(this.enemies[this.focus]);
+      if (this.enemies[this.focus].lifePoints < 0) {
+        Battle.$inBattle.filter((f) => f !== this.enemies[this.focus]);
+      }
+      this.enemies[this.focus].attack(this.player);
+      this.upFocus(this.enemies);
     }
   }
 
-  private static upFocus(arr: any[], curr: number): number {
-    const newFocus = curr + 1;
-    if (newFocus === arr.length) {
-      return 0;
-    }
-    return newFocus;
+  private upFocus(arr: SimpleFighter[]): void {
+    this.focus = this.focus + 1 === arr.length ? 0 : this.focus + 1;
   }
-  // TODO: Limpar comentários @natanaelneto
-  // static enterDungeon(invader: Fighter, owner: Fighter): Fighter {
-  //   while (invader.lifePoints > 0) {
-  //     invader.attack(owner);
-  //     if (owner.lifePoints <= 0) {
-  //       return invader;
-  //     }
-  //     owner.attack(invader);
-  //   }
-  //   return invader;
-  // }
 }
 
 export default Battle;
