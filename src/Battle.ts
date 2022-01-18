@@ -26,6 +26,9 @@ class Battle {
       this.enemies[this.focus].attack(this.player);
       this.upFocus(this.enemies);
     }
+    Battle.$inBattle.filter(
+      (fighter) => ![this.player, ...this.enemies].find((f) => f === fighter),
+    );
   }
 
   private upFocus(arr: SimpleFighter[]): void {
