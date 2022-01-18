@@ -1,25 +1,14 @@
-import Race, * as Races from '../../src/Races';
-
-class RaceChild extends Race {
-  get maxLifePoints(): number {
-    return 99;
-  }
-}
-
 describe('3 - Crie a classe Race', function () {
   it('A classe Race existe', () => {
-    const race = new RaceChild('', 80);
+    expect('Races.exists.ts').toCompile();
   });
   it('O parâmetro name da classe Race pode ser lido', () => {
-    const race = new RaceChild('Aloha', 80);
-    expect(race.name).toEqual('Aloha');
+    expect('Races.name.ts').toCompile();
   });
   it('O parâmetro dexterity da classe Race pode ser lido', () => {
-    const race = new RaceChild('Aloha', 80);
-    expect(race.dexterity).toEqual(80);
+    expect('Races.dexterity.ts').toCompile();
   });
   it('O método maxLifePoints retorna um valor numérico', () => {
-    const race = new RaceChild('Aloha', 80);
-    expect(typeof race.maxLifePoints).toEqual('number');
+    expect('Races.maxLifePoints.ts').toCompile();    
   });
 });
