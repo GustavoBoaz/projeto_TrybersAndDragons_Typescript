@@ -7,7 +7,7 @@ expect.extend({
   toCompile(fileName) {
     const filePath = path.join(FILES_FOLDER, `${fileName}`);
 
-    const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1 });
+    const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1, target: ts.ScriptTarget.ES2016, module: ts.ModuleKind.CommonJS, moduleResolution: ts.ModuleResolutionKind.NodeJs });
     const diagnostics = ts.getPreEmitDiagnostics(program);
 
     const errorDiagnostic = diagnostics.find(
