@@ -1,7 +1,7 @@
-import Energy, { EnergyType } from '../../src/Energy';
+import Energy, { EnergyType } from '../src/Energy';
 
 describe('Energy', () => {
-  describe.only('Tipo EnergyType', () => {
+  describe('Tipo EnergyType', () => {
     it('É possível criar uma variável com o tipo EnergyType e atribuir a ela o valor "mana"', () => {
       expect('Energy.mana.ts').toCompile();
     });
