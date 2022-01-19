@@ -11,8 +11,9 @@ const PERMANENT_JS_FILES = [
 ];
 
 afterAll(() => {
-  let execString = "find . -type f -iname '*.js' -exclude";
-  PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path ${file}`; });
+  let execString = "find . -type f -iname '*.js'";
+  PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path '${file}'`; });
+  execString += ' -delete';
   cp.exec(execString);
 });
 
