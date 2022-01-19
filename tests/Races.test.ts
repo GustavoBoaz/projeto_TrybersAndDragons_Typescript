@@ -1,4 +1,4 @@
-import Race, * as Races from '../../src/Races';
+import Race, * as Races from '../src/Races';
 
 describe('Race', () => {
   describe('1 - Classe Race', () => {
