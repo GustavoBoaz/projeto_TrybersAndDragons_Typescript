@@ -23,8 +23,7 @@ describe('Race', () => {
       });
 
       it('A classe Dwarf herda de Race', () => {
-        const dwarf = new Races.Dwarf('', 100);
-        expect(dwarf).toBeInstanceOf(Race);
+        expect('Dwarf.extends').toCompile();
       });
 
       it('O parâmetro name da classe Dwarf pode ser lido', () => {
@@ -36,9 +35,7 @@ describe('Race', () => {
       });
 
       it('O parâmetro maxLifePoints existe e é igual a 80', () => {
-        const dwarf = new Races.Dwarf('', 100);
-        expect(dwarf.maxLifePoints).toEqual(80);
-        expect('Dwarf.maxLifePoints').toCompile();
+        expect('Dwarf.maxLifePoints').toCompileAndBeEqualTo(80);
       });
     });
     describe('Cria a classe Elf que herda de Race', () => {
