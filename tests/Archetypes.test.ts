@@ -1,23 +1,23 @@
 describe('Archetype', () => {
   describe('3- Classe Archetype', () => {
     it('A classe Archetype existe', () => {
-      expect('Archetypes.exists.ts').toCompile();
+      expect('Archetype.exists.ts').toCompile();
     });
 
     it('O parâmetro name da classe Archetype pode ser lido', () => {
-      expect('Archetypes.name.ts').toCompile();
+      expect('Archetype.name.ts').toCompile();
     });
 
     it('O parâmetro special da classe Archetype pode ser lido', () => {
-      expect('Archetypes.special.ts').toCompile();
+      expect('Archetype.special.ts').toCompile();
     });
 
     it('O parâmetro cost da classe Archetype pode ser lido', () => {
-      expect('Archetypes.cost.ts').toCompile();
+      expect('Archetype.cost.ts').toCompile();
     });
 
     it('O método energyType retorna uma string', () => {
-      expect('Archetypes.energyType.ts').toCompile();
+      expect('Archetype.energyType.ts').toCompile();
     });
   });
 
@@ -51,7 +51,7 @@ describe('Archetype', () => {
       //   const necromancer = new Archetypes.Necromancer('');
       //   expect(necromancer).toBeInstanceOf(Archetype);
       // });
-    
+
       it('O parâmetro name da classe Necromancer pode ser lido', () => {
         expect('Necromancer.name.ts').toCompile();
       });
@@ -66,7 +66,7 @@ describe('Archetype', () => {
       it('A classe Ranger existe', () => {
         expect('Ranger.exists.ts').toCompile();
       });
-    
+
       // it('A classe Ranger herda de Archetype', () => {
       //   const ranger = new Archetypes.Ranger('');
       //   expect(ranger).toBeInstanceOf(Archetype);
@@ -96,10 +96,10 @@ describe('Archetype', () => {
         expect('Warrior.name.ts').toCompile();
       });
 
-    //  it('O parâmetro energyType da classe Warrior pode ser lido', () => {
-    //   const warrior = new Archetypes.Warrior('');
-    //   expect(warrior.energyType).toEqual('stamina');
-    //  });
+      //  it('O parâmetro energyType da classe Warrior pode ser lido', () => {
+      //   const warrior = new Archetypes.Warrior('');
+      //   expect(warrior.energyType).toEqual('stamina');
+      //  });
     });
   });
 });
