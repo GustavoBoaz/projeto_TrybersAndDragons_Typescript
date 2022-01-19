@@ -19,7 +19,7 @@ afterAll(() => {
   let execString = "find . -type f -iname '*.js'";
   PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path '${file}'`; });
   execString += ' -delete';
-  cp.exec(execString);
+  cp.execSync(execString);
 });
 
 expect.extend({
