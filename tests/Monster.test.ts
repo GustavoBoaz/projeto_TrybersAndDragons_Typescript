@@ -1,6 +1,3 @@
-import Monster from '../src/Monster';
-import Character from '../src/Character';
-
 describe('Monster', () => {
   describe('Crie a classe Monster', function () {
     it('A classe Monster existe', () => {
