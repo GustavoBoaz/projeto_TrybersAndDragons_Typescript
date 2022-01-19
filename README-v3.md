@@ -268,9 +268,6 @@ O que será verificado:
   - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`
   - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`.
 
-
-<!-- TODO: Verificar se a necessidade de dois 'its' verificando a possibilidade de criar uma variável com _type 'stamina' no teste deste requisito  -->
-
 ⚠ Atenção: Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão (export default).
 
 ### 4 - Crie a classe `Archetype`
@@ -341,24 +338,32 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
 
 Maravilha! Agora já temos tanto nossas raças quanto nossos arquétipos e interfaces definidos, mas antes de sair por aí entrando em tavernas e calabouços, temos outra _quest_: **criar um personagem**!
 
-O personagem será composto tanto por uma raça quanto por um arquétipo. Ele é a unidade mais pe  u
+Cada personagem será composto tanto por uma raça quanto por um arquétipo. Essa classe reunirá um conjunto de características que terão o poder de fazer deste ser o mais único possível. Além disso, um personagem deve possuir tudo o que se espera de uma pessoa lutadora.
 
- - O arquivo deverá ser criado na raiz do diretório `src`;
- - A interface deverá ter os atributos e métodos:
- - O atributo `life` deve ser privado e possuir um `getter()` e um `setter()`;
- - O atributo `life` não pode ser maior que o máximo definido pela raça;
- 
+As dicas para completar essa _quest_ são: 
+
+ - O arquivo `Character` deverá ser criado na raiz do diretório `src`;
+ - A classe implementa a interface `Fighter`;
+ - A classe deverá ter o atributo `life`, que deve ser privado;
+ - `life` deve possuir um `getter()` e um `setter()`;
+ - `life` não pode ser maior que o máximo definido pela raça;
+
 
 ### 8 - Criar a classe `Battle`
+ - Simula os comportamentos de batalha entre personagens ou personagem vs montros.
+ - Recebe dois objetos como parâmetro criados a partir da interface SimpleFighter
+ - Código parcialmente implementado, já com a criação dos objetos dentro da função.
+ - Espera-se que a pessoa estudante faça a função receber os players e não mais instanciá-los dentro da função
+ - Espera-se também que a função possa receber dois objetos do tipo Fighter ou SimpleFighter
+ - A partir disso, espera-se que interface SimpleFighter seja criada a partir da segregação de atributos de Fighter
 
- - Testar LSP
- - O arquivo está em `src/placeholder`
+### 9 - Criar a classe `Monster`
 
-### 9 - Criar a classe `Monster` segrega interface
+<!-- TODO: Fazer ajustes para que implemente a interface `SimpleFighter` e não mais Fighter  -->
 
  - O arquivo deverá ser criado na raiz do diretório `src`;
  - classe `Monster` deverá exportada de forma padrão (export default).
- - A classe `Monster` deve implementar a interface `Fighter`
+ - A classe `Monster` deve implementar a interface `SimpleFighter`
   - A classe `Monster` deverá ter os seguintes atributos:
     - `lifePoints` deve ser privado e possuir o valor 85;
     - `strength` deve ser privado e possuir o valor 63;
@@ -381,6 +386,7 @@ O personagem será composto tanto por uma raça quanto por um arquétipo. Ele é
    - `Monster` pode realizar um ataque;
 
 ### 10 - Criar objetos `Monster` e `Character`
+
 
 ### 11- volta pra battle
 
