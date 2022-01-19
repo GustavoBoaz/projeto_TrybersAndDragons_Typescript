@@ -3,23 +3,23 @@ import Race, * as Races from '../src/Races';
 describe('Race', () => {
   describe('1 - Classe Race', () => {
     it('A classe Race existe', () => {
-      expect('Races.exists.ts').toCompile();
+      expect('Races.exists').toCompile();
     });
     it('O parâmetro name da classe Race pode ser lido', () => {
-      expect('Races.name.ts').toCompile();
+      expect('Races.name').toCompile();
     });
     it('O parâmetro dexterity da classe Race pode ser lido', () => {
-      expect('Races.dexterity.ts').toCompile();
+      expect('Races.dexterity').toCompile();
     });
     it('O método maxLifePoints retorna um valor numérico', () => {
-      expect('Races.maxLifePoints.ts').toCompile();
+      expect('Races.maxLifePoints').toCompile();
     });
   });
 
   describe('2 - Classes que herdam de Race', () => {
     describe('Cria a classe Dwarf que herda de Race', () => {
       it('A classe Dwarf existe', () => {
-        expect('Dwarf.exists.ts').toCompile();
+        expect('Dwarf.exists').toCompile();
       });
 
       it('A classe Dwarf herda de Race', () => {
@@ -28,22 +28,22 @@ describe('Race', () => {
       });
 
       it('O parâmetro name da classe Dwarf pode ser lido', () => {
-        expect('Dwarf.name.ts').toCompile();
+        expect('Dwarf.name').toCompile();
       });
 
       it('O parâmetro dexterity da classe Dwarf pode ser lido', () => {
-        expect('Dwarf.dexterity.ts').toCompile();
+        expect('Dwarf.dexterity').toCompile();
       });
 
       it('O parâmetro maxLifePoints existe e é igual a 80', () => {
         const dwarf = new Races.Dwarf('', 100);
         expect(dwarf.maxLifePoints).toEqual(80);
-        expect('Dwarf.maxLifePoints.ts').toCompile();
+        expect('Dwarf.maxLifePoints').toCompile();
       });
     });
     describe('Cria a classe Elf que herda de Race', () => {
       it('A classe Elf existe', () => {
-        expect('Elf.exists.ts').toCompile();
+        expect('Elf.exists').toCompile();
       });
 
       it('A classe Elf herda de Race', () => {
@@ -52,20 +52,20 @@ describe('Race', () => {
       });
 
       it('O parâmetro name da classe Elf pode ser lido', () => {
-        expect('Elf.name.ts').toCompile();
+        expect('Elf.name').toCompile();
       });
 
       it('O parâmetro dexterity da classe Elf pode ser lido', () => {
-        expect('Elf.dexterity.ts').toCompile();
+        expect('Elf.dexterity').toCompile();
       });
 
       it('O parâmetro maxLifePoints existe e é igual a 99', () => {
-        expect('Elf.maxLifePoints.ts').toCompile();
+        expect('Elf.maxLifePoints').toCompile();
       });
     });
     describe('Cria a classe Halfling que herda de Race', () => {
       it('A classe Halfling existe', () => {
-        expect('Halfling.exists.ts').toCompile();
+        expect('Halfling.exists').toCompile();
       });
 
       it('A classe Halfling herda de Race', () => {
@@ -74,20 +74,20 @@ describe('Race', () => {
       });
 
       it('O parâmetro name da classe Halfling pode ser lido', () => {
-        expect('Halfling.name.ts').toCompile();
+        expect('Halfling.name').toCompile();
       });
 
       it('O parâmetro dexterity da classe Halfling pode ser lido', () => {
-        expect('Halfling.dexterity.ts').toCompile();
+        expect('Halfling.dexterity').toCompile();
       });
 
       it('O parâmetro maxLifePoints existe e é igual a 60', () => {
-        expect('Halfling.maxLifePoints.ts').toCompile();
+        expect('Halfling.maxLifePoints').toCompile();
       });
     });
     describe('Crie a classe Orc que herda de Race', () => {
       it('A classe Orc existe', () => {
-        expect('Orc.exists.ts').toCompile();
+        expect('Orc.exists').toCompile();
       });
 
       it('A classe Orc herda de Race', () => {
@@ -96,15 +96,15 @@ describe('Race', () => {
       });
 
       it('O parâmetro name da classe Orc pode ser lido', () => {
-        expect('Orc.name.ts').toCompile();
+        expect('Orc.name').toCompile();
       });
 
       it('O parâmetro dexterity da classe Orc pode ser lido', () => {
-        expect('Orc.dexterity.ts').toCompile();
+        expect('Orc.dexterity').toCompile();
       });
 
       it('O parâmetro maxLifePoints existe e é igual a 74', () => {
-        expect('Orc.maxLifePoints.ts').toCompile();
+        expect('Orc.maxLifePoints').toCompile();
       });
     });
   });

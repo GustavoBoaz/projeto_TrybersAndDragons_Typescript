@@ -4,32 +4,32 @@ import Character from '../src/Character';
 describe('Monster', () => {
   describe('Crie a classe Monster', function () {
     it('A classe Monster existe', () => {
-      expect('Monster.exists.ts').toCompile();
+      expect('Monster.exists').toCompile();
     });
   });
 
   describe('A classe Monster deve possuir as propriedades "lifePoints", "strength" e "defense" ', function () {
     it('A propriedade "lifePoints" existe', () => {
-      expect('Monster.lifePoints.ts').toCompile();
+      expect('Monster.lifePoints').toCompile();
     });
     it('A propriedade "strength" existe', () => {
-      expect('Monster.strength.ts').toCompile();
+      expect('Monster.strength').toCompile();
     });
     it('A propriedade "defense" existe', () => {
-      expect('Monster.defense.ts').toCompile();
+      expect('Monster.defense').toCompile();
     });
   });
 
   describe('Monster pode atacar e sofrer ataques', function () {
     it('Realiza um ataque', () => {
-      // expect('Monster.attack.ts').toCompile();
+      // expect('Monster.attack').toCompile();
       // TODO: implementar assert do monster.attack
     });
   });
 
   describe(' - Monster pode sofrer um ataque', function () {
     it('Recebe um ataque', () => {
-      // expect('Monster.receiveAttack.ts').toCompile();
+      // expect('Monster.receiveAttack').toCompile();
       // TODO: implementar assert do monster.receiveDamage
     });
   });

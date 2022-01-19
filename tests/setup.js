@@ -1,6 +1,7 @@
 const ts = require('typescript');
 const path = require('path');
 const cp = require('child_process');
+const fs = require('fs');
 
 const FILES_FOLDER = path.join(__dirname, 'sources');
 
@@ -9,6 +10,10 @@ const PERMANENT_JS_FILES = [
   './tests/setup.js',
   './node_modules/*'
 ];
+
+const replaceAll = (text, search, replacement) => {
+  return text.replace(new RegExp(search, 'g'), replacement);
+};
 
 afterAll(() => {
   let execString = "find . -type f -iname '*.js'";
@@ -19,7 +24,7 @@ afterAll(() => {
 
 expect.extend({
   toCompile(fileName, emit = true) {
-    const filePath = path.join(FILES_FOLDER, `${fileName}`);
+    const filePath = path.join(FILES_FOLDER, `${fileName}.ts`);
 
     const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1, target: ts.ScriptTarget.ES2016, module: ts.ModuleKind.CommonJS, moduleResolution: ts.ModuleResolutionKind.NodeJs });
     const diagnostics = ts.getPreEmitDiagnostics(program);
@@ -38,6 +43,25 @@ expect.extend({
     return {
       pass: true,
       message: () => `Expected ${fileName}.ts to generate compile errors`,
+    };
+  },
+  toCompileAndBeEqualTo(fileName, expected) {
+    let filePath = path.join(FILES_FOLDER, `${fileName}.ts`);
+
+    const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1, target: ts.ScriptTarget.ES2016, module: ts.ModuleKind.CommonJS, moduleResolution: ts.ModuleResolutionKind.NodeJs });
+
+    program.emit();
+    filePath = filePath.replace('.ts', '.js');
+
+    const jsString = fs.readFileSync(filePath) + ' ; result();';
+    const result = eval(replaceAll(jsString, '../../src', '../src'));
+
+    return result === expected ? {
+      pass: true,
+      message: () => `Expected result of ${fileName}.js to be equal to ${expected}`,
+    } : {
+      pass: false,
+      message: () => `Expected result of ${fileName}.js to be equal to ${expected} but got ${result}`,
     };
   },
 });

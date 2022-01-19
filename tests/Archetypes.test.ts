@@ -1,39 +1,38 @@
 describe('Archetype', () => {
   describe('3- Classe Archetype', () => {
     it('A classe Archetype existe', () => {
-      expect('Archetype.exists.ts').toCompile();
+      expect('Archetype.exists').toCompile();
     });
 
     it('O parâmetro name da classe Archetype pode ser lido', () => {
-      expect('Archetype.name.ts').toCompile();
+      expect('Archetype.name').toCompile();
     });
 
     it('O parâmetro special da classe Archetype pode ser lido', () => {
-      expect('Archetype.special.ts').toCompile();
+      expect('Archetype.special').toCompile();
     });
 
     it('O parâmetro cost da classe Archetype pode ser lido', () => {
-      expect('Archetype.cost.ts').toCompile();
+      expect('Archetype.cost').toCompile();
     });
 
     it('O método energyType retorna uma string', () => {
-      expect('Archetype.energyType.ts').toCompile();
+      expect('Archetype.energyType').toCompile();
     });
   });
 
   describe('4- Classes que herdam de Archetype', () => {
     describe('Cria a classe Mage que herda de Archetype', () => {
       it('A classe Mage existe', () => {
-        expect('Mage.exists.ts').toCompile();
+        expect('Mage.exists').toCompile();
       });
 
-      // it('A classe Mage herda de Archetype', () => {
-      //   const mage = new Archetypes.Mage('');
-      //   expect(mage).toBeInstanceOf(Archetype);
-      // });
+      it('A classe Mage herda de Archetype', () => {
+        expect('Mage.extends').toCompile();
+      });
 
       it('O parâmetro name da classe "Mage" pode ser lido', () => {
-        expect('Mage.name.ts').toCompile();
+        expect('Mage.name').toCompile();
       });
 
       // it('O método energyType da Classe Mage existe e retorna uma string', () => {
@@ -44,7 +43,7 @@ describe('Archetype', () => {
 
     describe('Cria a classe Necromancer que herda de Archetype', () => {
       it('A classe Necromancer existe', () => {
-        expect('Necromancer.exists.ts').toCompile();
+        expect('Necromancer.exists').toCompile();
       });
 
       // it('A classe Necromancer herda de Archetype', () => {
@@ -53,7 +52,7 @@ describe('Archetype', () => {
       // });
 
       it('O parâmetro name da classe Necromancer pode ser lido', () => {
-        expect('Necromancer.name.ts').toCompile();
+        expect('Necromancer.name').toCompile();
       });
 
       // it('O parâmetro energyType da classe Necromancer pode ser lido', () => {
@@ -64,7 +63,7 @@ describe('Archetype', () => {
 
     describe('Cria a classe Ranger que herda de Archetype', function () {
       it('A classe Ranger existe', () => {
-        expect('Ranger.exists.ts').toCompile();
+        expect('Ranger.exists').toCompile();
       });
 
       // it('A classe Ranger herda de Archetype', () => {
@@ -73,7 +72,7 @@ describe('Archetype', () => {
       // });
 
       it('O parâmetro name da classe Ranger pode ser lido', () => {
-        expect('Ranger.name.ts').toCompile();
+        expect('Ranger.name').toCompile();
       });
 
       // it('O parâmetro energyType da classe Ranger pode ser lido', () => {
@@ -84,7 +83,7 @@ describe('Archetype', () => {
 
     describe('Cria a classe Warrior que herda de Archetype', function () {
       it('A classe Warrior existe', () => {
-        expect('Warrior.exists.ts').toCompile();
+        expect('Warrior.exists').toCompile();
       });
 
       // it('A classe Warrior herda de Archetype', () => {
@@ -93,7 +92,7 @@ describe('Archetype', () => {
       // });
 
       it('O parâmetro name da classe Warrior pode ser lido', () => {
-        expect('Warrior.name.ts').toCompile();
+        expect('Warrior.name').toCompile();
       });
 
       //  it('O parâmetro energyType da classe Warrior pode ser lido', () => {
