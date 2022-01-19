@@ -4,7 +4,7 @@ const path = require('path');
 const FILES_FOLDER = path.join(__dirname, 'sources');
 
 expect.extend({
-  toCompile(fileName) {
+  toCompile(fileName, emit = true) {
     const filePath = path.join(FILES_FOLDER, `${fileName}`);
 
     const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1, target: ts.ScriptTarget.ES2016, module: ts.ModuleKind.CommonJS, moduleResolution: ts.ModuleResolutionKind.NodeJs });
@@ -14,14 +14,16 @@ expect.extend({
       (diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error
     );
 
-    return errorDiagnostic
-      ? {
-        pass: false,
-        message: () => `Expected ${fileName}.ts to compile successfully`,
-      }
-      : {
-        pass: true,
-        message: () => `Expected ${fileName}.ts to generate compile errors`,
-      };
+    if (errorDiagnostic) return {
+      pass: false,
+      message: () => `Expected ${fileName}.ts to compile successfully`,
+    };
+
+    if (emit) program.emit();
+
+    return {
+      pass: true,
+      message: () => `Expected ${fileName}.ts to generate compile errors`,
+    };
   },
 });
