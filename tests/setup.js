@@ -1,7 +1,20 @@
 const ts = require('typescript');
 const path = require('path');
+const cp = require('child_process');
 
 const FILES_FOLDER = path.join(__dirname, 'sources');
+
+const PERMANENT_JS_FILES = [
+  './jest.config.js',
+  './tests/setup.js',
+  './node_modules/*'
+];
+
+afterAll(() => {
+  let execString = "find . -type f -iname '*.js' -exclude";
+  PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path ${file}`; });
+  cp.exec(execString);
+});
 
 expect.extend({
   toCompile(fileName, emit = true) {
@@ -27,3 +40,4 @@ expect.extend({
     };
   },
 });
+

@@ -1,17 +1,4 @@
-import { exec } from 'child_process';
-import fs from 'fs';
 import Race, * as Races from '../../src/Races';
-
-afterAll(() => {
-  const permanentFiles = ['./jest.config.js', './tests/setup.js'];
-  exec(
-    "find . -type f -not -path './node_modules/*' -iname '*.js' > jsToExclude.txt"
-  );
-  (fs.readFileSync('jsToExclude.txt') + '').split(/\r?\n/).forEach(function (line) {
-    if (!permanentFiles.includes(line)) exec(`rm ${line}`);
-  });
-  exec('rm ./jsToExclude.txt');
-});
 
 describe('Race', () => {
   describe('1 - Classe Race', () => {
