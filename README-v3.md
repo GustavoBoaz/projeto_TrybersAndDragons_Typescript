@@ -359,8 +359,6 @@ As dicas para completar essa _quest_ são:
 
 ### 9 - Criar a classe `Monster`
 
-<!-- TODO: Fazer ajustes para que implemente a interface `SimpleFighter` e não mais Fighter  -->
-
  - O arquivo deverá ser criado na raiz do diretório `src`;
  - classe `Monster` deverá exportada de forma padrão (export default).
  - A classe `Monster` deve implementar a interface `SimpleFighter`
