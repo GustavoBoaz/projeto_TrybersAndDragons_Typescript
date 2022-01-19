@@ -22,15 +22,13 @@ describe('Monster', () => {
 
   describe('Monster pode atacar e sofrer ataques', function () {
     it('Realiza um ataque', () => {
-      // expect('Monster.attack').toCompile();
-      // TODO: implementar assert do monster.attack
+      expect('Monster.attack').toCompile();
     });
   });
 
   describe(' - Monster pode sofrer um ataque', function () {
     it('Recebe um ataque', () => {
-      // expect('Monster.receiveAttack').toCompile();
-      // TODO: implementar assert do monster.receiveDamage
+      expect('Monster.receiveAttack').toCompile();
     });
   });
 });

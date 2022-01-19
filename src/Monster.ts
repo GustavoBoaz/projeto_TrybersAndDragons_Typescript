@@ -1,6 +1,6 @@
-import Fighter from './Fighter';
+import SimpleFighter from './SimpleFighter';
 
-class Monster implements Fighter {
+class Monster implements SimpleFighter {
   private $lifePoints: number;
 
   private $strength: number;
@@ -13,7 +13,7 @@ class Monster implements Fighter {
     this.$defense = 0;
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this.$strength);
   }
 
