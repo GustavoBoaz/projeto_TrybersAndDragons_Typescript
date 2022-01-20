@@ -7,4 +7,4 @@ class RaceChild extends Race {
 }
 
 const race = new RaceChild('', 80);
-race.name;
+race.name = 'RaceChild';

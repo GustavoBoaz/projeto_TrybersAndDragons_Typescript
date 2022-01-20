@@ -1,4 +1,10 @@
 abstract class Race {
+  protected static $createdRacesInstances = 0;
+
+  static get createdRacesInstances(): number {
+    return;
+  }
+
   private $name: string;
 
   private $dexterity: number;
