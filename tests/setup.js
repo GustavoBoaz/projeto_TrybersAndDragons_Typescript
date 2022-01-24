@@ -15,7 +15,7 @@ const replaceAll = (text, search, replacement) => {
   return text.replace(new RegExp(search, 'g'), replacement);
 };
 
-afterAll(() => {
+afterEach(() => {
   const findPath = process.platform === 'win32' ? '"C:\\Program Files\\Git\\usr\\bin\\find.exe"' : 'find';
   let execString = `${findPath} . -type f -iname '*.js'`;
   PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path '${file}'`; });
@@ -57,7 +57,9 @@ expect.extend({
     const jsString = fs.readFileSync(filePath) + ' ; result();';
     const result = eval(replaceAll(jsString, '../../src', '../src'));
 
-    return result === expected ? {
+    const pass = typeof result === 'object' ? JSON.stringify(result) == JSON.stringify(expected) : result === expected;
+
+    return pass ? {
       pass: true,
       message: () => `Expected result of ${fileName}.js to be equal to ${expected}`,
     } : {
