@@ -16,7 +16,8 @@ const replaceAll = (text, search, replacement) => {
 };
 
 afterAll(() => {
-  let execString = "find . -type f -iname '*.js'";
+  const findPath = process.platform === 'win32' ? '"C:\\Program Files\\Git\\usr\\bin\\find.exe"' : 'find';
+  let execString = `${findPath} . -type f -iname '*.js'`;
   PERMANENT_JS_FILES.forEach((file) => { execString += ` -not -path '${file}'`; });
   execString += ' -delete';
   cp.execSync(execString);
