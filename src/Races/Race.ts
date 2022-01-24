@@ -1,8 +1,6 @@
 abstract class Race {
-  protected static $createdRacesInstances = 0;
-
-  static get createdRacesInstances(): number {
-    return;
+  static createdRacesInstances(): number {
+    throw new Error('Not implemented');
   }
 
   private $name: string;
