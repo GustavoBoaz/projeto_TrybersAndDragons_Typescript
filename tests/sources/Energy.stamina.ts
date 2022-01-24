@@ -1,3 +1,3 @@
 import { EnergyType } from '../../src/Energy';
 
-let x: EnergyType = 'mani';
+let x: EnergyType = 'stamina';
