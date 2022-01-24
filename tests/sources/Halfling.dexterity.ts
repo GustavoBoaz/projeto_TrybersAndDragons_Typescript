@@ -1,3 +1,3 @@
-import * as Races from '../../src/Races';
-const halfling = new Races.Halfling('', 110);
-halfling.dexterity;
+import { Halfling } from '../../src/Races';
+const h = new Halfling('Lobélia Sacola-Bolseiro', 100);
+h.dexterity;

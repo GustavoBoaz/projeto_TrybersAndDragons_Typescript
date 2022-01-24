@@ -1,3 +1,3 @@
-import * as Races from '../../src/Races';
-const orc = new Races.Orc('', 100);
-orc.dexterity;
+import { Orc } from '../../src/Races';
+const o = new Orc('Shagrat', 100);
+o.dexterity;

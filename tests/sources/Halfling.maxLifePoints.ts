@@ -1,3 +1,3 @@
-import * as Races from '../../src/Races';
-const halfling = new Races.Halfling('', 110);
-halfling.maxLifePoints
+import { Halfling } from '../../src/Races';
+const h = new Halfling('Lobélia Sacola-Bolseiro', 100);
+const result = () => h.maxLifePoints;

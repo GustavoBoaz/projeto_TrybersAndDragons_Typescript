@@ -1,3 +1,3 @@
-import * as Races from '../../src/Races';
-const elf = new Races.Elf('Lúthien', 150);
-elf.name;
+import { Elf } from '../../src/Races';
+const e = new Elf('Lúthien', 100);
+e.name;

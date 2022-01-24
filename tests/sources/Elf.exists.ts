@@ -1,2 +1,2 @@
 import * as Races from '../../src/Races';
-const elf = new Races.Elf('', 150);
+const e = new Races.Elf('', 100);
