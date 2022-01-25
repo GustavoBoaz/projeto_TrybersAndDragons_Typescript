@@ -1,6 +1,6 @@
 import Energy from '../../src/Energy';
 
 let x: Energy = {
-  amount: 10,
+  amount: 45,
   type_: 'mana'
 };

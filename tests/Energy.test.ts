@@ -11,20 +11,14 @@ describe('3 - Energy', () => {
     it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 10, type_: 'stamina'}", () => {
       expect('Energy.1').toCompile();
     });
-    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 10, type_: 'mana'}", () => {
+    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 45, type_: 'mana'}", () => {
       expect('Energy.2').toCompile();
     });
-    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 45, type_: 'stamina'}", () => {
-      expect('Energy.3').toCompile();
-    });
-    it("É possível criar uma variável com o tipo da interface Energy e atribuir a ela o valor { amount: 45, type_: 'mana'}", () => {
-      expect('Energy.4').toCompile();
-    });
     it("Não é possível criar uma variável com o tipo da interface Energy sem atribuir a ela um amount", () => {
-      expect('Energy.5').not.toCompile();
+      expect('Energy.4').not.toCompile();
     });
     it("Não é possível criar uma variável com o tipo da interface Energy sem atribuir a ela um type_", () => {
-      expect('Energy.6').not.toCompile();
+      expect('Energy.5').not.toCompile();
     });
   });
 });
