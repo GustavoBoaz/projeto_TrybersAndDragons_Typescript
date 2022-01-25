@@ -1,27 +1,29 @@
 describe('Archetype', () => {
-  describe('3- Classe Archetype', () => {
+  describe('4 - Classe Archetype', () => {
     it('A classe Archetype existe', () => {
       expect('Archetype.exists').toCompile();
     });
-
+    it('A classe Archetype é abstrata', () => {
+      expect('Archetype.abstract').not.toCompile();
+    });
     it('O parâmetro name da classe Archetype pode ser lido', () => {
       expect('Archetype.name').toCompile();
     });
-
+    it('O parâmetro name da classe Archetype não pode ser alterado', () => {
+      expect('Archetypes.name.set').not.toCompile();
+    });
     it('O parâmetro special da classe Archetype pode ser lido', () => {
       expect('Archetype.special').toCompile();
     });
-
     it('O parâmetro cost da classe Archetype pode ser lido', () => {
       expect('Archetype.cost').toCompile();
     });
-
     it('O método energyType retorna uma string', () => {
       expect('Archetype.energyType').toCompile();
     });
   });
 
-  describe('4- Classes que herdam de Archetype', () => {
+  describe('5 - Classes que herdam de Archetype', () => {
     describe('Cria a classe Mage que herda de Archetype', () => {
       it('A classe Mage existe', () => {
         expect('Mage.exists').toCompile();
