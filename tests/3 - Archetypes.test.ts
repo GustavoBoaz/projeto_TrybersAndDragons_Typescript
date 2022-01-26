@@ -4,13 +4,13 @@ describe('Archetype', () => {
       expect('Archetype.exists').toCompile();
     });
     it('A classe Archetype é abstrata', () => {
-      expect('Archetype.abstract').not.toCompile();
+      expect('Archetype.abstract').notToCompile();
     });
     it('O parâmetro name da classe Archetype pode ser lido', () => {
       expect('Archetype.name').toCompile();
     });
     it('O parâmetro name da classe Archetype não pode ser alterado', () => {
-      expect('Archetypes.name.set').not.toCompile();
+      expect('Archetypes.name.set').notToCompile();
     });
     it('O parâmetro special da classe Archetype pode ser lido', () => {
       expect('Archetype.special').toCompile();
@@ -107,9 +107,9 @@ describe('Archetype', () => {
         expect('Warrior.name').toCompile();
       });
 
-       it('O parâmetro energyType da classe Warrior pode ser lido', () => {
+      it('O parâmetro energyType da classe Warrior pode ser lido', () => {
         expect('Warrior.energyType').toCompileAndBeEqualTo('stamina');
-       });
+      });
     });
   });
 });

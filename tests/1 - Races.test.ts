@@ -4,16 +4,16 @@ describe('Race', () => {
       expect('Races.exists').toCompile();
     });
     it('A classe Race é abstrata', () => {
-      expect('Races.abstract').not.toCompile();
+      expect('Races.abstract').notToCompile();
     });
     it('O método maxLifePoints da classe Race é abstrato', () => {
-      expect('Races.maxLifePoints.abstract').not.toCompile();
+      expect('Races.maxLifePoints.abstract').notToCompile();
     });
     it('O parâmetro name da classe Race pode ser lido', () => {
       expect('Races.name').toCompile();
     });
     it('O parâmetro name da classe Race não pode ser alterado', () => {
-      expect('Races.name.set').not.toCompile();
+      expect('Races.name.set').notToCompile();
     });
     it('O parâmetro dexterity da classe Race pode ser lido', () => {
       expect('Races.dexterity').toCompile();

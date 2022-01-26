@@ -15,10 +15,10 @@ describe('3 - Energy', () => {
       expect('Energy.2').toCompile();
     });
     it("Não é possível criar uma variável com o tipo da interface Energy sem atribuir a ela um amount", () => {
-      expect('Energy.4').not.toCompile();
+      expect('Energy.4').notToCompile();
     });
     it("Não é possível criar uma variável com o tipo da interface Energy sem atribuir a ela um type_", () => {
-      expect('Energy.5').not.toCompile();
+      expect('Energy.5').notToCompile();
     });
   });
 });
