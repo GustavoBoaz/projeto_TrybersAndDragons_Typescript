@@ -8,7 +8,8 @@ const FILES_FOLDER = path.join(__dirname, 'sources');
 const PERMANENT_JS_FILES = [
   './jest.config.js',
   './tests/setup.js',
-  './node_modules/*'
+  './node_modules/*',
+  './tests/testSequencer.js'
 ];
 
 const replaceAll = (text, search, replacement) => {

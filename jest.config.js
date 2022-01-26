@@ -4,4 +4,5 @@ module.exports = {
   testEnvironment: 'node',
   rootDir: './tests',
   setupFilesAfterEnv: ['./setup.js'],
+  testSequencer: './testSequencer.js',
 };
