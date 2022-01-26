@@ -43,6 +43,31 @@ expect.extend({
 
     return {
       pass: true,
+      message: () => `Expected ${fileName}.ts to compile successfully`,
+    };
+  },
+  notToCompile(fileName) {
+    const filePath = path.join(FILES_FOLDER, `${fileName}.ts`);
+
+    const program = ts.createProgram([filePath], { maxNodeModuleJsDepth: 1, target: ts.ScriptTarget.ES2016, module: ts.ModuleKind.CommonJS, moduleResolution: ts.ModuleResolutionKind.NodeJs });
+    const diagnostics = ts.getPreEmitDiagnostics(program);
+
+    const errorDiagnostic = diagnostics.find(
+      (diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error
+    );
+
+    if (!errorDiagnostic) return {
+      pass: false,
+      message: () => `Expected ${fileName}.ts to generate compile errors`,
+    };
+
+    if (errorDiagnostic.code === 6053) return {
+      pass: false,
+      message: () => `${filePath} is not a valid file. Your test is probably not testing the correct file.`,
+    };
+
+    return {
+      pass: true,
       message: () => `Expected ${fileName}.ts to generate compile errors`,
     };
   },
