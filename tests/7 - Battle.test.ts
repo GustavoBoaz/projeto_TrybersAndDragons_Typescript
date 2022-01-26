@@ -1,4 +1,4 @@
-describe('Battle', () => {
+describe('7 - Battle', () => {
   describe('Classe Battle', () => {
     it('A classe Battle existe', () => {
       expect('Battle.exists').toCompile();

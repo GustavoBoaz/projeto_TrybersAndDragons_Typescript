@@ -1,4 +1,4 @@
-describe('Monster', () => {
+describe('8 - Monster', () => {
   describe('Crie a classe Monster', function () {
     it('A classe Monster existe', () => {
       expect('Monster.exists').toCompile();
