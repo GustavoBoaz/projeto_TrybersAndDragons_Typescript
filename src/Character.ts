@@ -57,6 +57,17 @@ class Character implements Fighter {
     return this.$lifePoints;
   }
 
+  levelUp(): void {
+    this.$strength += getRandomInt(1, 10);
+    this.$defense += getRandomInt(1, 10);
+    this.$dexterity += getRandomInt(1, 10);
+    this.$maxLifePoints += getRandomInt(1, 10);
+    if (this.$maxLifePoints > this.race.maxLifePoints) {
+      this.$maxLifePoints = this.race.maxLifePoints;
+    }
+    this.$lifePoints = this.$maxLifePoints;
+  }
+
   get strength(): number {
     return this.$strength;
   }

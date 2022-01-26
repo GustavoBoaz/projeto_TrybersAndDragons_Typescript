@@ -7,6 +7,7 @@ class f implements Fighter {
     public defense: 10,
   ) { }
 
-  attack(enemy: Fighter) {
-  }
+  attack(enemy: Fighter) { }
+  levelUp(): void { }
+  special(enemy: Fighter): void { }
 };
