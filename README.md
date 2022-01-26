@@ -198,6 +198,7 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
 
 - Os arquivos sejam criados no diretório `src/Races`.
 - `Race` tenha os atributos privados `name` e `dexterity`, ambos inicializados em seu construtor.
+- A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number. Esse número é correspondente a quantidade de instâncias criadas, a partir das classses extendidas de `Race`. Porém na classe `Race` levantará apenas uma messagem de erro.
 - A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça.
 - A classe também deverá ter `getters` para acessar os valores de `name` e `dexterity`.
 
@@ -209,9 +210,15 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
 
 - O que será verificado:
   - A classe `Race` existe;
+  - A classe `Race` é abstrata;
+  - O método `maxLifePoints` da classe `Race` é abstrato;
   - O parâmetro `name` da classe `Race` pode ser lido;
+  - O parâmetro `name` da classe `Race` *NÃO* pode ser alterado;
   - O parâmetro `dexterity` da classe `Race` pode ser lido;
+  - O parâmetro `dexterity` da classe Race *NÃO* pode ser setado;
   - O método `maxLifePoints` retorna um valor numérico;
+  - O método `createdRacesInstances` deve existir e ser estático;
+  - O método `createdRacesInstances` deve levantar um erro "Not implemented"
 
 ⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser importada no no arquivo `src/Races/index.ts` e exportada lá de forma padrão (export default).  ⚠
 
@@ -228,21 +235,33 @@ Antes de prosseguir com a missão, é muito importante que você saiba que:
  
  - O que será verificado:
    - A classe `Dwarf` existe;
+   - A classe `Dwarf` herda de `Race`;
+   - O parâmetro `name` da classe `Dwarf` pode ser lido;
+   - O parâmetro `dexterity` da classe `Dwarf` pode ser lido;
+   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Dwarf`;
+   - O parâmetro `maxLifePoints` da classe `Dwarf` existe e é igual a 80;
    - A classe `Elf` existe;
+   - A classe `Elf` herda de `Race`;
+   - O parâmetro `name` da classe `Elf` pode ser lido;
+   - O parâmetro `dexterity` da classe `Elf` pode ser lido;
+   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Elf`;
+   - O parâmetro `maxLifePoints` da classe `Elf` existe e é igual a 99;
    - A classe `Halfling` existe;
+   - A classe `Halfling` herda de `Race`;
+   - O parâmetro `name` da classe `Halfling` pode ser lido;
+   - O parâmetro `dexterity` da classe `Halfling` pode ser lido;
+   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Halfling`;
+   - O parâmetro `maxLifePoints` da classe `Halfling` existe e é igual a 60;
    - A classe `Orc` existe;
+   - A classe `Orc` herda de `Race`;
+   - O parâmetro `name` da classe `Orc` pode ser lido;
+   - O parâmetro `dexterity` da classe `Orc` pode ser lido;
+   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Orc`;
+   - O parâmetro `maxLifePoints` da classe `Orc` existe e é igual a 74;
    - É possível criar um objeto da classe `Dwarf` corretamente;
    - É possível criar um objeto da classe `Elf` corretamente;
    - É possível criar um objeto da classe `Halfling` corretamente;
-   - É possível criar um objeto da classe `Orc` corretamente;
-   - O parâmetro name da classe `Dwarf` pode ser lido;
-   - O parâmetro name da classe `Elf` pode ser lido;
-   - O parâmetro name da classe `Halfling` pode ser lido;
-   - O parâmetro name da classe `Orc` pode ser lido;
-   - O parâmetro `maxLifePoints` existe na classe `Dwarf`e possui valor entre 75 e 80;
-   - O parâmetro `maxLifePoints` existe na classe `Elf`e possui valor entre 95 e 99;
-   - O parâmetro `maxLifePoints` existe na classe `Halfling`e possui valor entre 50 e 60;
-   - O parâmetro `maxLifePoints` existe na classe `Orc`e possui valor entre 70 e 80;
+   - É possível criar um objeto da classe `Orc` corretamente
 
 ⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Races/index.ts` e lá exportas. ⚠
 
@@ -264,9 +283,13 @@ Sua próxima missão é tornar possível o uso dessas energias. Para isso:
 - Para implementar a interface `Energy`, é necessário criar um type `EnergyType` que poderá ser definido como `'mana'` ou `'stamina'`
 
 O que será verificado:
-  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'mana'`
-  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`
-  - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`.
+  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'mana'`;
+  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`;
+  - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 10, type_: 'stamina'}`;
+  - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 45, type_: 'mana'}`;
+  - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
+  - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `amount`;
+  - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`
 
 ⚠ Atenção: Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão (export default).
 
@@ -275,12 +298,18 @@ O que será verificado:
 Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua próxima _quest_ será **criar a classe abstrata `Archetype`**.
 
 - Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
+- A classe `Race` deverá ter um método estático chamado `createdArchetypeInstances` que retorna um number. Esse número é correspondente a quantidade de instâncias criadas, a partir das classses extendidas de `Archetype`. Porém na classe `Archetype` levantará apenas uma messagem de erro.
 - A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
 - O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
 
  - O que será verificado:
    - A classe `Archetype` existe;
+   - A classe `Archetype` é abstrata;
    - O parâmetro `name` da classe `Archetype` pode ser lido;
+   - O parâmetro `name` da classe `Archetype` não pode ser alterado;
+   - O parâmetro `special` da classe `Archetype` pode ser lido;
+   - O parâmetro `cost` da classe `Archetype` pode ser lido;
+   - O método `energyType` retorna uma string
 
 ⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado no diretório `src/Archetypes` e a classe `Archetypes` deve ser importada no arquivo `src/Archetypes/index.ts` e lá exportada de forma padrão (export default). ⚠
 
@@ -296,9 +325,25 @@ Como você pode imaginar, há diversos arquétipos diferentes no mundo de _Trybe
 
  - O que será verificado:
    - A classe `Mage` existe;
+   - A classe `Mage` herda de `Archetype`;
+   - O parâmetro `name` da classe `Mage` pode ser lido;
+   - O método `energyType` da Classe `Mage` existe e retorna uma string;
+   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Mage`;
    - A classe `Necromancer` existe;
+   - A classe `Necromancer` herda de `Archetype`;
+   - O parâmetro `name` da classe `Necromancer` pode ser lido;
+   - O método `energyType` da Classe `Necromancer` existe e retorna uma string;
+   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Necromancer`;
    - A classe `Warrior` existe;
+   - A classe `Warrior` herda de `Archetype`;
+   - O parâmetro `name` da classe `Warrior` pode ser lido;
+   - O método `energyType` da Classe `Warrior` existe e retorna uma string;
+   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`;
    - A classe `Ranger` existe;
+   - A classe `Ranger` herda de `Archetype`;
+   - O parâmetro `name` da classe `Ranger` pode ser lido;
+   - O método `energyType` da Classe `Ranger` existe e retorna uma string;
+   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Ranger`;
    - É possível criar um objeto da classe `Mage` corretamente;
    - É possível criar um objeto da classe `Necromancer` corretamente;
    - É possível criar um objeto da classe `Warrior` corretamente;
@@ -327,10 +372,15 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   attack();
   receiveDamage();
   ```
-
- - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`.
- - O método `attack`, que recebe outro ser do tipo `Fighter` como parâmetro e não retorna nada;
- - O método `receiveDamage`, que recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number`;
+  - O que será verificado:
+    - A interface `Fighter` existe;
+    - A interface `Fighter` pode ser implementada corretamente;
+    - A interface `Fighter` possui o atributo `lifePoints`;
+    - A interface `Fighter` possui o atributo `strength`;
+    - A interface `Fighter` possui o atributo `defense`;
+    - A interface `Fighter` possui o método `attack`, que recebe um `enemy` do tipo `Fighter`;
+    - A interface `Fighter` possui o método `receiveDamage`, que recebe um `amount` do tipo number;
+    - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`
 
 ⚠ Atenção: Para que os testes funcionem corretamente, a interface `Fighter` deve ser exportada de forma padrão (export default).
 
@@ -344,6 +394,8 @@ As dicas para completar essa _quest_ são:
 
  - O arquivo `Character` deverá ser criado na raiz do diretório `src`;
  - A classe implementa a interface `Fighter`;
+ - A classe `Character` possui uma `Race`;
+ - A classe `Character` possui um `Archetype`;
  - A classe deverá ter o atributo `life`, que deve ser privado;
  - `life` deve possuir um `getter()` e um `setter()`;
  - `life` não pode ser maior que o máximo definido pela raça;
@@ -356,6 +408,10 @@ As dicas para completar essa _quest_ são:
  - Espera-se que a pessoa estudante faça a função receber os players e não mais instanciá-los dentro da função
  - Espera-se também que a função possa receber dois objetos do tipo Fighter ou SimpleFighter
  - A partir disso, espera-se que interface SimpleFighter seja criada a partir da segregação de atributos de Fighter
+
+  - O que será verificado:
+    - A classe `Battle` existe;
+    - A função `fight` pode ser acessada
 
 ### 9 - Criar a classe `Monster`
 
