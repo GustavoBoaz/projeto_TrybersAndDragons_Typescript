@@ -1,4 +1,4 @@
-describe('6 - Interface Fighter', () => {
+describe('06 - Interface Fighter', () => {
   it('A interface Fighter existe', () => {
     expect('Fighter.exists').toCompile();
   });

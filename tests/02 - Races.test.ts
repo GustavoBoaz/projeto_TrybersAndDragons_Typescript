@@ -1,4 +1,4 @@
-describe('2 - Classes que herdam de Race', () => {
+describe('02 - Classes que herdam de Race', () => {
   describe('Cria a classe Dwarf que herda de Race', () => {
     it('A classe Dwarf existe', () => {
       expect('Dwarf.exists').toCompile();

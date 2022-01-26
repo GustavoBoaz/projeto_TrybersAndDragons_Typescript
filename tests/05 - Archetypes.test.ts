@@ -1,4 +1,4 @@
-describe('5 - Classes que herdam de Archetype', () => {
+describe('05 - Classes que herdam de Archetype', () => {
   describe('Cria a classe Mage que herda de Archetype', () => {
     it('O método createdArchetypeInstances deve retornar o número correto de instâncias criadas da classe Mage', () => {
       expect('Mage.createdArchetypeInstances').toCompileAndBeEqualTo([1, 2, 3]);

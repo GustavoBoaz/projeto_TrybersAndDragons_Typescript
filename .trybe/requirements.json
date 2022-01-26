@@ -1,0 +1,59 @@
+{
+    "requirements": [
+        {
+            "description": "01 - Classe Race",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "02 - Classes que herdam de Race",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "03 - Energy",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "04 - Classe Archetype",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "05 - Classes que herdam de Archetype",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "06 - Interface Fighter",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "07 - Classe Character",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "08 - Classe Battle",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "09 - Interface SimpleFighter",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "10 - Classe Monster",
+            "bonus": false,
+            "skill_ids": []
+        },
+        {
+            "description": "11 - Classes que herdam de Battle",
+            "bonus": true,
+            "skill_ids": []
+        }
+    ]
+}
