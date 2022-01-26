@@ -66,6 +66,7 @@ class Character implements Fighter {
       this.$maxLifePoints = this.race.maxLifePoints;
     }
     this.$lifePoints = this.$maxLifePoints;
+    this.energy.amount = 10;
   }
 
   get strength(): number {
