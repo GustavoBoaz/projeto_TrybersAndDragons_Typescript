@@ -10,7 +10,7 @@ describe('Archetype', () => {
       expect('Archetype.name').toCompile();
     });
     it('O parâmetro name da classe Archetype não pode ser alterado', () => {
-      expect('Archetypes.name.set').notToCompile();
+      expect('Archetype.name.set').notToCompile();
     });
     it('O parâmetro special da classe Archetype pode ser lido', () => {
       expect('Archetype.special').toCompile();
