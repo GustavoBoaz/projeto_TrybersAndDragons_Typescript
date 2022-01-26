@@ -1,11 +1,10 @@
-import Fighter from './Fighter';
+import Fighter, { SimpleFighter } from './Fighter';
 import Energy from './Energy';
 import Archetype from './Archetypes';
 import Mage from './Archetypes/Mage';
 import Race from './Races';
 import Elf from './Races/Elf';
 import getRandomInt from './utils';
-import SimpleFighter from './SimpleFighter';
 
 class Character implements Fighter {
   private $lifePoints: number;

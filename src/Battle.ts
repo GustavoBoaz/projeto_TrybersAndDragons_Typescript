@@ -1,4 +1,4 @@
-import SimpleFighter from './SimpleFighter';
+import { SimpleFighter } from './Fighter';
 
 class Battle {
   private static $inBattle: SimpleFighter[] = [];

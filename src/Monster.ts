@@ -1,4 +1,4 @@
-import SimpleFighter from './SimpleFighter';
+import { SimpleFighter } from './Fighter';
 
 class Monster implements SimpleFighter {
   private $lifePoints: number;
