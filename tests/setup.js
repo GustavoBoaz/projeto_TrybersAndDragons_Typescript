@@ -90,7 +90,7 @@ expect.extend({
       message: () => `Expected result of ${fileName}.js to be equal to ${expected}`,
     } : {
       pass: false,
-      message: () => `Expected result of ${fileName}.js to be equal to ${expected} but got ${result}`,
+      message: () => `Expected result of ${fileName}.js to be equal to ${expected} but got ${typeof result === 'object' ? JSON.stringify(result) : result}`,
     };
   },
 });
