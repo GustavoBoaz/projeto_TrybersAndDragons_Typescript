@@ -23,9 +23,10 @@ describe('07 - Classe Character', () => {
     expect('Character.defense').toCompile();
     expect('Character.defense.set').notToCompile();
   });
-  it('Um Character possui um atributo energy, que pode ser lido mas não pode ser setado', () => {
+  it('Um Character possui um atributo energy, que pode ser lido mas não pode ser setado nem ter um de seus valores internos alterados', () => {
     expect('Character.energy').toCompile();
     expect('Character.energy.set').notToCompile();
+    expect('Character.energy.alter').toCompileAndBeEqualTo(true);
   });
   it('Um Character possui um atributo dexterity, que pode ser lido mas não pode ser setado', () => {
     expect('Character.dexterity').toCompile();
