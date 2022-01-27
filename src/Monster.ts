@@ -5,12 +5,9 @@ class Monster implements SimpleFighter {
 
   private $strength: number;
 
-  private $defense: number;
-
   constructor() {
     this.$lifePoints = 85;
     this.$strength = 63;
-    this.$defense = 0;
   }
 
   attack(enemy: SimpleFighter): void {
@@ -25,10 +22,6 @@ class Monster implements SimpleFighter {
 
   get strength(): number {
     return this.$strength;
-  }
-
-  public get defense(): number {
-    return this.$defense;
   }
 
   public get lifePoints(): number {

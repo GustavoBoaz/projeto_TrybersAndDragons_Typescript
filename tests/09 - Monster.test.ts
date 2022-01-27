@@ -1,31 +1,25 @@
-describe('10 - Classe Monster', () => {
-  describe('Crie a classe Monster', function () {
-    it('A classe Monster existe', () => {
-      expect('Monster.exists').toCompile();
-    });
+describe('09 - Classe Monster', () => {
+  it('A classe Monster existe', () => {
+    expect('Monster.exists').toCompile();
   });
-
-  describe('A classe Monster deve possuir as propriedades "lifePoints", "strength" e "defense" ', function () {
-    it('A propriedade "lifePoints" existe', () => {
-      expect('Monster.lifePoints').toCompile();
-    });
-    it('A propriedade "strength" existe', () => {
-      expect('Monster.strength').toCompile();
-    });
-    it('A propriedade "defense" existe', () => {
-      expect('Monster.defense').toCompile();
-    });
+  it('A classe Monster implementa a interface SimpleFighter', () => {
+    expect('Monster.implements').toCompile();
   });
-
-  describe('Monster pode atacar e sofrer ataques', function () {
-    it('Realiza um ataque', () => {
-      expect('Monster.attack').toCompile();
-    });
+  it('Um Monster possui um atributo lifePoints, que pode ser lido mas não pode ser setado', () => {
+    expect('Monster.lifePoints').toCompile();
+    expect('Monster.lifePoints.set').notToCompile();
   });
-
-  describe(' - Monster pode sofrer um ataque', function () {
-    it('Recebe um ataque', () => {
-      expect('Monster.receiveAttack').toCompile();
-    });
+  it('Um Monster possui um atributo strength, que pode ser lido mas não pode ser setado', () => {
+    expect('Monster.strength').toCompile();
+    expect('Monster.strength.set').notToCompile();
+  });
+  it('Um Monster pode receber danos através do método receiveDamage, fazendo com que seus lifePoints caiam o valor do parâmetro amount, devendo retornar -1 caso os lifePoints tenham chegado a 0 ou menos', () => {
+    expect('Monster.receiveDamage').toCompile();
+  });
+  it('Um Monster pode atacar um Character, e o Character receberá dano entre o valor do atributo strength do Monster que ataca e este valor decrescido do valor do atributo defense do Character que defende', () => {
+    expect('Monster.attack').toCompile();
+  });
+  it('Um Character pode atacar um Monster, e o Monster receberá de dano o valor do atributo strength do Character que o ataca', () => {
+    expect('Monster.receiveAttack').toCompile();
   });
 });

@@ -41,4 +41,5 @@ describe('07 - Classe Character', () => {
   it('Um Character pode atacar outro Character, e o outro Character receberá dano entre o valor do atributo strength do Character que ataca e este valor decrescido do valor do atributo defense do Character que defende', () => {
     expect('Character.attack').toCompileAndBeEqualTo(true);
   });
+  // TODO: testar special
 });
