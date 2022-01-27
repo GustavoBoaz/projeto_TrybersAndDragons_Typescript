@@ -7,4 +7,7 @@ describe('08 - Classe Battle', () => {
       expect('Battle.fightAcess').toCompile();
     });
   });
+  // TODO: Testar Open Closed
+  // TODO: Testar Liskov Substitution
+  // TODO: Testar Dependency Inversion
 });
