@@ -24,7 +24,7 @@ class PVP extends Battle {
   }
 
   private enemyFightsPlayer() {
-    if (getRandomInt(1, 10) > 7) this.enemy.special(this.enemy);
+    if (getRandomInt(1, 10) > 7) this.enemy.special(this.player);
     else this.enemy.attack(this.player);
   }
 }
