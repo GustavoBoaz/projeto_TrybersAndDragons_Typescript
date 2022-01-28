@@ -1,11 +1,10 @@
-import Character from '../Character';
-import { SimpleFighter } from '../Fighter';
+import Fighter, { SimpleFighter } from '../Fighter';
 import getRandomInt from '../utils';
 import Battle from './Battle';
 
 class PVE extends Battle {
   constructor(
-    protected player: Character,
+    protected player: Fighter,
     protected enemies: SimpleFighter[],
   ) {
     super(player);

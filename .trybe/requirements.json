@@ -46,12 +46,12 @@
             "skill_ids": []
         },
         {
-            "description": "10 - Classe PVE",
+            "description": "10 - Classe PVP",
             "bonus": false,
             "skill_ids": []
         },
         {
-            "description": "11 - Classe PVP",
+            "description": "11 - Classe PVE",
             "bonus": true,
             "skill_ids": []
         },
