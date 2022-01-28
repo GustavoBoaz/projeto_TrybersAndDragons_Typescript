@@ -3,7 +3,7 @@ import Fighter from '../Fighter';
 import getRandomInt from '../utils';
 import Battle from './Battle';
 
-class PVE extends Battle {
+class PVP extends Battle {
   constructor(
     protected player: Character,
     protected enemy: Fighter,
@@ -30,4 +30,4 @@ class PVE extends Battle {
   }
 }
 
-export default PVE;
+export default PVP;
