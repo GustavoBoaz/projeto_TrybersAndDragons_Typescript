@@ -36,22 +36,27 @@
             "skill_ids": []
         },
         {
-            "description": "08 - Classe Battle",
+            "description": "08 - Interface SimpleFighter",
             "bonus": false,
             "skill_ids": []
         },
         {
-            "description": "09 - Interface SimpleFighter",
+            "description": "09 - Classe Monster",
             "bonus": false,
             "skill_ids": []
         },
         {
-            "description": "10 - Classe Monster",
+            "description": "10 - Classe PVE",
             "bonus": false,
             "skill_ids": []
         },
         {
-            "description": "11 - Classes que herdam de Battle",
+            "description": "11 - Classe PVP",
+            "bonus": true,
+            "skill_ids": []
+        },
+        {
+            "description": "12 - Arquivo index",
             "bonus": true,
             "skill_ids": []
         }
