@@ -56,7 +56,12 @@
             "skill_ids": []
         },
         {
-            "description": "12 - Arquivo index",
+            "description": "12 - Classe Dragon",
+            "bonus": true,
+            "skill_ids": []
+        },
+        {
+            "description": "13 - Arquivo index",
             "bonus": true,
             "skill_ids": []
         }

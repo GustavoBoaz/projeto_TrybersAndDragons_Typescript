@@ -1,8 +1,8 @@
-describe('12 - Arquivo index', () => {
+describe('13 - Arquivo index', () => {
   it('Crie 3 objetos do tipo Character e os exporte no arquivo index como player1, player2 e player3; Rode o método levelUp algumas vezes no player1', () => {
     expect('index.characters').toCompileAndBeEqualTo(true);
   });
-  it('Crie 2 objetos do tipo Monster e os exporte no arquivo index como monster1, monster2', () => {
+  it('Crie 2 objetos do tipo Monster, sendo o segundo um Dragon, e os exporte no arquivo index como monster1, monster2', () => {
     expect('index.monsters').toCompile();
   });
   it('Crie um objeto do tipo PVP (com os Characters player2 e player3) e o exporte no arquivo index como pvp; NÃO execute o método pvp.fight', () => {
@@ -14,6 +14,4 @@ describe('12 - Arquivo index', () => {
   it('Crie uma função chamada runBattles, que recebe um array de Battles e chama em seu interior o método battle.fight', () => {
     expect('index.OCP').toCompileAndBeEqualTo(true);
   });
-  // TODO: Criar objetos character, monster, PVP e PVE, e colocar algumas batalhas pra acontecer
-  // TODO: Testar Open Closed criando uma função que pode rodar diversas batalhas, sejam elas PVP ou PVE ou similares, desde que tenham o método fight
 });

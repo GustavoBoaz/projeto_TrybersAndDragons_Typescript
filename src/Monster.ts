@@ -1,7 +1,7 @@
 import { SimpleFighter } from './Fighter';
 
 class Monster implements SimpleFighter {
-  private $lifePoints: number;
+  protected $lifePoints: number;
 
   private $strength: number;
 
