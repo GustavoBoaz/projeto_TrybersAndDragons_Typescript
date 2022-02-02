@@ -371,30 +371,36 @@ Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor p
 
 ### 6 - Criar a interface `Fighter`
 
-Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável. Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas. Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
+Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável.
+Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas.
+Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
 
-Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`. Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
+Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`.
+Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
 
- - O arquivo deverá ser criado na raiz do diretório `src`;
- - A interface deverá ter os atributos e métodos:
+- O arquivo deverá ser criado na raiz do diretório `src`;
+- A interface deverá possuir os atributos:
+  - lifePoints, do tipo number
+  - strength, do tipo number
+  - defense, do tipo number
+  - energy, do tipo Energy
+- A interface deverá possuir os métodos:
+  - attack
+  - special
+  - receiveDamage
+  - levelUp
 
-  ```typescript
-  lifePoints: number;
-  strength: number;
-  defense: number;
-  energy: Energy;
-  attack();
-  receiveDamage();
-  ```
-  - O que será verificado:
-    - A interface `Fighter` existe;
-    - A interface `Fighter` pode ser implementada corretamente;
-    - A interface `Fighter` possui o atributo `lifePoints`;
-    - A interface `Fighter` possui o atributo `strength`;
-    - A interface `Fighter` possui o atributo `defense`;
-    - A interface `Fighter` possui o método `attack`, que recebe um `enemy` do tipo `Fighter`;
-    - A interface `Fighter` possui o método `receiveDamage`, que recebe um `amount` do tipo number;
-    - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`
+- O que será verificado:
+  - A interface `Fighter` existe;
+  - A interface `Fighter` pode ser implementada corretamente;
+  - A interface `Fighter` possui o atributo `lifePoints`;
+  - A interface `Fighter` possui o atributo `strength`;
+  - A interface `Fighter` possui o atributo `defense`;
+  - A interface `Fighter` possui o método `attack`, que recebe um `enemy` do tipo `Fighter`;
+  - A interface `Fighter` possui o método `special`, que recebe um `enemy` do tipo `Fighter`
+  - A interface `Fighter` possui o método `receiveDamage`, que recebe um `amount` do tipo number;
+  - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`;
+  - A interface `Fighter` possui o método `levelUp`, que não recebe parâmetros nem retorna nada.
 
 ⚠ Atenção: Para que os testes funcionem corretamente, a interface `Fighter` deve ser exportada de forma padrão (export default).
 
