@@ -408,20 +408,33 @@ Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informa
 
 Maravilha! Agora já temos tanto nossas raças quanto nossos arquétipos e interfaces definidos, mas antes de sair por aí entrando em tavernas e calabouços, temos outra _quest_: **criar um personagem**!
 
-Cada personagem será composto tanto por uma raça quanto por um arquétipo. Essa classe reunirá um conjunto de características que terão o poder de fazer deste ser o mais único possível. Além disso, um personagem deve possuir tudo o que se espera de uma pessoa lutadora.
+Cada personagem será composto tanto por uma raça quanto por um arquétipo. Essa classe reunirá um conjunto de características que terão o poder de fazer deste ser o mais único possível.
+Além disso, um personagem deve possuir tudo o que se espera de alguém que luta.
 
 As dicas para completar essa _quest_ são: 
 
- - O arquivo `Character` deverá ser criado na raiz do diretório `src`;
- - A classe implementa a interface `Fighter`;
- - A classe `Character` possui uma `Race`;
- - A classe `Character` possui um `Archetype`;
- - A classe deverá ter o atributo `life`, que deve ser privado;
- - `life` deve possuir um `getter()` e um `setter()`;
- - `life` não pode ser maior que o máximo definido pela raça;
+- O arquivo `Character.ts` deverá ser criado na raiz do diretório `src`;
+- A classe implementa a interface `Fighter`;
+- A classe `Character` possui uma `Race`, que por padrão deve ser uma instância de `Elf`;
+- A classe `Character` possui um `Archetype`, que por padrão deve ser uma instância de `Mage`;
 
+- O que será verificado:
+  - A classe `Character` existe;
+  - A classe `Character` implementa a interface `Fighter`;
+  - Um `Character` possui uma `Race`;
+  - Um `Character` possui um `Archetype`;
+  - Um `Character` possui um atributo `lifePoints`, que pode ser lido mas não pode ser setado;
+  - Um `Character` possui um atributo `strength`, que pode ser lido mas não pode ser setado;
+  - Um `Character` possui um atributo `defense`, que pode ser lido mas não pode ser setado;
+  - Um `Character` possui um atributo `energy`, que pode ser lido mas não pode ser setado nem ter um de seus valores internos alterados;
+  - Um `Character` possui um atributo `dexterity`, que pode ser lido mas não pode ser setado;
+  - Um `Character` pode subir de nível através do método `levelUp`, e seus atributos (`maxLifePoints`, `strength`, `dexterity`, `defense`) ficarão no mínimo 1 ponto e no máximo 10 pontos maiores (sendo que `lifePoints` nunca poderá ser maior que o `maxLifePoints` da `Race`), sua vida ficará completamente cheia (`lifePoints` ficará igual ao novo `maxLifePoints`) e sua energia também ficará cheia (`energy.amount` será igual a 10);
+  - Um `Character` pode receber danos através do método `receiveDamage`, fazendo com que seus `lifePoints` caiam entre o valor do parâmetro `amount` e este mesmo valor decrescido da `defense` do `Character` (com o limite inferior de 0), e o `receiveDamage` retorna os `lifePoints` atuais do `Character`, devendo retornar -1 caso os `lifePoints` tenham chegado a 0 ou menos;
+  - Um `Character` pode atacar outro `Character`, e o outro `Character` receberá dano entre o valor do atributo `strength` do `Character` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende.
 
-### 8 - Criar a classe `Battle`
+⚠ Atenção: Para que os testes funcionem corretamente, a classe `Character` deve ser exportada de forma padrão (export default).
+
+### 8 - Criar a interface `SimpleFighter`
  - Simula os comportamentos de batalha entre personagens ou personagem vs montros.
  - Recebe dois objetos como parâmetro criados a partir da interface SimpleFighter
  - Código parcialmente implementado, já com a criação dos objetos dentro da função.
@@ -459,8 +472,11 @@ As dicas para completar essa _quest_ são:
    - `Monster` pode sofrer um ataque;
    - `Monster` pode realizar um ataque;
 
-### 10 - Criar objetos `Monster` e `Character`
+### 10 - Criar a classe `PVP`
 
+### 11 - Criar a classe `PVE`
 
-### 11- volta pra battle
+### 12 - Criar a classe `Dragon`
+
+### 13 - Criar objetos no arquivo `index`
 
