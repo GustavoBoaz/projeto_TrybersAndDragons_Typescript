@@ -524,4 +524,19 @@ O que será verificado:
 
 ### 12 - Criar a classe `Dragon`
 
+O mundo de Trybers and Dragons não se chamaria assim se não existissem `Dragons`, não é?
+Estes seres magníficos aqui são representados como `Monsters`, só que com a característica especial de possuírem um valor de vida bem elevado.
+Sua próxima _quest_: **criar a classe `Dragon`**
+
+As dicas para completar essa _quest_ são:
+
+- O arquivo que deverá ser criado é o `src/Dragon.ts`;
+- Faça com que `Dragon` herde de `Monster` que você já deve ter criado;
+
+O que será verificado:
+
+- A classe `Dragon` existe
+- A classe `Dragon` herda de `Monster`
+- Um `Dragon` deve ter 999 no valor do atributo `lifePoints`
+
 ### 13 - Criar objetos no arquivo `index`
