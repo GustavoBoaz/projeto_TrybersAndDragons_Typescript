@@ -56,7 +56,7 @@ jobs:
 
   evaluator:
     runs-on: self-hosted
-    depends-on: linter
+    needs: linter
 
     steps:
       - name: Fetch project repository
