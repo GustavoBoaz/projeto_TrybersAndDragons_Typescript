@@ -483,6 +483,8 @@ As dicas para completar essa _quest_ são:
 - Um `Monster` pode atacar um `Character`, e o `Character` receberá dano entre o valor do atributo `strength` do `Monster` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende
 - Um `Character` pode atacar um `Monster`, e o `Monster` receberá de dano o valor do atributo `strength` do `Character` que o ataca
 
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Monster` deve ser criada no arquivo `src/Monster.ts` e lá exportada de forma padrão (export default). ⚠
+
 ### 10 - Criar a classe `PVP`
 
 Se existem seres que lutam, existem lutas.
@@ -503,6 +505,8 @@ O que será verificado:
 - A classe `PVP` pode ser utilizada onde a classe `Battle` é esperada, e um `Characters` com level bem elevado ganham uma luta contra `Characters` level 0
 - A classe `PVP` pode receber tanto dois `Characters` quanto duas instâncias de uma implementação diferente de `Fighter`
 
+⚠ Atenção: para que os testes funcionem corretamente, a classe `PVP` deve ser importada no arquivo `src/Battle/index.ts` e lá exportada. ⚠
+
 ## Requisitos Bônus
 
 ### 11 - Criar a classe `PVE`
@@ -522,6 +526,8 @@ O que será verificado:
 - A classe `PVE` pode ser utilizada onde a classe `Battle` é esperada, e um `Character` com level bem elevado ganha uma luta contra somente um `Monster`, e um `Character` com level baixo perde numa luta contra diversos `Monsters`
 - A classe `PVE` pode receber tanto `Character` e um array com um `Monster` quanto implementações diferentes de `Fighter` e `SimpleFighter` que não são `Character` nem `Monster`
 
+⚠ Atenção: para que os testes funcionem corretamente, a classe `PVE` deve ser importada no arquivo `src/Battle/index.ts` e lá exportada. ⚠
+
 ### 12 - Criar a classe `Dragon`
 
 O mundo de Trybers and Dragons não se chamaria assim se não existissem `Dragons`, não é?
@@ -538,5 +544,7 @@ O que será verificado:
 - A classe `Dragon` existe
 - A classe `Dragon` herda de `Monster`
 - Um `Dragon` deve ter 999 no valor do atributo `lifePoints`
+
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Dragon` deve ser criada no arquivo `src/Dragon.ts` e lá exportada de forma padrão (export default). ⚠
 
 ### 13 - Criar objetos no arquivo `index`
