@@ -367,7 +367,7 @@ Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor p
   - O parâmetro `energyType` da classe `Warrior` pode ser lido
   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`
 
-⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Archetypes/index.ts` e lá exportas. ⚠
+⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Archetypes/index.ts` e lá exportadas. ⚠
 
 ### 6 - Criar a interface `Fighter`
 
@@ -378,7 +378,7 @@ Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutador
 Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`.
 Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
 
-- O arquivo deverá ser criado na raiz do diretório `src`;
+- O arquivo deverá ser criado no diretório `src/Fighter`;
 - A interface deverá possuir os atributos:
   - lifePoints, do tipo number
   - strength, do tipo number
@@ -402,7 +402,7 @@ Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informa
   - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`;
   - A interface `Fighter` possui o método `levelUp`, que não recebe parâmetros nem retorna nada.
 
-⚠ Atenção: Para que os testes funcionem corretamente, a interface `Fighter` deve ser exportada de forma padrão (export default).
+⚠ Atenção: para que os testes funcionem corretamente, a interface `Fighter` deve ser importada no no arquivo `src/Fighter/index.ts` e lá exportada de forma padrão (export default). ⚠
 
 ### 7 - Crie a classe `Character`
 
@@ -435,16 +435,29 @@ As dicas para completar essa _quest_ são:
 ⚠ Atenção: Para que os testes funcionem corretamente, a classe `Character` deve ser exportada de forma padrão (export default).
 
 ### 8 - Criar a interface `SimpleFighter`
- - Simula os comportamentos de batalha entre personagens ou personagem vs montros.
- - Recebe dois objetos como parâmetro criados a partir da interface SimpleFighter
- - Código parcialmente implementado, já com a criação dos objetos dentro da função.
- - Espera-se que a pessoa estudante faça a função receber os players e não mais instanciá-los dentro da função
- - Espera-se também que a função possa receber dois objetos do tipo Fighter ou SimpleFighter
- - A partir disso, espera-se que interface SimpleFighter seja criada a partir da segregação de atributos de Fighter
 
-  - O que será verificado:
-    - A classe `Battle` existe;
-    - A função `fight` pode ser acessada
+Uau, nosso universo de T&D tá ficando muito bacana!
+Mas nem todo mundo que luta é um ser possuidor de capacidades avançadas, como se preocupar com a defesa ou realizar ataques especiais.
+Vamos para mais uma _quest_: **criar a interface lutador simples**
+
+As dicas para completar essa _quest_ são:
+
+- O arquivo deverá ser criado no diretório `src/Fighter`;
+- A interface deverá possuir os atributos:
+  - lifePoints, do tipo number
+  - strength, do tipo number
+- A interface deverá possuir os métodos:
+  - attack
+  - receiveDamage
+
+- O que será verificado:
+  - A interface `SimpleFighter` existe
+  - A interface `SimpleFighter` possui o atributo `lifePoints`
+  - A interface `SimpleFighter` possui o atributo `strength`
+  - A interface `SimpleFighter` possui o método `attack`, que recebe um `enemy` do tipo `SimpleFighter`
+  - A interface `SimpleFighter` possui o método `receiveDamage`, que recebe um `amount` do tipo `number`
+
+⚠ Atenção: para que os testes funcionem corretamente, a interface `SimpleFighter` deve ser importada no no arquivo `src/Fighter/index.ts` e lá exportada. ⚠
 
 ### 9 - Criar a classe `Monster`
 
@@ -473,6 +486,8 @@ As dicas para completar essa _quest_ são:
    - `Monster` pode realizar um ataque;
 
 ### 10 - Criar a classe `PVP`
+
+## Requisitos Bônus
 
 ### 11 - Criar a classe `PVE`
 
