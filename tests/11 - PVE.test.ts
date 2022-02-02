@@ -8,5 +8,4 @@ describe('11 - Classe PVE', () => {
   it('A classe PVE pode receber tanto Character e um array com um Monster quanto implementações diferentes de Fighter e SimpleFighter que não são Character nem Monster', () => {
     expect('PVE.DIP').toCompile();
   });
-  // TODO: Testar mais funcionalidades do PVE
 });

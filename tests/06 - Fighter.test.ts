@@ -9,7 +9,6 @@ describe('06 - Interface Fighter', () => {
   });
   it('A interface Fighter possui o atributo lifePoints', () => {
     expect('Fighter.lifePoints').notToCompile();
-    // TODO: Testar erros com tipos diferentes de number
   });
   it('A interface Fighter possui o atributo strength', () => {
     expect('Fighter.strength').notToCompile();
