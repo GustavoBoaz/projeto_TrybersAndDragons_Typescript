@@ -191,12 +191,18 @@ Uma estratégia é pular todos os testes no início e ir implementando um teste 
 
 ## Contextualizando
 
- - No universo de Trybers and Dragons, cada ser que anda por estas terras pertence a uma **raça** e possui um **arquétipo**.
- - As diversas raças (como, por exemplo, Élfica, Orc ou Anã) definem as características dos personagens desde a sua criação, como seus pontos de vida e sua destreza.
- - Já os arquétipos definem, de modo geral, a vocação de um personagem, suas habilidades e visão de mundo: como enfrentam as situações, exploram masmorras ou enfrentam monstros. Aqui, as pessoas podem ser guerreiras, magas ou guardiãs, para dar alguns exemplos.
- - Cabe a você, nobre ~~dev~~, explorar essas terras e cumprir as quests que surgirão ao longo de sua incrível ~~jornada~~ leitura do README.
+- No universo de Trybers and Dragons, a maioria dos seres que andam por estas terras pertencem a uma **raça**
+- As diversas raças (como, por exemplo, Élfica, Orc ou Anã) definem as características dos personagens desde a sua criação, como seus pontos de vida e sua destreza
+- Alguns seres também possuem uma **energia**, e ao treinarem o uso da energia passam a possuir um **arquétipo**
+- Os arquétipos definem, de modo geral, a vocação de um personagem, suas habilidades e visão de mundo:
+  - Como enfrentam as situações, exploram masmorras ou enfrentam monstros
+  - Aqui, os seres podem ser guerreiros, magos ou necromantes, para dar alguns exemplos
+- Alguns seres podem ser considerados lutadores, bastando para isso possuir alguns atributos específicos
+- Existem seres denominados **monstros** que não possuem uma raça específica, mas podem lutar
+- Em diversas ocasiões podem acontecer lutas entre personagens diversos, bem como entre personagens e monstros
+- Cabe a você, nobre ~~dev~~, explorar essas terras e cumprir as quests que surgirão ao longo de sua incrível ~~jornada~~ leitura do README
 
-**_ Now, follow ~~the blind~~ the master!_**
+**_Now, follow ~~the blind~~ the master!_**
 
 ## Requisitos Obrigatórios
 
