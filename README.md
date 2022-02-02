@@ -462,29 +462,26 @@ As dicas para completar essa _quest_ são:
 
 ### 9 - Criar a classe `Monster`
 
- - O arquivo deverá ser criado na raiz do diretório `src`;
- - classe `Monster` deverá exportada de forma padrão (export default).
- - A classe `Monster` deve implementar a interface `SimpleFighter`
-  - A classe `Monster` deverá ter os seguintes atributos:
-    - `lifePoints` deve ser privado e possuir o valor 85;
-    - `strength` deve ser privado e possuir o valor 63;
-    - `defense` deve ser privado e possuir o valor 0;
- - A classe `Monster` deverá implementar o método `attack`;
- - A classe `Monster` deverá implementar o método `receiveDamage`;
+Se existem seres que implementam a interface `Fighter`, devem existir seres que implementam a `SimpleFighter`, não é?
+Estes seres são os `Monsters`, que são seres que apenas atacam outros seres.
+Sua próxima _quest_: **criar a classe Monster**
 
-- O método `attack`, recebe como parâmetro outro ser do tipo `Fighter` como parâmetro e deverá causar danos ao mesmo;
-  - exemplo: Após `Monster` atacar um `Character` o `lifePoints` de `Character` deverá ser menor do que antes do ataque.
+As dicas para completar essa _quest_ são:
 
-- O método `receiveDamage`, recebe um parâmetro do tipo `number` e retorna também um valor do tipo `number` que se refere ao `lifePoints` após receber um ataque;
-  - exemplo: Após `Monster` sofrer um ataque de `Character` o `lifePoints` de `Monster` deverá ser menor do que antes de receber o ataque.
+- O arquivo deverá ser criado na raiz do diretório `src`;
+- A classe `Monster` deve implementar a interface `SimpleFighter`
+  - `lifePoints` deve ser privado e possuir o valor 85;
+  - `strength` deve ser privado e possuir o valor 63;
 
  O que será verificado:
-   - A classe `Monster` existe;
-   - O atributo `lifePoints` existe;
-   - O atributo `strength` existe;
-   - O atributo `defense` existe;
-   - `Monster` pode sofrer um ataque;
-   - `Monster` pode realizar um ataque;
+
+- A classe `Monster` existe
+- A classe `Monster` implementa a interface `SimpleFighter`
+- Um `Monster` possui um atributo `lifePoints`, que pode ser lido mas não pode ser setado
+- Um `Monster` possui um atributo `strength`, que pode ser lido mas não pode ser setado
+- Um `Monster` pode receber danos através do método `receiveDamage`, fazendo com que seus `lifePoints` caiam o valor do parâmetro `amount`, devendo retornar -1 caso os `lifePoints` tenham chegado a 0 ou menos
+- Um `Monster` pode atacar um `Character`, e o `Character` receberá dano entre o valor do atributo `strength` do `Monster` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende
+- Um `Character` pode atacar um `Monster`, e o `Monster` receberá de dano o valor do atributo `strength` do `Character` que o ataca
 
 ### 10 - Criar a classe `PVP`
 
@@ -495,4 +492,3 @@ As dicas para completar essa _quest_ são:
 ### 12 - Criar a classe `Dragon`
 
 ### 13 - Criar objetos no arquivo `index`
-
