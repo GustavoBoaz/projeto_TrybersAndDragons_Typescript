@@ -449,6 +449,7 @@ As dicas para completar essa _quest_ são:
 - A interface deverá possuir os métodos:
   - attack
   - receiveDamage
+- Utilize a segregação de interfaces para aproveitar o que já fez na classe `Fighter`
 
 - O que será verificado:
   - A interface `SimpleFighter` existe
