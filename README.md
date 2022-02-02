@@ -485,9 +485,42 @@ As dicas para completar essa _quest_ são:
 
 ### 10 - Criar a classe `PVP`
 
+Se existem seres que lutam, existem lutas.
+As lutas em T&D são denominadas `Battles` (batalhas), sendo sua representação abstrata já fornecida.
+Entretanto, existem tipos específicos de batalhas, sendo o primeiro deles a batalha entre players diferentes, ou PVP.
+Estas batalhas só podem acontecer entre `Fighters`.
+Sua _quest_ agora é justamente **criar a classe PVP**.
+Vamos lá?
+
+As dicas para completar essa _quest_ são:
+
+- O arquivo deverá ser criado na raiz do diretório `src/Battle`;
+- Faça com que `PVP` herde de `Battle`, classe já disponibilizada em `src/Battle`
+
+O que será verificado:
+
+- A classe `PVP` existe e se pode ser criada uma nova instância, passando dois `Characters`
+- A classe `PVP` pode ser utilizada onde a classe `Battle` é esperada, e um `Characters` com level bem elevado ganham uma luta contra `Characters` level 0
+- A classe `PVP` pode receber tanto dois `Characters` quanto duas instâncias de uma implementação diferente de `Fighter`
+
 ## Requisitos Bônus
 
 ### 11 - Criar a classe `PVE`
+
+Nem todas as batalhas são entre players. `Monsters` estão aí para lutarem contra os players também.
+Nas batalhas do tipo `PVE`, um `Fighter` pode lutar contra um ou mais `SimpleFighters`.
+Parece interessante? Pois tornar isso possível é a sua _quest_.
+
+As dicas para completar essa _quest_ são:
+
+- O arquivo deverá ser criado na raiz do diretório `src/Battle`;
+- Faça com que `PVE` herde de `Battle`, classe já disponibilizada em `src/Battle`
+
+O que será verificado:
+
+- A classe `PVE` existe e se pode ser criada uma nova instância, passando um `Character` e um array com um `Monster`
+- A classe `PVE` pode ser utilizada onde a classe `Battle` é esperada, e um `Character` com level bem elevado ganha uma luta contra somente um `Monster`, e um `Character` com level baixo perde numa luta contra diversos `Monsters`
+- A classe `PVE` pode receber tanto `Character` e um array com um `Monster` quanto implementações diferentes de `Fighter` e `SimpleFighter` que não são `Character` nem `Monster`
 
 ### 12 - Criar a classe `Dragon`
 
