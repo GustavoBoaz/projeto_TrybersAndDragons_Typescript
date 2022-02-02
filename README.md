@@ -336,43 +336,36 @@ Dentro do nosso universo, os seres têm seus talentos especiais. Por isso, sua p
 
 ### 5 - Crie classes que herdam de `Archetype`
 
-Como você pode imaginar, há diversos arquétipos diferentes no mundo de _Trybers and Dragons_, cada um com suas peculiaridades e alinhamentos. Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor para isso do que criar classes para eles? Mas antes, tenha atenção às seguintes instruções:
+Como você pode imaginar, há diversos arquétipos diferentes no mundo de _Trybers and Dragons_, cada um com suas peculiaridades e alinhamentos.
+Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor para isso do que criar classes para eles? Mas antes, tenha atenção às seguintes instruções:
 
- - Os arquivos deverão ser criados no diretório `src/Archetypes`;
- - Todas os arquétipos estendem a classe `Archetype`;
- - No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: **Mage** 🧙‍♀️, **Necromancer** ☠️, **Warrior** ⚔️ ou **Ranger** 🍃;
- - São características dos seres dos arquétipos `Mage` e `Necromancer` causar dano em seus inimigos por meio de magia, através do uso de`mana`;
- - São características dos seres dos arquétipos `Warrior` e `Ranger` causar dano em seus inimigos por meio de sua força, usando `stamina` para isso;
+- Os arquivos deverão ser criados no diretório `src/Archetypes`;
+- Todas os arquétipos estendem a classe `Archetype`;
+- No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: **Mage** 🧙‍♀️, **Necromancer** ☠️, **Warrior** ⚔️ ou **Ranger** 🍃;
+- São características dos seres dos arquétipos `Mage` e `Necromancer` causar dano em seus inimigos por meio de magia, através do uso de`mana`;
+- São características dos seres dos arquétipos `Warrior` e `Ranger` causar dano em seus inimigos por meio de sua força, usando `stamina` para isso;
 
- - O que será verificado:
-   - A classe `Mage` existe;
-   - A classe `Mage` herda de `Archetype`;
-   - O parâmetro `name` da classe `Mage` pode ser lido;
-   - O método `energyType` da Classe `Mage` existe e retorna uma string;
-   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Mage`;
-   - A classe `Necromancer` existe;
-   - A classe `Necromancer` herda de `Archetype`;
-   - O parâmetro `name` da classe `Necromancer` pode ser lido;
-   - O método `energyType` da Classe `Necromancer` existe e retorna uma string;
-   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Necromancer`;
-   - A classe `Warrior` existe;
-   - A classe `Warrior` herda de `Archetype`;
-   - O parâmetro `name` da classe `Warrior` pode ser lido;
-   - O método `energyType` da Classe `Warrior` existe e retorna uma string;
-   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`;
-   - A classe `Ranger` existe;
-   - A classe `Ranger` herda de `Archetype`;
-   - O parâmetro `name` da classe `Ranger` pode ser lido;
-   - O método `energyType` da Classe `Ranger` existe e retorna uma string;
-   - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Ranger`;
-   - É possível criar um objeto da classe `Mage` corretamente;
-   - É possível criar um objeto da classe `Necromancer` corretamente;
-   - É possível criar um objeto da classe `Warrior` corretamente;
-   - É possível criar um objeto da classe `Ranger` corretamente;
-   - O tipo de energia do arquétipo `Mage` é 'mana';
-   - O tipo de energia do arquétipo `Necromancer` é 'mana';
-   - O tipo de energia do arquétipo `Warrior` é 'stamina';
-   - O tipo de energia do arquétipo `Ranger` é 'stamina';
+- O que será verificado:
+  - A classe `Mage` existe
+  - A classe `Mage` herda de `Archetype`
+  - O parâmetro `name` da classe `Mage` pode ser lido
+  - O método `energyType` da Classe `Mage` existe e retorna uma string
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Mage`
+  - A classe `Necromancer` existe
+  - A classe `Necromancer` herda de `Archetype`
+  - O parâmetro `name` da classe `Necromancer` pode ser lido
+  - O parâmetro `energyType` da classe `Necromancer` pode ser lido
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Necromancer`
+  - A classe `Ranger` existe
+  - A classe `Ranger` herda de `Archetype`
+  - O parâmetro `name` da classe `Ranger` pode ser lido
+  - O parâmetro `energyType` da classe `Ranger` pode ser lido
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Ranger`
+  - A classe `Warrior` existe
+  - A classe `Warrior` herda de `Archetype`
+  - O parâmetro `name` da classe `Warrior` pode ser lido
+  - O parâmetro `energyType` da classe `Warrior` pode ser lido
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`
 
 ⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Archetypes/index.ts` e lá exportas. ⚠
 
