@@ -548,3 +548,22 @@ O que será verificado:
 ⚠ Atenção: para que os testes funcionem corretamente, a classe `Dragon` deve ser criada no arquivo `src/Dragon.ts` e lá exportada de forma padrão (export default). ⚠
 
 ### 13 - Criar objetos no arquivo `index`
+
+Você já modelou todo o mundo de T&D, maravilha!
+Agora repare que, por mais que a gente saiba o que é um `Monster`, um `Character`, um `Dragon`, um `PVE`, etc, não foi visto nenhum desses na prática.
+Sua _quest_ agora é criar algumas instâncias das classes criadas.
+Vamos lá pra mais este desafio?
+
+As dicas para completar essa _quest_ são:
+
+- O arquivo que deverá ser criado é o `src/index.ts`;
+
+O que será verificado:
+
+- Crie 3 objetos do tipo `Character` e os exporte no arquivo `index` como `player1`, `player2` e `player3`; Rode o método `levelUp` algumas vezes no `player1`
+- Crie 2 objetos do tipo `Monster`, sendo o segundo um `Dragon`, e os exporte no arquivo index como `monster1`, `monster2`
+- Crie um objeto do tipo `PVP` (com os `Characters` `player2` e `player3`) e o exporte no arquivo index como `pvp`; *NÃO* execute o método pvp.fight
+- Crie um objeto do tipo `PVE` (com o `Character` `player1` e com os `Monsters` `monster1` e `monster2`) e o exporte no arquivo `index` como `pve`; *NÃO* execute o método pve.fight
+- Crie uma função chamada `runBattles`, que recebe um `array de Battles` e chama em seu interior o método `battle.fight`
+
+⚠ Atenção: para que os testes funcionem corretamente, os objetos criados em `src/index.ts` devem ser exportados com os nomes indicados na seção `o que será verificado`. ⚠
