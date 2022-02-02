@@ -284,7 +284,9 @@ Antes de prosseguir com a missão, é muito importante que você saiba que:
 
 ### 3 - Crie a interface `Energy`
 
-Energia é um atributo vital para todos os seres. A energia gasta ao andar, nadar, escalar ou lutar é chamada de stamina no contexto de Trybers and Dragons. No entanto, este universo também abriga seres capazes de usar magia. Nesses casos, a energia gasta ao utilizar magias é chamada de 'mana'.
+Energia é um atributo vital para a maioria dos seres.
+A energia gasta ao andar, nadar, escalar ou lutar é chamada de stamina no contexto de Trybers and Dragons.
+No entanto, este universo também abriga seres capazes de usar magia. Nesses casos, a energia gasta ao utilizar magias é chamada de 'mana'.
 
 Sua próxima missão é tornar possível o uso dessas energias. Para isso:
 
@@ -293,40 +295,42 @@ Sua próxima missão é tornar possível o uso dessas energias. Para isso:
   - type_: EnergyType
   - amount: number
 
-✨ Dica de mestre: 
+✨ Dica de mestre:
 
 - O arquivo deverá ser criado na raiz do diretório `src`.
 - O nome do arquivo deverá ser `Energy.ts`;
 - Para implementar a interface `Energy`, é necessário criar um type `EnergyType` que poderá ser definido como `'mana'` ou `'stamina'`
 
 O que será verificado:
-  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'mana'`;
-  - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`;
-  - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 10, type_: 'stamina'}`;
-  - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 45, type_: 'mana'}`;
-  - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
-  - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `amount`;
-  - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`
+
+- É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'mana'`;
+- É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`;
+- É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 10, type_: 'stamina'}`;
+- É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 45, type_: 'mana'}`;
+- Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
+- Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `amount`;
+- Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`
 
 ⚠ Atenção: Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão (export default).
 
 ### 4 - Crie a classe `Archetype`
 
-Dentro do nosso universo, cada ser tem seus talentos especiais. Por isso, sua próxima _quest_ será **criar a classe abstrata `Archetype`**.
+Dentro do nosso universo, os seres têm seus talentos especiais. Por isso, sua próxima _quest_ será **criar a classe abstrata `Archetype`**.
 
 - Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
-- A classe `Race` deverá ter um método estático chamado `createdArchetypeInstances` que retorna um number. Esse número é correspondente a quantidade de instâncias criadas, a partir das classses extendidas de `Archetype`. Porém na classe `Archetype` levantará apenas uma messagem de erro.
+- A classe `Archetype` deverá ter um método estático chamado `createdArchetypesInstances` que retorna um number.
+  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Archetype`. Porém na classe `Archetype` levantará apenas uma mensagem de erro.
 - A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
-- O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquetipos existentes no universo de D&T.
+- O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquétipos existentes no universo de D&T.
 
- - O que será verificado:
-   - A classe `Archetype` existe;
-   - A classe `Archetype` é abstrata;
-   - O parâmetro `name` da classe `Archetype` pode ser lido;
-   - O parâmetro `name` da classe `Archetype` não pode ser alterado;
-   - O parâmetro `special` da classe `Archetype` pode ser lido;
-   - O parâmetro `cost` da classe `Archetype` pode ser lido;
-   - O método `energyType` retorna uma string
+- O que será verificado:
+  - A classe `Archetype` existe;
+  - A classe `Archetype` é abstrata;
+  - O parâmetro `name` da classe `Archetype` pode ser lido;
+  - O parâmetro `name` da classe `Archetype` não pode ser alterado;
+  - O parâmetro `special` da classe `Archetype` pode ser lido;
+  - O parâmetro `cost` da classe `Archetype` pode ser lido;
+  - O método `energyType` retorna uma string.
 
 ⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado no diretório `src/Archetypes` e a classe `Archetypes` deve ser importada no arquivo `src/Archetypes/index.ts` e lá exportada de forma padrão (export default). ⚠
 
