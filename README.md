@@ -208,7 +208,9 @@ Uma estratégia é pular todos os testes no início e ir implementando um teste 
 
 ### 1 - Crie a classe `Race`
 
-Todo ser necessariamente pertence a uma raça. No universo de Trybers and Dragons - T&D, embora todas as raças de personagens sejam humanóides, cada uma tem suas particularidades. A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos seres deste universo.
+Quase todos os seres pertencem a uma raça.
+No universo de Trybers and Dragons - T&D, embora todas as raças de personagens sejam humanoides, cada uma tem suas particularidades.
+A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos seres deste universo.
 
 Para entender melhor um pouco da incrível diversidade que temos e as características únicas de algumas das raças de T&D, vamos começar nossa jornada com a missão de **criar a classe abstrata `Race`**.
 
@@ -216,7 +218,8 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
 
 - Os arquivos sejam criados no diretório `src/Races`.
 - `Race` tenha os atributos privados `name` e `dexterity`, ambos inicializados em seu construtor.
-- A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number. Esse número é correspondente a quantidade de instâncias criadas, a partir das classses extendidas de `Race`. Porém na classe `Race` levantará apenas uma messagem de erro.
+- A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number.
+  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Race`. Porém na classe `Race` levantará apenas uma mensagem de erro.
 - A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça.
 - A classe também deverá ter `getters` para acessar os valores de `name` e `dexterity`.
 
@@ -238,50 +241,46 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
   - O método `createdRacesInstances` deve existir e ser estático;
   - O método `createdRacesInstances` deve levantar um erro "Not implemented"
 
-⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser importada no no arquivo `src/Races/index.ts` e exportada lá de forma padrão (export default).  ⚠
-
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser importada no arquivo `src/Races/index.ts` e exportada lá de forma padrão (export default).  ⚠
 
 ### 2 - Crie classes que herdam de `Race`
 
-Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda _quest_, você irá criar classes para quatro raças que existem no mundo de T&D.
+Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas.
+Nesta segunda _quest_, você irá criar classes para quatro raças que existem no mundo de T&D.
 
 Antes de prosseguir com a missão, é muito importante que você saiba que:
 
- - Os arquivos deverão ser criados no diretório `src/Races`.
- - Todas as raças estendem a classe `Race`;
- - As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc` e devem estar em arquivos de mesmo nome.
- 
- - O que será verificado:
-   - A classe `Dwarf` existe;
-   - A classe `Dwarf` herda de `Race`;
-   - O parâmetro `name` da classe `Dwarf` pode ser lido;
-   - O parâmetro `dexterity` da classe `Dwarf` pode ser lido;
-   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Dwarf`;
-   - O parâmetro `maxLifePoints` da classe `Dwarf` existe e é igual a 80;
-   - A classe `Elf` existe;
-   - A classe `Elf` herda de `Race`;
-   - O parâmetro `name` da classe `Elf` pode ser lido;
-   - O parâmetro `dexterity` da classe `Elf` pode ser lido;
-   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Elf`;
-   - O parâmetro `maxLifePoints` da classe `Elf` existe e é igual a 99;
-   - A classe `Halfling` existe;
-   - A classe `Halfling` herda de `Race`;
-   - O parâmetro `name` da classe `Halfling` pode ser lido;
-   - O parâmetro `dexterity` da classe `Halfling` pode ser lido;
-   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Halfling`;
-   - O parâmetro `maxLifePoints` da classe `Halfling` existe e é igual a 60;
-   - A classe `Orc` existe;
-   - A classe `Orc` herda de `Race`;
-   - O parâmetro `name` da classe `Orc` pode ser lido;
-   - O parâmetro `dexterity` da classe `Orc` pode ser lido;
-   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Orc`;
-   - O parâmetro `maxLifePoints` da classe `Orc` existe e é igual a 74;
-   - É possível criar um objeto da classe `Dwarf` corretamente;
-   - É possível criar um objeto da classe `Elf` corretamente;
-   - É possível criar um objeto da classe `Halfling` corretamente;
-   - É possível criar um objeto da classe `Orc` corretamente
+- Os arquivos deverão ser criados no diretório `src/Races`.
+- Todas as raças estendem a classe `Race`;
+- As classes criadas deverão ser `Dwarf`, `Elf`, `Halfling` e `Orc` e devem estar em arquivos de mesmo nome.
 
-⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Races/index.ts` e lá exportas. ⚠
+- O que será verificado:
+  - A classe `Dwarf` existe;
+  - A classe `Dwarf` herda de `Race`;
+  - O parâmetro `name` da classe `Dwarf` pode ser lido;
+  - O parâmetro `dexterity` da classe `Dwarf` pode ser lido;
+  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Dwarf`;
+  - O parâmetro `maxLifePoints` da classe `Dwarf` existe e é igual a 80;
+  - A classe `Elf` existe;
+  - A classe `Elf` herda de `Race`;
+  - O parâmetro `name` da classe `Elf` pode ser lido;
+  - O parâmetro `dexterity` da classe `Elf` pode ser lido;
+  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Elf`;
+  - O parâmetro `maxLifePoints` da classe `Elf` existe e é igual a 99;
+  - A classe `Halfling` existe;
+  - A classe `Halfling` herda de `Race`;
+  - O parâmetro `name` da classe `Halfling` pode ser lido;
+  - O parâmetro `dexterity` da classe `Halfling` pode ser lido;
+  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Halfling`;
+  - O parâmetro `maxLifePoints` da classe `Halfling` existe e é igual a 60;
+  - A classe `Orc` existe;
+  - A classe `Orc` herda de `Race`;
+  - O parâmetro `name` da classe `Orc` pode ser lido;
+  - O parâmetro `dexterity` da classe `Orc` pode ser lido;
+  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Orc`;
+  - O parâmetro `maxLifePoints` da classe `Orc` existe e é igual a 74;
+
+⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no arquivo `src/Races/index.ts` e lá exportas. ⚠
 
 ### 3 - Crie a interface `Energy`
 
