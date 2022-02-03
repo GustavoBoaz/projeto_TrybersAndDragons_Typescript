@@ -43,6 +43,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [11 - Criar a classe `PVE`](#11---criar-a-classe-pve)
     - [12 - Criar a classe `Dragon`](#12---criar-a-classe-dragon)
     - [13 - Criar objetos no arquivo `index`](#13---criar-objetos-no-arquivo-index)
+  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+  - [Revisando um pull request](#revisando-um-pull-request)
+  - [Avisos finais](#avisos-finais)
 
 ---
 
@@ -53,20 +56,22 @@ Neste projeto, você será capaz de:
 - Exercitar o conhecimento dos pilares da `Programação Orientada a Objetos`: `Herança`, `Abstração`, `Encapsulamento` e `Polimorfismo`;
 - Exercitar a utilização de `Composição`;
 - Exercitar a criação e utilização de `Interfaces`;
-- Implementar, em `TypeScript`, `Classes`, `Instâncias`, `Atributos`, `Métodos` e `Objetos`;
+- Implementar, em `TypeScript`: `Classes`, `Instâncias`, `Atributos`, `Métodos` e `Objetos`;
 - Exercitar o conhecimento por meio da aplicação dos princípios `SOLID`.
 
 ---
 
 # Entregáveis
 
-Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
+Para entregar o seu projeto, você deverá criar um _Pull Request_ neste repositório.
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
 
 ---
 
 ## O que deverá ser desenvolvido
+
+Para este projeto, você deverá aplicar os princípios da arquitetura `SOLID` e os princípios de `POO` em uma estrutura de jogos de interpretação de papéis, mais conhecidos como jogos `RPG` (_Role Playing Game_).
 
 ---
 
@@ -83,7 +88,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ## Data de Entrega
 
-    - Será `X` dia de projeto.
+    - Será `X` dias de projeto.
     - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
 ---
@@ -204,10 +209,10 @@ Uma estratégia é pular todos os testes no início e ir implementando um teste 
 
 - No universo de Trybers and Dragons, a maioria dos seres que andam por estas terras pertencem a uma **raça**
 - As diversas raças (como, por exemplo, Élfica, Orc ou Anã) definem as características dos personagens desde a sua criação, como seus pontos de vida e sua destreza
-- Alguns seres também possuem uma **energia**, e ao treinarem o uso da energia passam a possuir um **arquétipo**
+- Alguns seres também possuem uma **energia** e, ao treinarem o uso da energia, passam a possuir um **arquétipo**
 - Os arquétipos definem, de modo geral, a vocação de um personagem, suas habilidades e visão de mundo:
   - Como enfrentam as situações, exploram masmorras ou enfrentam monstros
-  - Aqui, os seres podem ser guerreiros, magos ou necromantes, para dar alguns exemplos
+  - Aqui, as pessoas podem ser guerreiras, magas ou necromantes, por exemplo.
 - Alguns seres podem ser considerados lutadores, bastando para isso possuir alguns atributos específicos
 - Existem seres denominados **monstros** que não possuem uma raça específica, mas podem lutar
 - Em diversas ocasiões podem acontecer lutas entre personagens diversos, bem como entre personagens e monstros
@@ -219,20 +224,19 @@ Uma estratégia é pular todos os testes no início e ir implementando um teste 
 
 ### 1 - Crie a classe `Race`
 
-Quase todos os seres pertencem a uma raça.
-No universo de Trybers and Dragons - T&D, embora todas as raças de personagens sejam humanoides, cada uma tem suas particularidades.
+Quase todos os seres pertencem a uma raça. -No universo de Trybers and Dragons - T&D, embora todas as raças de personagens sejam humanoides, cada uma tem suas particularidades.
 A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos seres deste universo.
 
 Para entender melhor um pouco da incrível diversidade que temos e as características únicas de algumas das raças de T&D, vamos começar nossa jornada com a missão de **criar a classe abstrata `Race`**.
 
 Para que você tenha sucesso nesta _quest_, deve se certificar que:
 
-- Os arquivos sejam criados no diretório `src/Races`.
-- `Race` tenha os atributos privados `name` e `dexterity`, ambos inicializados em seu construtor.
-- A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number.
-  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Race`. Porém na classe `Race` levantará apenas uma mensagem de erro.
-- A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça.
-- A classe também deverá ter `getters` para acessar os valores de `name` e `dexterity`.
+- Os arquivos sejam criados no diretório `src/Races`;
+- `Race` tenha os atributos privados `name` e `dexterity`, ambos inicializados em seu construtor;
+- A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number;
+  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Race`. Porém na classe `Race` levantará apenas uma mensagem de erro;
+- A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça;
+- A classe também deverá ter `getters` para acessar os valores de `name` e `dexterity`;
 
  ```typescript
  name: string;
@@ -250,14 +254,13 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
   - O parâmetro `dexterity` da classe Race *NÃO* pode ser setado;
   - O método `maxLifePoints` retorna um valor numérico;
   - O método `createdRacesInstances` deve existir e ser estático;
-  - O método `createdRacesInstances` deve levantar um erro "Not implemented"
+  - O método `createdRacesInstances` deve levantar um erro "Not implemented";
 
-⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser importada no arquivo `src/Races/index.ts` e exportada lá de forma padrão (export default).  ⚠
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Race` deve ser importada no arquivo `src/Races/index.ts` e exportada lá de forma padrão (`export default`).  ⚠
 
 ### 2 - Crie classes que herdam de `Race`
 
-Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas.
-Nesta segunda _quest_, você irá criar classes para quatro raças que existem no mundo de T&D.
+Já foi dito anteriormente que há uma diversidade de raças neste universo e agora chegou a hora de você saber mais a respeito de algumas delas. Nesta segunda _quest_, você irá criar classes para quatro raças que existem no mundo de T&D.
 
 Antes de prosseguir com a missão, é muito importante que você saiba que:
 
@@ -291,26 +294,25 @@ Antes de prosseguir com a missão, é muito importante que você saiba que:
   - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Orc`;
   - O parâmetro `maxLifePoints` da classe `Orc` existe e é igual a 74;
 
-⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no arquivo `src/Races/index.ts` e lá exportas. ⚠
+⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no arquivo `src/Races/index.ts` e lá exportadas. ⚠
 
 ### 3 - Crie a interface `Energy`
 
-Energia é um atributo vital para a maioria dos seres.
-A energia gasta ao andar, nadar, escalar ou lutar é chamada de stamina no contexto de Trybers and Dragons.
+Energia é um atributo vital para a maioria dos seres. A energia gasta ao andar, nadar, escalar ou lutar é chamada de stamina no contexto de `Trybers and Dragons`.
 No entanto, este universo também abriga seres capazes de usar magia. Nesses casos, a energia gasta ao utilizar magias é chamada de 'mana'.
 
 Sua próxima missão é tornar possível o uso dessas energias. Para isso:
 
 - Crie uma interface Energy, que deve possuir os seguintes atributos:
 
-  - type_: EnergyType
-  - amount: number
+  - type_: EnergyType;
+  - amount: number;
 
 ✨ Dica de mestre:
 
-- O arquivo deverá ser criado na raiz do diretório `src`.
+- O arquivo deverá ser criado na raiz do diretório `src`;
 - O nome do arquivo deverá ser `Energy.ts`;
-- Para implementar a interface `Energy`, é necessário criar um type `EnergyType` que poderá ser definido como `'mana'` ou `'stamina'`
+- Para implementar a interface `Energy`, é necessário criar um type `EnergyType` que poderá ser definido como `'mana'` ou `'stamina'`;
 
 O que será verificado:
 
@@ -320,19 +322,19 @@ O que será verificado:
 - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 45, type_: 'mana'}`;
 - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
 - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `amount`;
-- Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`
+- Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`;
 
-⚠ Atenção: Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão (export default).
+⚠ Atenção: Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão (`export default`).
 
 ### 4 - Crie a classe `Archetype`
 
 Dentro do nosso universo, os seres têm seus talentos especiais. Por isso, sua próxima _quest_ será **criar a classe abstrata `Archetype`**.
 
-- Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente.
-- A classe `Archetype` deverá ter um método estático chamado `createdArchetypesInstances` que retorna um number.
-  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Archetype`. Porém na classe `Archetype` levantará apenas uma mensagem de erro.
-- A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem.
-- O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquétipos existentes no universo de D&T.
+- Essa classe deverá conter os atributos `special` e `cost`, ambos do tipo `number`, que representarão a potência de seu ataque especial e o custo energético para utilizá-lo, respectivamente;
+- A classe `Archetype` deverá ter um método estático chamado `createdArchetypesInstances` que retorna um number:
+  - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Archetype`. Porém na classe `Archetype` levantará apenas uma mensagem de erro;
+- A classe também deverá ter um `getter` energyType, que retorna o tipo de energia do personagem;
+- O construtor da classe recebe o atributo `name`, que será uma `string` e representará o nome de um dos arquétipos existentes no universo de D&T;
 
 - O que será verificado:
   - A classe `Archetype` existe;
@@ -341,9 +343,9 @@ Dentro do nosso universo, os seres têm seus talentos especiais. Por isso, sua p
   - O parâmetro `name` da classe `Archetype` não pode ser alterado;
   - O parâmetro `special` da classe `Archetype` pode ser lido;
   - O parâmetro `cost` da classe `Archetype` pode ser lido;
-  - O método `energyType` retorna uma string.
+  - O método `energyType` retorna uma string;
 
-⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado no diretório `src/Archetypes` e a classe `Archetypes` deve ser importada no arquivo `src/Archetypes/index.ts` e lá exportada de forma padrão (export default). ⚠
+⚠ Atenção: para que os testes funcionem corretamente, o arquivo deverá ser criado no diretório `src/Archetypes` e a classe `Archetypes` deve ser importada no arquivo `src/Archetypes/index.ts` e lá exportada de forma padrão (`export default`). ⚠
 
 ### 5 - Crie classes que herdam de `Archetype`
 
@@ -357,49 +359,47 @@ Agora, chegou a hora de você conhecer alguns deles e o que poderia ser melhor p
 - São características dos seres dos arquétipos `Warrior` e `Ranger` causar dano em seus inimigos por meio de sua força, usando `stamina` para isso;
 
 - O que será verificado:
-  - A classe `Mage` existe
-  - A classe `Mage` herda de `Archetype`
-  - O parâmetro `name` da classe `Mage` pode ser lido
-  - O método `energyType` da Classe `Mage` existe e retorna uma string
-  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Mage`
-  - A classe `Necromancer` existe
-  - A classe `Necromancer` herda de `Archetype`
-  - O parâmetro `name` da classe `Necromancer` pode ser lido
-  - O parâmetro `energyType` da classe `Necromancer` pode ser lido
-  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Necromancer`
-  - A classe `Ranger` existe
-  - A classe `Ranger` herda de `Archetype`
-  - O parâmetro `name` da classe `Ranger` pode ser lido
-  - O parâmetro `energyType` da classe `Ranger` pode ser lido
-  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Ranger`
-  - A classe `Warrior` existe
-  - A classe `Warrior` herda de `Archetype`
-  - O parâmetro `name` da classe `Warrior` pode ser lido
-  - O parâmetro `energyType` da classe `Warrior` pode ser lido
-  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`
+  - A classe `Mage` existe;
+  - A classe `Mage` herda de `Archetype`;
+  - O parâmetro `name` da classe `Mage` pode ser lido;
+  - O método `energyType` da Classe `Mage` existe e retorna uma string;
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Mage`;
+  - A classe `Necromancer` existe;
+  - A classe `Necromancer` herda de `Archetype`;
+  - O parâmetro `name` da classe `Necromancer` pode ser lido;
+  - O parâmetro `energyType` da classe `Necromancer` pode ser lido;
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Necromancer`;
+  - A classe `Ranger` existe;
+  - A classe `Ranger` herda de `Archetype`;
+  - O parâmetro `name` da classe `Ranger` pode ser lido;
+  - O parâmetro `energyType` da classe `Ranger` pode ser lido;
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Ranger`;
+  - A classe `Warrior` existe;
+  - A classe `Warrior` herda de `Archetype`;
+  - O parâmetro `name` da classe `Warrior` pode ser lido;
+  - O parâmetro `energyType` da classe `Warrior` pode ser lido;
+  - O método `createdArchetypeInstances` deve retornar o número correto de instâncias criadas da classe `Warrior`;
 
-⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no no arquivo `src/Archetypes/index.ts` e lá exportadas. ⚠
+⚠ Atenção: para que os testes funcionem corretamente, cada uma das classes criadas para este requisito deve ser importada no arquivo `src/Archetypes/index.ts` e lá exportadas. ⚠
 
 ### 6 - Criar a interface `Fighter`
 
-Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável.
-Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas.
-Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
+Um universo tão rico e cheio de diferentes seres, com diferentes alinhamentos e personalidades pode não ser um lugar sempre amigável. Por isso, seus habitantes têm que ser capazes de se defender ou de inventar artimanhas para se livrarem de brigas, confusões e armadilhas. Sendo assim, podemos dizer que todos os seres de T&D são, em essência, lutadores.
 
 Para fixar bem esse conceito, preparamos para você a missão especial de criar a interface `Fighter`.
 Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informações necessárias para tirar isso de letra! Observe:
 
 - O arquivo deverá ser criado no diretório `src/Fighter`;
 - A interface deverá possuir os atributos:
-  - lifePoints, do tipo number
-  - strength, do tipo number
-  - defense, do tipo number
-  - energy, do tipo Energy
+  - `lifePoints`, do tipo `number`;
+  - `strength`, do tipo `number`;
+  - `defense`, do tipo `number`;
+  - `energy`, do tipo `Energy`;
 - A interface deverá possuir os métodos:
-  - attack
-  - special
-  - receiveDamage
-  - levelUp
+  - `attack()`;
+  - `special()`;
+  - `receiveDamage()`;
+  - `levelUp()`;
 
 - O que será verificado:
   - A interface `Fighter` existe;
@@ -407,13 +407,13 @@ Mas não se preocupe, não deixaremos você dar mais nem um passo sem as informa
   - A interface `Fighter` possui o atributo `lifePoints`;
   - A interface `Fighter` possui o atributo `strength`;
   - A interface `Fighter` possui o atributo `defense`;
-  - A interface `Fighter` possui o método `attack`, que recebe um `enemy` do tipo `Fighter`;
-  - A interface `Fighter` possui o método `special`, que recebe um `enemy` do tipo `Fighter`
-  - A interface `Fighter` possui o método `receiveDamage`, que recebe um `amount` do tipo number;
+  - A interface `Fighter` possui o método `attack()`, que recebe um `enemy` do tipo `Fighter`;
+  - A interface `Fighter` possui o método `special()`, que recebe um `enemy` do tipo `Fighter`
+  - A interface `Fighter` possui o método `receiveDamage()`, que recebe um `amount` do tipo number;
   - O atributo `energy` deverá ser do tipo `Energy`, definido no arquivo `src/Energy.ts`;
-  - A interface `Fighter` possui o método `levelUp`, que não recebe parâmetros nem retorna nada.
+  - A interface `Fighter` possui o método `levelUp()`, que não recebe parâmetros nem retorna nada;
 
-⚠ Atenção: para que os testes funcionem corretamente, a interface `Fighter` deve ser importada no no arquivo `src/Fighter/index.ts` e lá exportada de forma padrão (export default). ⚠
+⚠ Atenção: para que os testes funcionem corretamente, a interface `Fighter` deve ser importada no no arquivo `src/Fighter/index.ts` e lá exportada de forma padrão (`export default`). ⚠
 
 ### 7 - Crie a classe `Character`
 
@@ -441,25 +441,25 @@ As dicas para completar essa _quest_ são:
   - Um `Character` possui um atributo `dexterity`, que pode ser lido mas não pode ser setado;
   - Um `Character` pode subir de nível através do método `levelUp`, e seus atributos (`maxLifePoints`, `strength`, `dexterity`, `defense`) ficarão no mínimo 1 ponto e no máximo 10 pontos maiores (sendo que `lifePoints` nunca poderá ser maior que o `maxLifePoints` da `Race`), sua vida ficará completamente cheia (`lifePoints` ficará igual ao novo `maxLifePoints`) e sua energia também ficará cheia (`energy.amount` será igual a 10);
   - Um `Character` pode receber danos através do método `receiveDamage`, fazendo com que seus `lifePoints` caiam entre o valor do parâmetro `amount` e este mesmo valor decrescido da `defense` do `Character` (com o limite inferior de 0), e o `receiveDamage` retorna os `lifePoints` atuais do `Character`, devendo retornar -1 caso os `lifePoints` tenham chegado a 0 ou menos;
-  - Um `Character` pode atacar outro `Character`, e o outro `Character` receberá dano entre o valor do atributo `strength` do `Character` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende.
+  - Um `Character` pode atacar outro `Character`, e o outro `Character` receberá dano entre o valor do atributo `strength` do `Character` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende;
 
-⚠ Atenção: Para que os testes funcionem corretamente, a classe `Character` deve ser exportada de forma padrão (export default).
+⚠ Atenção: Para que os testes funcionem corretamente, a classe `Character` deve ser exportada de forma padrão (`export default`).
 
 ### 8 - Criar a interface `SimpleFighter`
 
-Uau, nosso universo de T&D tá ficando muito bacana!
-Mas nem todo mundo que luta é um ser possuidor de capacidades avançadas, como se preocupar com a defesa ou realizar ataques especiais.
+Uau, nosso universo de T&D está ficando fabuloso! Mas nem todo mundo que luta é um ser possuidor de capacidades avançadas, como se preocupar com a defesa ou realizar ataques especiais.
+
 Vamos para mais uma _quest_: **criar a interface lutador simples**
 
 As dicas para completar essa _quest_ são:
 
 - O arquivo deverá ser criado no diretório `src/Fighter`;
 - A interface deverá possuir os atributos:
-  - lifePoints, do tipo number
-  - strength, do tipo number
+  - `lifePoints`, do tipo `number`;
+  - `strength`, do tipo `number`;
 - A interface deverá possuir os métodos:
-  - attack
-  - receiveDamage
+  - `attack()`;
+  - `receiveDamage()`;
 - Utilize a segregação de interfaces para aproveitar o que já fez na classe `Fighter`
 
 - O que será verificado:
@@ -473,48 +473,46 @@ As dicas para completar essa _quest_ são:
 
 ### 9 - Criar a classe `Monster`
 
-Se existem seres que implementam a interface `Fighter`, devem existir seres que implementam a `SimpleFighter`, não é?
-Estes seres são os `Monsters`, que são seres que apenas atacam outros seres.
+Se existem seres que implementam a interface `Fighter`, devem existir seres que implementam a `SimpleFighter`, não é? Estes seres são os `Monsters`, que são seres que apenas atacam outros seres.
+
 Sua próxima _quest_: **criar a classe Monster**
 
 As dicas para completar essa _quest_ são:
 
 - O arquivo deverá ser criado na raiz do diretório `src`;
-- A classe `Monster` deve implementar a interface `SimpleFighter`
+- A classe `Monster` deve implementar a interface `SimpleFighter`:
   - `lifePoints` deve ser privado e possuir o valor 85;
   - `strength` deve ser privado e possuir o valor 63;
 
  O que será verificado:
 
-- A classe `Monster` existe
-- A classe `Monster` implementa a interface `SimpleFighter`
-- Um `Monster` possui um atributo `lifePoints`, que pode ser lido mas não pode ser setado
-- Um `Monster` possui um atributo `strength`, que pode ser lido mas não pode ser setado
-- Um `Monster` pode receber danos através do método `receiveDamage`, fazendo com que seus `lifePoints` caiam o valor do parâmetro `amount`, devendo retornar -1 caso os `lifePoints` tenham chegado a 0 ou menos
-- Um `Monster` pode atacar um `Character`, e o `Character` receberá dano entre o valor do atributo `strength` do `Monster` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende
-- Um `Character` pode atacar um `Monster`, e o `Monster` receberá de dano o valor do atributo `strength` do `Character` que o ataca
+- A classe `Monster` existe;
+- A classe `Monster` implementa a interface `SimpleFighter`;
+- Um `Monster` possui um atributo `lifePoints`, que pode ser lido mas não pode ser setado;
+- Um `Monster` possui um atributo `strength`, que pode ser lido mas não pode ser setado;
+- Um `Monster` pode receber danos através do método `receiveDamage`, fazendo com que seus `lifePoints` caiam o valor do parâmetro `amount`, devendo retornar -1 caso os `lifePoints` tenham chegado a 0 ou menos;
+- Um `Monster` pode atacar um `Character`, e o `Character` receberá dano entre o valor do atributo `strength` do `Monster` que ataca e este valor decrescido do valor do atributo `defense` do `Character` que defende;
+- Um `Character` pode atacar um `Monster`, e o `Monster` receberá de dano o valor do atributo `strength` do `Character` que o ataca;
 
-⚠ Atenção: para que os testes funcionem corretamente, a classe `Monster` deve ser criada no arquivo `src/Monster.ts` e lá exportada de forma padrão (export default). ⚠
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Monster` deve ser criada no arquivo `src/Monster.ts` e lá exportada de forma padrão (`export default`). ⚠
 
 ### 10 - Criar a classe `PVP`
 
-Se existem seres que lutam, existem lutas.
-As lutas em T&D são denominadas `Battles` (batalhas), sendo sua representação abstrata já fornecida.
-Entretanto, existem tipos específicos de batalhas, sendo o primeiro deles a batalha entre players diferentes, ou PVP.
-Estas batalhas só podem acontecer entre `Fighters`.
-Sua _quest_ agora é justamente **criar a classe PVP**.
-Vamos lá?
+Se existem seres que lutam, existem lutas. As lutas em T&D são denominadas `Battles` (batalhas), sendo sua representação abstrata já fornecida.
+Entretanto, existem tipos específicos de batalhas, sendo o primeiro deles a batalha entre players diferentes, ou PVP. Estas batalhas só podem acontecer entre `Fighters`.
+
+Sua _quest_ agora é justamente **criar a classe PVP**. Vamos lá?
 
 As dicas para completar essa _quest_ são:
 
 - O arquivo deverá ser criado na raiz do diretório `src/Battle`;
-- Faça com que `PVP` herde de `Battle`, classe já disponibilizada em `src/Battle`
+- Faça com que `PVP` herde de `Battle`, classe já disponibilizada em `src/Battle`;
 
 O que será verificado:
 
-- A classe `PVP` existe e se pode ser criada uma nova instância, passando dois `Characters`
-- A classe `PVP` pode ser utilizada onde a classe `Battle` é esperada, e um `Characters` com level bem elevado ganham uma luta contra `Characters` level 0
-- A classe `PVP` pode receber tanto dois `Characters` quanto duas instâncias de uma implementação diferente de `Fighter`
+- A classe `PVP` existe e se pode ser criada uma nova instância, passando dois `Characters`;
+- A classe `PVP` pode ser utilizada onde a classe `Battle` é esperada, e um `Characters` com level bem elevado ganham uma luta contra `Characters` level 0;
+- A classe `PVP` pode receber tanto dois `Characters` quanto duas instâncias de uma implementação diferente de `Fighter`;
 
 ⚠ Atenção: para que os testes funcionem corretamente, a classe `PVP` deve ser importada no arquivo `src/Battle/index.ts` e lá exportada. ⚠
 
@@ -522,20 +520,19 @@ O que será verificado:
 
 ### 11 - Criar a classe `PVE`
 
-Nem todas as batalhas são entre players. `Monsters` estão aí para lutarem contra os players também.
-Nas batalhas do tipo `PVE`, um `Fighter` pode lutar contra um ou mais `SimpleFighters`.
+Nem todas as batalhas são entre players. `Monsters` estão aí para lutarem contra os players também. Nas batalhas do tipo `PVE`, um `Fighter` pode lutar contra um ou mais `SimpleFighters`.
 Parece interessante? Pois tornar isso possível é a sua _quest_.
 
 As dicas para completar essa _quest_ são:
 
 - O arquivo deverá ser criado na raiz do diretório `src/Battle`;
-- Faça com que `PVE` herde de `Battle`, classe já disponibilizada em `src/Battle`
+- Faça com que `PVE` herde de `Battle`, classe já disponibilizada em `src/Battle`;
 
 O que será verificado:
 
-- A classe `PVE` existe e se pode ser criada uma nova instância, passando um `Character` e um array com um `Monster`
-- A classe `PVE` pode ser utilizada onde a classe `Battle` é esperada, e um `Character` com level bem elevado ganha uma luta contra somente um `Monster`, e um `Character` com level baixo perde numa luta contra diversos `Monsters`
-- A classe `PVE` pode receber tanto `Character` e um array com um `Monster` quanto implementações diferentes de `Fighter` e `SimpleFighter` que não são `Character` nem `Monster`
+- A classe `PVE` existe e se pode ser criada uma nova instância, passando um `Character` e um array com um `Monster`;
+- A classe `PVE` pode ser utilizada onde a classe `Battle` é esperada, e um `Character` com level bem elevado ganha uma luta contra somente um `Monster`, e um `Character` com level baixo perde numa luta contra diversos `Monsters`;
+- A classe `PVE` pode receber tanto `Character` e um array com um `Monster` quanto implementações diferentes de `Fighter` e `SimpleFighter` que não são `Character` nem `Monster`;
 
 ⚠ Atenção: para que os testes funcionem corretamente, a classe `PVE` deve ser importada no arquivo `src/Battle/index.ts` e lá exportada. ⚠
 
@@ -543,6 +540,7 @@ O que será verificado:
 
 O mundo de Trybers and Dragons não se chamaria assim se não existissem `Dragons`, não é?
 Estes seres magníficos aqui são representados como `Monsters`, só que com a característica especial de possuírem um valor de vida bem elevado.
+
 Sua próxima _quest_: **criar a classe `Dragon`**
 
 As dicas para completar essa _quest_ são:
@@ -552,11 +550,11 @@ As dicas para completar essa _quest_ são:
 
 O que será verificado:
 
-- A classe `Dragon` existe
-- A classe `Dragon` herda de `Monster`
-- Um `Dragon` deve ter 999 no valor do atributo `lifePoints`
+- A classe `Dragon` existe;
+- A classe `Dragon` herda de `Monster`;
+- Um `Dragon` deve ter 999 no valor do atributo `lifePoints`;
 
-⚠ Atenção: para que os testes funcionem corretamente, a classe `Dragon` deve ser criada no arquivo `src/Dragon.ts` e lá exportada de forma padrão (export default). ⚠
+⚠ Atenção: para que os testes funcionem corretamente, a classe `Dragon` deve ser criada no arquivo `src/Dragon.ts` e lá exportada de forma padrão (`export default`). ⚠
 
 ### 13 - Criar objetos no arquivo `index`
 
@@ -571,10 +569,44 @@ As dicas para completar essa _quest_ são:
 
 O que será verificado:
 
-- Crie 3 objetos do tipo `Character` e os exporte no arquivo `index` como `player1`, `player2` e `player3`; Rode o método `levelUp` algumas vezes no `player1`
-- Crie 2 objetos do tipo `Monster`, sendo o segundo um `Dragon`, e os exporte no arquivo index como `monster1`, `monster2`
-- Crie um objeto do tipo `PVP` (com os `Characters` `player2` e `player3`) e o exporte no arquivo index como `pvp`; *NÃO* execute o método pvp.fight
-- Crie um objeto do tipo `PVE` (com o `Character` `player1` e com os `Monsters` `monster1` e `monster2`) e o exporte no arquivo `index` como `pve`; *NÃO* execute o método pve.fight
-- Crie uma função chamada `runBattles`, que recebe um `array de Battles` e chama em seu interior o método `battle.fight`
+- Crie 3 objetos do tipo `Character` e os exporte no arquivo `index` como `player1`, `player2` e `player3`; Rode o método `levelUp` algumas vezes no `player1`;
+- Crie 2 objetos do tipo `Monster`, sendo o segundo um `Dragon`, e os exporte no arquivo index como `monster1`, `monster2`;
+- Crie um objeto do tipo `PVP` (com os `Characters` `player2` e `player3`) e o exporte no arquivo index como `pvp`; *NÃO* execute o método `pvp.fight`;
+- Crie um objeto do tipo `PVE` (com o `Character` `player1` e com os `Monsters` `monster1` e `monster2`) e o exporte no arquivo `index` como `pve`; *NÃO* execute o método `pve.fight`;
+- Crie uma função chamada `runBattles`, que recebe um `array de Battles` e chama em seu interior o método `battle.fight`;
 
 ⚠ Atenção: para que os testes funcionem corretamente, os objetos criados em `src/index.ts` devem ser exportados com os nomes indicados na seção `o que será verificado`. ⚠
+
+---
+
+## Depois de terminar o desenvolvimento (opcional)
+
+Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
+
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+
+  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+
+  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+
+  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
+
+Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
+
+---
+
+# Revisando um pull request
+
+Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
+
+#VQV
+
+---
+
+# Avisos finais
+
+Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
+
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
+
+O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no _README_. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
