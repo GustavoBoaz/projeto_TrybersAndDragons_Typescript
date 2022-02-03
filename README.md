@@ -457,6 +457,7 @@ As dicas para completar essa _quest_ são:
 - A classe implementa a interface `Fighter`;
 - A classe `Character` possui uma `Race`, que por padrão deve ser uma instância de `Elf`;
 - A classe `Character` possui um `Archetype`, que por padrão deve ser uma instância de `Mage`;
+- Utilize a função `getRandomInt`, fornecida no arquivo `src/utils.ts`, para gerar um dinamismo na `receiveDamage`, juntamente com a `dexterity`;
 
 <details close>
   <summary>O que será verificado:</summary>
