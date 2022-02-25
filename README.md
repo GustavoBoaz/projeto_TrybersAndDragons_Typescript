@@ -235,7 +235,7 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
 - `Race` tenha os atributos `name` e `dexterity`, ambos inicializados em seu construtor;
 - A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number;
   - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Race`. Porém na classe `Race` levantará apenas uma mensagem de erro;
-- A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça;
+- A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que, quando implementado, retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça;
 - A classe também deverá ter `getters` para acessar os valores de `name` e `dexterity`;
 
  ```typescript
@@ -252,11 +252,11 @@ Para que você tenha sucesso nesta _quest_, deve se certificar que:
   - A classe `Race` existe;
   - A classe `Race` é abstrata;
   - O método `maxLifePoints` da classe `Race` é abstrato;
+  - O método `maxLifePoints` ao ser implementado retorna um valor numérico;
   - O parâmetro `name` da classe `Race` pode ser lido;
   - O parâmetro `name` da classe `Race` *NÃO* pode ser alterado;
   - O parâmetro `dexterity` da classe `Race` pode ser lido;
   - O parâmetro `dexterity` da classe Race *NÃO* pode ser setado;
-  - O método `maxLifePoints` retorna um valor numérico;
   - O método `createdRacesInstances` deve existir e ser estático;
   - O método `createdRacesInstances` deve levantar um erro "Not implemented";
 </details>
