@@ -232,7 +232,7 @@ Para entender melhor um pouco da incrível diversidade que temos e as caracterí
 Para que você tenha sucesso nesta _quest_, deve se certificar que:
 
 - Os arquivos sejam criados no diretório `src/Races`;
-- `Race` tenha os atributos privados `name` e `dexterity`, ambos inicializados em seu construtor;
+- `Race` tenha os atributos `name` e `dexterity`, ambos inicializados em seu construtor;
 - A classe `Race` deverá ter um método estático chamado `createdRacesInstances` que retorna um number;
   - Esse número é correspondente a quantidade de instâncias criadas a partir das classes estendidas de `Race`. Porém na classe `Race` levantará apenas uma mensagem de erro;
 - A classe deverá ter um `getter` abstrato chamado `maxLifePoints`, que retorna um number. Esse número é correspondente a quantidade máxima de pontos de vida da raça;
