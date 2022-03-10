@@ -11,7 +11,7 @@ describe('08 - Interface SimpleFighter', () => {
   it('A interface SimpleFighter possui o método attack, que recebe um enemy do tipo SimpleFighter', () => {
     expect('SimpleFighter.attack').notToCompile();
   });
-  it('A interface SimpleFighter possui o método receiveDamage, que recebe um amount do tipo number', () => {
+  it('A interface SimpleFighter possui o método receiveDamage, que recebe um attackPoints do tipo number', () => {
     expect('SimpleFighter.receiveDamage').notToCompile();
   });
 });

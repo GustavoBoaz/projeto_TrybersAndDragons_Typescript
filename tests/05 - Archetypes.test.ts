@@ -15,7 +15,7 @@ describe('05 - Classes que herdam de Archetype', () => {
     expect('Mage.name').toCompile();
   });
 
-  it('O método energyType da Classe Mage existe e retorna uma string', () => {
+  it('O método energyType da Classe Mage existe e retorna um EnergyType', () => {
     expect('Mage.energyType').toCompileAndBeEqualTo('mana');
   });
 

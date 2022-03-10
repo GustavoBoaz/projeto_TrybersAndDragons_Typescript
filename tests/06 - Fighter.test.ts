@@ -22,7 +22,7 @@ describe('06 - Interface Fighter', () => {
   it('A interface Fighter possui o método special, que recebe um enemy do tipo Fighter', () => {
     expect('Fighter.special').notToCompile();
   });
-  it('A interface Fighter possui o método receiveDamage, que recebe um amount do tipo number', () => {
+  it('A interface Fighter possui o método receiveDamage, que recebe um attackPoints do tipo number', () => {
     expect('Fighter.receiveDamage').notToCompile();
   });
   it('A interface Fighter possui o método levelUp, que não recebe parâmetros nem retorna nada', () => {
