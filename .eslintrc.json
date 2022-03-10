@@ -26,6 +26,9 @@
         "mocha"
     ],
     "rules": {
+        "no-underscore-dangle": "off",
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
         "no-console": "off",
         "camelcase": "warn",
         "arrow-parens": [

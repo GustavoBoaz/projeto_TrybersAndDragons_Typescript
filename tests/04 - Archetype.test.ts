@@ -17,7 +17,7 @@ describe('04 - Classe Archetype', () => {
   it('O parâmetro cost da classe Archetype pode ser lido', () => {
     expect('Archetype.cost').toCompile();
   });
-  it('O método energyType retorna uma string', () => {
+  it('O método energyType retorna um EnergyType', () => {
     expect('Archetype.energyType').toCompile();
   });
 });
