@@ -328,25 +328,25 @@ Antes de prosseguir com a missão, é muito importante saber que:
   - A classe `Dwarf` herda de `Race`;
   - O atributo `name` da classe `Dwarf` pode ser lido;
   - O atributo `dexterity` da classe `Dwarf` pode ser lido;
-  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Dwarf`;
+  - O método `createdRacesInstances` retorna o número correto de instâncias criadas da classe `Dwarf`;
   - O atributo `maxLifePoints` da classe `Dwarf` existe e é igual a 80;
   - A classe `Elf` existe;
   - A classe `Elf` herda de `Race`;
   - O atributo `name` da classe `Elf` pode ser lido;
   - O atributo `dexterity` da classe `Elf` pode ser lido;
-  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Elf`;
+  - O método `createdRacesInstances` retorna o número correto de instâncias criadas da classe `Elf`;
   - O atributo `maxLifePoints` da classe `Elf` existe e é igual a 99;
   - A classe `Halfling` existe;
   - A classe `Halfling` herda de `Race`;
   - O atributo `name` da classe `Halfling` pode ser lido;
   - O atributo `dexterity` da classe `Halfling` pode ser lido;
-  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Halfling`;
+  - O método `createdRacesInstances` retorna o número correto de instâncias criadas da classe `Halfling`;
   - O atributo `maxLifePoints` da classe `Halfling` existe e é igual a 60;
   - A classe `Orc` existe;
   - A classe `Orc` herda de `Race`;
   - O atributo `name` da classe `Orc` pode ser lido;
   - O atributo `dexterity` da classe `Orc` pode ser lido;
-  - O método `createdRacesInstances` deve retornar o número correto de instâncias criadas da classe `Orc`;
+  - O método `createdRacesInstances` retorna o número correto de instâncias criadas da classe `Orc`;
   - O atributo `maxLifePoints` da classe `Orc` existe e é igual a 74;
 </details>
 
