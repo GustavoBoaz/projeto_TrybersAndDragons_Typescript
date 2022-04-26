@@ -374,7 +374,7 @@ Sua próxima missão é tornar possível o uso dessas energias, *"stamina"* e *"
 
 > :warning: **Atenção**:
 > - Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão ( com `export default`).
-> - `EnergyType` também deve ser exportado, mas este de forma normal (`export`).
+> - `EnergyType` também deve ser exportado, mas este de forma explícita (`export`).
 
 <br>
 
