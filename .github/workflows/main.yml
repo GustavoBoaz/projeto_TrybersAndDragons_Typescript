@@ -64,7 +64,7 @@ jobs:
           repository: betrybe/jest-evaluator-action
           token: ${{ secrets.GIT_HUB_PAT }}
           path: .github/actions/jest-evaluator
-          ref: v9
+          ref: v9.2
 
       - name: Fetch Store evaluation
         uses: actions/checkout@v2
