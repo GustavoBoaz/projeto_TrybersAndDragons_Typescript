@@ -8,24 +8,24 @@ describe('06 - Interface Fighter', () => {
     expect('Fighter.implemented').toCompile();
   });
   it('A interface Fighter possui o atributo lifePoints', () => {
-    expect('Fighter.lifePoints').notToCompile();
+    expect('Fighter.lifePoints').toCompile();
   });
   it('A interface Fighter possui o atributo strength', () => {
-    expect('Fighter.strength').notToCompile();
+    expect('Fighter.strength').toCompile();
   });
   it('A interface Fighter possui o atributo defense', () => {
-    expect('Fighter.defense').notToCompile();
+    expect('Fighter.defense').toCompile();
   });
   it('A interface Fighter possui o método attack, que recebe um enemy do tipo Fighter', () => {
-    expect('Fighter.attack').notToCompile();
+    expect('Fighter.attack').toCompile();
   });
   it('A interface Fighter possui o método special, que recebe um enemy do tipo Fighter', () => {
-    expect('Fighter.special').notToCompile();
+    expect('Fighter.special').toCompile();
   });
-  it('A interface Fighter possui o método receiveDamage, que recebe um attackPoints do tipo number', () => {
-    expect('Fighter.receiveDamage').notToCompile();
+  it('A interface Fighter possui o método receiveDamage, que recebe um amount do tipo number', () => {
+    expect('Fighter.receiveDamage').toCompile();
   });
   it('A interface Fighter possui o método levelUp, que não recebe parâmetros nem retorna nada', () => {
-    expect('Fighter.levelUp').notToCompile();
+    expect('Fighter.levelUp').toCompile();
   });
 });
