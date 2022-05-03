@@ -243,11 +243,11 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 No universo de Trybers and Dragons - T&D, quase todos os seres racionais têm uma raça e, embora todas as raças de personagens sejam humanoides, cada uma tem as suas particularidades.
 
-A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nas pessoas que habitam este universo.
+A raça influencia desde a aparência geral até fatores como longevidade média, talento em determinadas habilidades ou mesmo a presença de algum sentido mais aguçado nos habitantes desse universo.
 
 Para entender melhor um pouco da incrível diversidade que temos e as características únicas de algumas das raças de T&D, vamos começar nossa jornada com a missão de **criar a classe abstrata `Race`**.
 
-Para que você tenha sucesso nesta *quest*, certifique-se que:
+Para que você tenha sucesso nesta *quest*, é importante saber que:
 
 - O arquivo foi criado no diretório `src/Races/` e chamar `Race.ts`;
 - A classe `Race` deve ter os atributos privados: `name` e `dexterity`, ambos inicializados em seu **construtor**;
@@ -258,12 +258,12 @@ Para que você tenha sucesso nesta *quest*, certifique-se que:
   - `name` deve retornar o tipo `string`;
   - `dexterity` deve retornar o tipo `number`.
 - A classe `Race` deve ter um **método estático** chamado `createdRacesInstances`, que retorna um `number`;
-  - Esse número é correspondente a quantidade de **instâncias criadas a partir das classes estendidas** da classe `Race`;
-  - Cada raça vai ter seu número máximo de instâncias **e isto será feito dentro de suas classes especializadas**;
-  - Na classe `Race` será lançada apenas a mensagem de erro: `Not implemented`.
+  - Esse número corresponde à quantidade de **instâncias criadas a partir das classes estendidas** da classe `Race`;
+  - Cada raça terá seu número máximo de instâncias, **que será definido dentro de cada classe especializada**;
+  - Na classe `Race`, o método deve lançar um erro com a mensagem `Not implemented`.
 - A classe `Race` deve ter um **getter abstrato** chamado `maxLifePoints` que retorna um `number`;
   - Esse número corresponde à quantidade máxima de pontos de vida da raça;
-  - Cada raça vai ter seu número máximo de pontos **e isto será feito dentro de suas classes especializadas**;
+  - Cada raça terá seu número máximo de pontos, **que será definido dentro de cada classe especializada**;
   - Na classe `Race` **deve estar apenas a assinatura do método**.
 
 <br>
@@ -271,7 +271,7 @@ Para que você tenha sucesso nesta *quest*, certifique-se que:
 > :warning: **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Race` deve ser exportada de forma padrão (com `export default`);
 > - Deve ser criado o arquivo chamado `index.ts` dentro do diretório `src/Races/`;
-> - A classe `Race` deve ser importada dentro deste arquivo e exportada também de forma padrão, igual à estrutura contida no diretório `src/Battle/`.
+> - A classe `Race` deve ser importada dentro deste arquivo e exportada também de forma padrão, da mesma forma que no diretório `src/Battle/`.
 
 <br>
 
@@ -287,9 +287,9 @@ Para que você tenha sucesso nesta *quest*, certifique-se que:
   - O atributo `name` da classe `Race` pode ser lido;
   - O atributo `name` da classe `Race` *NÃO* pode ser alterado;
   - O atributo `dexterity` da classe `Race` pode ser lido;
-  - O atributo `dexterity` da classe Race *NÃO* pode ser setado;
+  - O atributo `dexterity` da classe Race *NÃO* pode ser redefinido;
   - O método `createdRacesInstances` deve existir e ser estático;
-  - O método `createdRacesInstances` deve levantar um erro "Not implemented".
+  - O método `createdRacesInstances` deve lançar um erro com a mensagem "Not implemented".
 </details>
 
 ---
@@ -301,21 +301,21 @@ Já foi dito anteriormente que há uma diversidade de raças neste universo e ag
 Antes de prosseguir com a missão, é muito importante saber que:
 
 - Os arquivos devem ser criados no diretório `src/Races/`;
-- Todas as raças devem estender da `classe abstrata Race`;
+- Todas as raças devem estender da classe abstrata `Race`;
 - As classes criadas devem ser: `Dwarf`, `Elf`, `Halfling` e `Orc` e dprecisam estar em arquivos com exatamente esses nomes.
-- Cada raça deve possuir um número máximo de pontos de vida (`maxLifePoints`) e este deve ser inicializado em seu **construtor**:
+- Cada raça deve possuir um número máximo de pontos de vida (`maxLifePoints`), que deve ser inicializado em seu **construtor**:
   - A raça `Dwarf` deve receber `80` pontos de vida;
   - A raça `Elf` deve receber `99` pontos de vida;
   - A raça `Halfling` deve receber `60` pontos de vida;
   - A raça `Orc` deve receber `74` pontos de vida.
-- Não se esqueça de implementar o(s) método(s) necessário(s) após estender a `classe abstrata Race`;
+- Não se esqueça de implementar o(s) método(s) necessário(s) após estender a classe abstrata `Race`;
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s).
 
 <br>
 
 > :warning: **Atenção**:
 > - Assim como no requisito anterior, cada uma das classes criadas (`Dwarf`, `Elf`, `Halfling` e `Orc`) para este requisito deve ser exportada de forma padrão (com `export default`).
-> - Novamente dentro de `src/Races/index.ts` as classes (`Dwarf`, `Elf`, `Halfling` e `Orc`) devem ser importadas, porém estas, agora devem ser exportadas de forma normal (`export { class1, class2, classN }`).
+> - As classes (`Dwarf`, `Elf`, `Halfling` e `Orc`) devem ser importadas dentro de `src/Races/index.ts` e exportadas de forma explícita (`export { class1, class2, classN }`).
 
 <br>
 
@@ -357,13 +357,13 @@ Antes de prosseguir com a missão, é muito importante saber que:
 Energia é um atributo vital para a maioria dos seres. No contexto de `Trybers and Dragons`, a energia gasta ao se andar, nadar, escalar ou lutar é chamada de *"stamina"* .
 Contudo, esse universo também abriga seres capazes de usar magia. Nesses casos, a energia gasta é chamada de *"mana"*.
 
-Sua próxima missão é tornar possível o uso dessas energias, *"stamina"* e *"mana"*. Para isso:
+Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"stamina"* e *"mana"*. Para isso:
 
 - Crie uma `interface` chamada `Energy`;
 - O arquivo `Energy.ts` deve ser criado na raiz do diretório `src/`.
 - A interface deverá possuir os atributos:
-  - `type_` é do tipo `EnergyType`; ✨✨
-  - `amount` é do tipo `number`.
+  - `type_`, do tipo `EnergyType`; ✨✨
+  - `amount`, do tipo `number`.
 
 ✨ Dica de mestre: ✨
 - Para implementar a `interface Energy`, é necessário criar um tipo novo, o `type EnergyType`;
@@ -387,7 +387,7 @@ Sua próxima missão é tornar possível o uso dessas energias, *"stamina"* e *"
   - É possível criar uma variável com o tipo `EnergyType` e atribuir a ela o valor `'stamina'`;
   - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 10, type_: 'stamina'}`;
   - É possível criar uma variável com o tipo da interface `Energy` e atribuir a ela o valor `{ amount: 45, type_: 'mana'}`;
-  - Não possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
+  - Não é possível criar uma variável com o tipo `EnergyType` e atribuir a ela um valor diferente de `'mana'` ou `'stamina'`;
   - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `amount`;
   - Não é possível criar uma variável com o tipo da interface `Energy` sem atribuir a ela um `type_`.
 </details>
@@ -399,9 +399,9 @@ Sua próxima missão é tornar possível o uso dessas energias, *"stamina"* e *"
 Dentro do nosso universo, os seres têm talentos especiais e cada um desses talentos tem o seu nome dentro de T&D.
 Aqui vamos ter alguns atributos super legais e necessários, que representarão o nome, a potência do seu ataque especial e o custo energético para utilizá-lo. Por isso, sua próxima *quest* será **criar a classe abstrata `Archetype`**.
 
-Para que você tenha sucesso nesta *quest*, você deve se certificar que:
+Para que você tenha sucesso nesta *quest*, é importante saber que:
 
-- O arquivo deve ser criado no diretório `src/Archetypes/` e chamar `Archetype.ts`;
+- O arquivo `Archetype.ts` deve ser criado no diretório `src/Archetypes/`;
 - A classe `Archetype` deve ter os atributos privados: `name`, `special`, `cost`, que serão inicializados em seu **construtor**;
   - O atributo `name` dever ser do tipo `string`;
   - O atributo `special` dever ser do tipo `number`;
@@ -413,13 +413,13 @@ Para que você tenha sucesso nesta *quest*, você deve se certificar que:
   - `special` deve retornar o tipo `number`;
   - `cost` deve retornar o tipo `number`.
 - A classe `Archetype` deve ter um **método estático** chamado `createdArchetypeInstances` que retorna um `number`:
-  - Esse número corresponde à quantidade de **instâncias criadas a partir das classes estendidas** da `classe abstrata Archetype`;
-  - Cada arquétipo vai ter seu número máximo de instâncias **e isto será feito dentro de suas classes especializadas**;
-  - Na `classe abstrata Archetype` será lançada apenas a mensagem de erro: `Not implemented`.
+  - Esse número corresponde à quantidade de **instâncias criadas a partir das classes estendidas** da classe abstrata `Archetype`;
+  - Cada arquétipo terá seu número máximo de instâncias, **que será definido dentro de suas classes especializadas**;
+  - Na classe abstrata `Archetype`, o método deve apenas lançar um erro com a mensagem `Not implemented`.
 - A classe `Archetype` deve ter um **getter abstrato** chamado `energyType` que retorna uma `EnergyType`:
-  - Esse tipo EnergyType é correspondente ao tipo de energia que este arquétipo deve ter. *(`mana` ou `stamina`)*
-  - Cada arquétipo vai ter o seu tipo de energia **e isto será feito dentro de suas classes especializadas**;
-  - Na `classe abstrata Archetype` **deve conter apenas a assinatura do método**.
+  - Esse tipo EnergyType corresponde ao tipo de energia que este arquétipo deve ter. *(`mana` ou `stamina`)*
+  - Cada arquétipo terá o seu tipo de energia, **que será definido dentro de suas classes especializadas**;
+  - A classe abstrata `Archetype` **deve conter apenas a assinatura do método**.
 
 <br>
 
@@ -450,11 +450,12 @@ Para que você tenha sucesso nesta *quest*, você deve se certificar que:
 ### 5 - Crie classes que herdam de `Archetype`
 
 Como você pode imaginar, há diversos arquétipos diferentes no mundo de *Trybers and Dragons*, cada um com as suas peculiaridades e alinhamentos.
-Agora, chegou a hora de você conhecer alguns desses arquétipos. E o que poderia ser melhor para isso do que criar classes para eles? Mas antes, tenha atenção às seguintes instruções:
+Agora, chegou a hora de você conhecer alguns desses arquétipos. E o que poderia ser melhor para isso do que criar classes para eles?
+Para isto, atenção às instruções a seguir:
 
 - Os arquivos devem ser criados no diretório `src/Archetypes/`;
-- Todos os arquétipos devem estender da `classe abstrata Archetype`.
-- No momento, vamos nos ater a quatro arquétipos muito comuns nos seres deste universo: (eles devem estar em quatro arquivos com os mesmos nomes)
+- Todos os arquétipos devem estender da classe abstrata `Archetype`.
+- No momento, vamos nos ater a quatro arquétipos muito comuns aos seres deste universo: (eles devem estar em quatro arquivos com os mesmos nomes)
   - `Mage` 🧙‍♀️;
   - `Necromancer` ☠️; 
   - `Warrior` ⚔️;
@@ -462,14 +463,14 @@ Agora, chegou a hora de você conhecer alguns desses arquétipos. E o que poderi
 - Cada arquétipo possui a habilidade de causar danos em seus inimigos de forma diferente, e essa habilidade deve ser inicializada em seu **construtor**
   - Os arquétipos `Mage`🧙‍♀️ e `Necromancer`☠️ causam dano por meio de magia, através do uso de `mana`;
   - Os arquétipos `Warrior` ⚔️ e `Ranger` 🍃 causam dano por meio de sua força, usando `stamina`.
-- Não se esqueça de implementar o(s) método(s) necessário(s) após estender a `classe abstrata Archetype`;
+- Não se esqueça de implementar o(s) método(s) necessário(s) após estender a classe abstrata `Archetype`;
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s);
 
 <br>
 
 > :warning: **Atenção**:
 > - Assim como no requisito anterior, cada uma das classes criadas (`Mage`, `Necromancer`, `Warrior` e `Ranger`) para este requisito deve ser exportada de forma padrão ( com `export default`);
-> - Novamente, dentro de `src/Archetypes/index.ts` as classes (`Mage`, `Necromancer`, `Warrior` e `Ranger`) devem ser importadas, porém estas, agora devem ser exportadas de forma normal (`export { class1, class2, classN }`).
+> - Novamente, as classes (`Mage`, `Necromancer`, `Warrior` e `Ranger`) devem ser importadas dentro de `src/Archetypes/index.ts` e exportadas de forma explícita (`export { class1, class2, classN }`).
 
 <br>
 
@@ -511,18 +512,18 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
 - Crie uma `interface` chamada `Fighter`;
 - O arquivo `Fighter.ts` deve ser criado no diretório `src/Fighter/`;
 - A interface deverá possuir os atributos:
-  - `lifePoints` é do tipo `number`;
-  - `strength` é do tipo `number`;
-  - `defense` é do tipo `number`;
-  - `energy` é do tipo `Energy`. ✨✨
+  - `lifePoints`, do tipo `number`;
+  - `strength`, do tipo `number`;
+  - `defense`, do tipo `number`;
+  - `energy`, do tipo `Energy`. ✨✨
 - A interface deverá possuir os métodos:
-  - `attack()` que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
-  - `special()` que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
-  - `levelUp()` que não recebe parâmetro e não possui retorno (`void`);
-  - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`).
+  - `attack()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
+  - `special()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
+  - `levelUp()`, que não recebe parâmetro e não possui retorno (`void`);
+  - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`).
 
 ✨ Dica de mestre: ✨
-- Para declarar o atributo `energy`, este deve ser opcional;
+- O atributo `energy` deve ser opcional;
   - Pesquise sobre: `Optional Properties` ou `Optional parameters` em interfaces;
 - Agora você pode descomentar os trechos de código dos arquivos do diretório `Battle`; (`Battle.ts` e `index.ts`).
 
@@ -573,7 +574,7 @@ As dicas para completar essa *quest* são:
   - O atributo `defense` deve ser do tipo `number`;
   - O atributo `dexterity` deve ser do tipo `number`;
   - O atributo `energy` deve ser do tipo `Energy`;
-  - Deve-se receber um parâmetro `name` no construtor, este será usado para dar nome à sua personagem.
+  - O atributo `name` deve ser recebido como parâmetro no construtor e deve ser usado para dar nome à sua personagem.
   - Devem ser inicializados no construtor:
     - `race` por padrão com uma instância de `Elf`;
     - `archetype` por padrão com uma instância de `Mage`;
@@ -611,8 +612,7 @@ As dicas para completar essa *quest* são:
     - Esta parte do requisito não esta sendo avalida é apenas para você se divertir aprendendo. 💚
 
 ✨ Dica de mestre: ✨
-- Para gerar valores aleatórios:
-  - Utilize a função `getRandomInt` para gerar um dinamismo; (fornecida no arquivo `src/utils.ts`).
+- Para gerar valores aleatórios, use a função `getRandomInt` fornecida no arquivo `src/utils.ts`.
 
 <br>
 
@@ -651,8 +651,8 @@ As dicas para completar essa *quest* são:
 - Crie uma `interface` chamada `SimpleFighter`;
 - O arquivo `SimpleFighter.ts` deve ser criado no diretório `src/Fighter/`.
 - A interface deverá possuir os atributos:
-  - `lifePoints` é do tipo `number`;
-  - `strength` é do tipo `number`.
+  - `lifePoints`, do tipo `number`;
+  - `strength`, do tipo `number`.
 - A interface deverá possuir os métodos:
   - `attack()` que recebe um `enemy` do tipo `SimpleFighter` como parâmetro e não possui retorno (`void`);
   - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`);
@@ -662,7 +662,7 @@ As dicas para completar essa *quest* são:
 
 > :warning: **Atenção**:
 > - Para que os testes funcionem corretamente, a interface `SimpleFighter` deve ser exportada de forma padrão (com `export default`);
-> - Novamente dentro de `src/Fighter/index.ts` a interface (`SimpleFighter`) deve ser importada, porém esta, agora deve ser exportada de forma normal (`export { SimpleFighter }`), como feito em requisitos anteriores.
+> - A interface `SimpleFighter` deve ser importada dentro de `src/Fighter/index.ts` e deve ser exportada de forma explícita (`export { SimpleFighter }`), como feito em requisitos anteriores.
 
 <br>
 
@@ -687,7 +687,7 @@ Se existem seres que implementam a `interface Fighter`, deve existir seres que i
 O que você deve saber para seguir em frente:
 
 - O arquivo deve ser criado na raiz do diretório `src/` e chamar `Monster.ts`;
-- A classe implementa a interface `SimpleFighter`;
+- A classe deve implementar a interface `SimpleFighter`;
 - A classe `Monster` deve ter os atributos privados `lifePoints` e `strength`, ambos inicializados em seu **construtor**:
   - Os atributos `lifePoints` e `strength` devem ser do tipo `number`;
   - Devem ser inicializados no construtor:
@@ -700,10 +700,10 @@ O que você deve saber para seguir em frente:
     - Este valor deve ser decrescido de seus pontos de vida (`lifePoints`), assim causando um dano (`damage`);
     - Se o dano for maior que `0`, você perde pontos de vida (`lifePoints`);
     - Ao receber o ataque e perder pontos de vida, sua vida nunca poderá chegar a `0`, se isto acontecer seus `lifePoints` deve valer `-1`;
-    - Ao final sempre retorne o valor atualizado de seus pontos de vida.
+    - Ao final o método deve retornar o valor atualizado dos pontos de vida.
   - **`attack 🪄`** este método recebe por parâmetro uma pessoa inimiga (`enemy`) e as regras são:
     - Toda vez que acontecer um ataque, o inimigo recebido por parâmetro recebe um dano;
-    - Este dano deve ser equivalente a força (`strength`) de quem ataca.
+    - Este dano deve ser calculado a partir de `attackPoints` equivalentes à força (`strength`) de quem ataca.
 
 <br>
 
