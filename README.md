@@ -302,7 +302,7 @@ Antes de prosseguir com a missão, é muito importante saber que:
 
 - Os arquivos devem ser criados no diretório `src/Races/`;
 - Todas as raças devem estender da classe abstrata `Race`;
-- As classes criadas devem ser: `Dwarf`, `Elf`, `Halfling` e `Orc` e dprecisam estar em arquivos com exatamente esses nomes.
+- As classes `Dwarf`, `Elf`, `Halfling` e `Orc` devem ser criadas em arquivos com exatamente esses nomes.
 - Cada raça deve possuir um número máximo de pontos de vida (`maxLifePoints`), que deve ser inicializado em seu **construtor**:
   - A raça `Dwarf` deve receber `80` pontos de vida;
   - A raça `Elf` deve receber `99` pontos de vida;
