@@ -49,7 +49,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 # Orientações
 
 <details>
-  <summary><strong>:whale: Rodando no Docker vs Localmente</strong></summary><br />
+  <summary><strong>🐋 Rodando no Docker vs Localmente</strong></summary><br />
   
   ## Com Docker
 
@@ -191,7 +191,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Conduta 
 
   - As importações e exportações dos arquivos devem ser feitas exatamente como estão sendo solicitadas e os nomes dos arquivos/diretórios também devem seguir à risca o que é pedido no `README.md`;
 
-  - Sempre que encontrar o símbolo :warning: pare e leia com muita atenção o que é pedido;
+  - Sempre que encontrar o símbolo ⚠️ pare e leia com muita atenção o que é pedido;
 
   - Atente ao vocabulário usado no projeto, ele é super importante para te ajudar na hora de suas pesquisas. Qualquer dúvida procure a pessoa instrutora de sua turma no `Slack` ou nas `mentorias`;
 
@@ -249,7 +249,7 @@ Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência 
 
 [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
 
-:warning: **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
+⚠️ **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
 
 </details>
 
@@ -309,9 +309,10 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
   - Cada raça terá seu número máximo de pontos, **que será definido dentro de cada classe especializada**;
   - Na classe `Race` **deve estar apenas a assinatura do método**.
 
+> Dica: use a convenção de atributos privados para criar os atributos **com** `_` e os getters para expor os atributos **sem** o `_`.
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Race` deve ser exportada de forma padrão (com `export default`);
 > - Deve ser criado o arquivo chamado `index.ts` dentro do diretório `src/Races/`;
 > - A classe `Race` deve ser importada dentro deste arquivo e exportada também de forma padrão, da mesma forma que no diretório `src/Battle/`.
@@ -360,9 +361,10 @@ Antes de prosseguir com a missão, é muito importante saber que:
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Assim como no requisito anterior, cada uma das classes criadas (`Dwarf`, `Elf`, `Halfling` e `Orc`) para este requisito deve ser exportada de forma padrão (com `export default`).
 > - As classes (`Dwarf`, `Elf`, `Halfling` e `Orc`) devem ser importadas dentro de `src/Races/index.ts` e exportadas de forma explícita (`export { class1, class2, classN }`).
+> - Não se esqueça de implementar o método `createdRacesInstances` nas classes herdeiras;
 
 <br>
 </details>
@@ -410,20 +412,20 @@ Contudo, esse universo também abriga seres capazes de usar magia. Nesses casos,
 
 Sua próxima missão é tornar possível o uso destes dois tipos de energia:  *"stamina"* e *"mana"*. Para isso:
 
-- Crie uma `interface` chamada `Energy`;
-- O arquivo `Energy.ts` deve ser criado na raiz do diretório `src/`.
-- A interface deverá possuir os atributos:
-  - `type_`, do tipo `EnergyType`; ✨✨
-  - `amount`, do tipo `number`.
+- Crie uma `interface` chamada `Energy`, para isso:
+  - Crie o arquivo `Energy.ts` na raiz do diretório `src/`.
+  - A interface deverá possuir os atributos:
+    - `type_`, do tipo `EnergyType`; ✨✨
+      - Esse novo tipo ~~pode~~ deve receber os valores: `'mana'` ou `'stamina'`;
+      - O tipo `EnergyType` também deve ser exportado.
+    - `amount`, do tipo `number`.
 
 ✨ Dica de mestre: ✨
 - Para implementar a `interface Energy`, é necessário criar um tipo novo, o `type EnergyType`;
-  - Esse novo tipo ~~pode~~ deve receber os valores: `'mana'` ou `'stamina'`;
-  - O tipo `EnergyType` também deve ser exportado.
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a interface `Energy` deve ser exportada de forma padrão ( com `export default`).
 > - `EnergyType` também deve ser exportado, mas este de forma explícita (`export`).
 
@@ -477,7 +479,7 @@ Para que você tenha sucesso nesta *quest*, é importante saber que:
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Archetype` deve ser exportada de forma padrão ( com `export default`);
 > - Um arquivo `index.ts` deve ser criado dentro do diretório `src/Archetypes/`;
 > - A classe `Archetype` deve ser importada dentro deste arquivo e exportada também de forma padrão, como feito com `Race`.
@@ -525,9 +527,10 @@ Para isto, atenção às instruções a seguir:
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Assim como no requisito anterior, cada uma das classes criadas (`Mage`, `Necromancer`, `Warrior` e `Ranger`) para este requisito deve ser exportada de forma padrão ( com `export default`);
 > - Novamente, as classes (`Mage`, `Necromancer`, `Warrior` e `Ranger`) devem ser importadas dentro de `src/Archetypes/index.ts` e exportadas de forma explícita (`export { class1, class2, classN }`).
+> - Não se esqueça de implementar o método `createdArchetypeInstances` nas classes herdeiras;
 
 <br>
 </details>
@@ -589,7 +592,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a interface `Fighter` deve ser exportada de forma padrão (com `export default`);
 > - Um arquivo chamado `index.ts` deve ser criado dentro do diretório `src/Fighter/`;
 > - A interface `Fighter` deve ser importada dentro deste arquivo e exportada também de forma padrão, como feito em requisitos anteriores.
@@ -679,7 +682,7 @@ As dicas para completar essa *quest* são:
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Character` deve ser exportada de forma padrão ( com `export default`).
 
 <br>
@@ -726,7 +729,7 @@ As dicas para completar essa *quest* são:
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a interface `SimpleFighter` deve ser exportada de forma padrão (com `export default`);
 > - A interface `SimpleFighter` deve ser importada dentro de `src/Fighter/index.ts` e deve ser exportada de forma explícita (`export { SimpleFighter }`), como feito em requisitos anteriores.
 
@@ -776,7 +779,10 @@ O que você deve saber para seguir em frente:
 
 <br>
 
-> :warning: **Atenção**:
+✨ Dica de mestre: ✨
+- Aqui vamos precisar que os métodos de `Fighter` que recebia um inimigo do tipo `Fighter` agora recebam um SimpleFighter, né? Assim um `Fighter` pode atacar um `Monster`.
+
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Monster` deve ser exportada de forma padrão ( com `export default`).
 
 <br>
@@ -815,6 +821,8 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s). ✨✨
 
 ✨ Dica de mestre: ✨
+- Use um dois _players_ para ser parâmetro do `super` na inicialização e use o método `fight` do super para dar o veredito da batalha, ou seja, se `super.fight()` retornar 1 o _player_ quer foi usado como parâmetro do `super` na inicialização ganhou, e se retornar -1 a vitória foi do _player_ que não foi o parâmetro do `super`; 
+
 - Aqui ~~podemos~~ devemos sobrescrever o método `fight`;
   - No método `fight` sobrescrito, implemente uma lógica de ataque entre personagens lutadores da classe;
 - Se necessário, refatore o que já foi feito com as interfaces `Fighter` e `SimpleFighter` para se adequarem melhor à sua nova implementação de batalha;
@@ -822,7 +830,7 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `PVP` deve ser exportada de forma padrão (com `export default`);
 > - Novamente, dentro de `src/Battle/index.ts`, a classe (`PVP`) deve ser importada, porém esta deve ser exportada de forma normal (`export { PVP }`), como feito em requisitos anteriores.
 
@@ -863,7 +871,7 @@ Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!!
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `PVE` deve ser exportada de forma padrão (com `export default`);
 > - Novamente dentro de `src/Battle/index.ts` a classe (`PVE`) deve ser importada, porém desta vez de forma normal (`export { PVP }`), como feito em requisitos anteriores.
 
@@ -900,7 +908,7 @@ Nesta *quest*, você deve **criar a classe `Dragon`**, cuidando para garantir qu
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Dragon` deve ser exportada de forma padrão ( com `export default`).
 
 <br>
@@ -929,7 +937,7 @@ Agora repare que, por mais que a gente saiba o que são `Monster`, `Character`, 
 Algumas dicas se fazem necessárias para completar sua última missão no mundo de T&D. Elas são:
 
 - O arquivo deve ser criado na raiz de `src/` e se chamar `index.ts`;
-- :warning: Preste bastante atenção nos nomes das variáves/métodos e nas exportações pedidadas deste último requisito; :wink:.
+- ⚠️ Preste bastante atenção nos nomes das variáveis/métodos e nas exportações pedidas deste último requisito; :wink:.
 - Crie `3` objetos do tipo `Character`:
   - As variáveis devem-se chamar `player1`, `player2` e `player3`;
   - Execute algumas vezes o método `levelUp` do `player1`;
@@ -958,7 +966,7 @@ Algumas dicas se fazem necessárias para completar sua última missão no mundo 
 
 <br>
 
-> :warning: **Atenção**:
+> ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, os objetos/métodos criados em `src/index.ts` devem ser exportados como explicado no requsito;
 
 <br>
