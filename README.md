@@ -725,7 +725,7 @@ As dicas para completar essa *quest* são:
 - A interface deverá possuir os métodos:
   - `attack()` que recebe um `enemy` do tipo `SimpleFighter` como parâmetro e não possui retorno (`void`);
   - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`);
-- Aqui é um bom momento para treinarmos algumas skills deste bloco e aplicar uma refatoração. Utilize a segregação de interfaces, volte e observe nossa `interface Fighter`.
+- Aqui é um bom momento para treinarmos algumas skills deste bloco e aplicar uma refatoração, além disso você acaba adiantando uma parte do próximo requisito ✨. Utilize a segregação de interfaces, volte e observe nossa `interface Fighter`.
 
 <br>
 
