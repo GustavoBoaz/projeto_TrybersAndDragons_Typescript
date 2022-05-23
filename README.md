@@ -781,7 +781,7 @@ O que você deve saber para seguir em frente:
 <br>
 
 ✨ Dica de mestre: ✨
-- Aqui vamos precisar que os métodos de `Fighter` que recebiam um inimigo do tipo `Fighter` agora recebam um `SimpleFighter`. Assim um `Fighter` pode atacar um `Monster` 😄.
+- Aqui vamos precisar que os métodos de `Fighter` que recebiam um inimigo do tipo `Fighter` agora possam receber um `SimpleFighter`. Assim um `Fighter` pode atacar um `Monster` 😄.
 
 > ⚠️ **Atenção**:
 > - Para que os testes funcionem corretamente, a classe `Monster` deve ser exportada de forma padrão ( com `export default`).
