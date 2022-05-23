@@ -659,6 +659,7 @@ As dicas para completar essa *quest* são:
   - `defense` deve retornar o tipo `number`;
   - `dexterity` deve retornar o tipo `number`;
   - `energy` deve retornar o tipo `Energy`.
+    - ✨ Lembre-se que `energy` é um objeto, portanto se você retornar ele diretamente o javascript permite que as propriedades desse objetos sejam alteradas, mesmo `energy` sendo privado. 
 - A classe `Character` também deve implementar os métodos estendidos da `interface Fighter`;
   - **`receiveDamage 😵`** este método recebe por parâmetro um valor (`attackPoints`) e as regras são:
     - Este valor deve ser decrescido de sua defesa (`defense`), assim causando um dano (`damage`);
