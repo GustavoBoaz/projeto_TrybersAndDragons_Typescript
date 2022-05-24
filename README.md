@@ -822,7 +822,7 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s). ✨✨
 
 ✨ Dica de mestre: ✨
-- Use um dois _players_ para ser parâmetro do `super` na inicialização e use o método `fight` do super para dar o veredito da batalha, ou seja, se `super.fight()` retornar 1 o _player_ quer foi usado como parâmetro do `super` na inicialização ganhou, e se retornar -1 a vitória foi do _player_ que não foi o parâmetro do `super`; 
+- Use um dos _players_ para ser parâmetro do `super` na inicialização e use o método `fight` do super para dar o veredito da batalha, ou seja, se `super.fight()` retornar 1 o _player_ quer foi usado como parâmetro do `super` na inicialização ganhou, e se retornar -1 a vitória foi do _player_ que não foi o parâmetro do `super`; 
 
 - Aqui ~~podemos~~ devemos sobrescrever o método `fight`;
   - No método `fight` sobrescrito, implemente uma lógica de ataque entre personagens lutadores da classe;
