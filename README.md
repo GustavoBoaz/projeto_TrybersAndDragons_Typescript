@@ -583,7 +583,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   - `attack()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
   - `special()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
   - `levelUp()`, que não recebe parâmetro e não possui retorno (`void`);
-  - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`).
+  - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e retorne um inteiro (`integer`).
 
 ✨ Dica de mestre: ✨
 - O atributo `energy` deve ser opcional;
@@ -642,12 +642,12 @@ As dicas para completar essa *quest* são:
   - O atributo `energy` deve ser do tipo `Energy`;
   - O atributo `name` deve ser recebido como parâmetro no construtor e deve ser usado para dar nome à sua personagem.
   - Devem ser inicializados no construtor:
-    - `race` por padrão com uma instância de `Elf`;
+    - `dexterity` com um valor aleatório de no mínimo 1 e no máximo 10 pontos. ✨✨;
+    - `race` por padrão com uma instância de `Elf` (A destreza de `Elf` deve ser a mesma definida em `dexterity`);
     - `archetype` por padrão com uma instância de `Mage`;
     - `maxLifePoints` por padrão com metade do `maxLifePoints` da raça instanciada;
     - `lifePoints` por padrão com o mesmo valor de `maxLifePoints` da classe;
     - `strength`, `defense` com valores aleatórios de no mínimo 1 e no máximo 10 pontos; ✨✨
-    - `dexterity` por padrão com a mesma destreza da raça instanciada;
     - `energy` por padrão:
       - `type_` com o mesmo valor do arquétipo instanciado;
       - `amount` com um valor aleatório de no mínimo 1 e no máximo 10 pontos. ✨✨
@@ -725,7 +725,7 @@ As dicas para completar essa *quest* são:
   - `strength`, do tipo `number`.
 - A interface deverá possuir os métodos:
   - `attack()` que recebe um `enemy` do tipo `SimpleFighter` como parâmetro e não possui retorno (`void`);
-  - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e não possui retorno (`void`);
+  - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e retorna um inteiro (`integer`);
 - Aqui é um bom momento para treinarmos algumas skills deste bloco e aplicar uma refatoração, além disso você acaba adiantando uma parte do próximo requisito ✨. Utilize a segregação de interfaces, volte e observe nossa `interface Fighter`.
 
 <br>
