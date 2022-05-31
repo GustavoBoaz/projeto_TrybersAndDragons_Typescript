@@ -8,7 +8,7 @@ class F implements Fighter {
   ) { }
   
   attack(enemy: Fighter) { }
-  receiveDamage(amount: number) { }
+  receiveDamage(amount: number) { return 0 }
   levelUp(): void { }
   special(enemy: Fighter): void { }
 };

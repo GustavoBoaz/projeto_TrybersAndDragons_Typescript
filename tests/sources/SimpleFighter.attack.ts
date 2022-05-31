@@ -8,7 +8,7 @@ class F implements SimpleFighter {
   ) { }
   
   attack(enemy: SimpleFighter) { }
-  receiveDamage(amount: number) { }
+  receiveDamage(amount: number): number { return 0 }
 };
 
 const f = (obj: SimpleFighter) => {
