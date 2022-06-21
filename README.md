@@ -583,7 +583,7 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   - `attack()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
   - `special()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
   - `levelUp()`, que não recebe parâmetro e não possui retorno (`void`);
-  - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e retorne um inteiro (`integer`).
+  - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e retorne um `number`.
 
 ✨ Dica de mestre: ✨
 - O atributo `energy` deve ser opcional;
@@ -725,7 +725,7 @@ As dicas para completar essa *quest* são:
   - `strength`, do tipo `number`.
 - A interface deverá possuir os métodos:
   - `attack()` que recebe um `enemy` do tipo `SimpleFighter` como parâmetro e não possui retorno (`void`);
-  - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e retorna um inteiro (`integer`);
+  - `receiveDamage()` que recebe um `attackPoints` do tipo `number` como parâmetro e retorne um `number`;
 - Aqui é um bom momento para treinarmos algumas skills deste bloco e aplicar uma refatoração, além disso você acaba adiantando uma parte do próximo requisito ✨. Utilize a segregação de interfaces, volte e observe nossa `interface Fighter`.
 
 <br>
