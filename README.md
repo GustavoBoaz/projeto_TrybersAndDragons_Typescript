@@ -581,12 +581,12 @@ Para fixar bem esse conceito, preparamos para você a missão especial de criar 
   - `energy`, do tipo `Energy`. ✨✨
 - A interface deverá possuir os métodos:
   - `attack()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
-  - `special()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`);
+  - `special()`, que recebe um `enemy` do tipo `Fighter` como parâmetro e não possui retorno (`void`); ✨✨
   - `levelUp()`, que não recebe parâmetro e não possui retorno (`void`);
   - `receiveDamage()`, que recebe um `attackPoints` do tipo `number` como parâmetro e retorne um `number`.
 
 ✨ Dica de mestre: ✨
-- O atributo `energy` deve ser opcional;
+- O atributo `energy` e o método `special()` devem ser opcionais;
   - Pesquise sobre: `Optional Properties` ou `Optional parameters` em interfaces;
 - Agora você pode descomentar os trechos de código dos arquivos do diretório `Battle`; (`Battle.ts` e `index.ts`).
 
@@ -826,6 +826,7 @@ Brincadeira! Estamos aqui para te ajudar e por isso trazemos abaixo algumas dica
 
 - Aqui ~~podemos~~ devemos sobrescrever o método `fight`;
   - No método `fight` sobrescrito, implemente uma lógica de ataque entre personagens lutadores da classe;
+  - As personagens `devem batalhar` até uma das duas ser `derrotada`, em outras palavras, a batalha só deverá terminar, quando alguma personagem ter seus pontos de vida (`lifePoints`) igual a `-1`;
 - Se necessário, refatore o que já foi feito com as interfaces `Fighter` e `SimpleFighter` para se adequarem melhor à sua nova implementação de batalha;
 - Não esqueça de descomentar os trechos de código dos arquivos do diretório `Battle` como citado nas "Dica de mestre" do requisito 6 - Crie a interface `Fighter`.
 
@@ -863,12 +864,12 @@ Monstros representam alguns destes perigos, assim, temos as batalhas do tipo `PV
 Antes de prosseguir para essa nova batalha, leia atentamente as dicas abaixo !!! Só assim obteremos sucesso e prosperidade:
 
 - O arquivo deve ser criado no diretório `src/Battle/` e se chamar `PVE.ts`;
-- A classe `PVE` deve herdar de `Battle`;
 - Lembre-se a classe `Battle` já esta criada;
 - Na criação de uma instância de `PVE.ts` é esperado que em seu construtor seja recebido uma pessoa personagem lutadora (`Character Fighter`) e um *array* com pelo menos um monstro (`Monster`), ambos inicializados no **construtor**;
   - Como estamos falando de uma batalha *player versus environment*, este *array* de monstros também aceita instâncias de pessoas personagens lutadoras sendo elas simples ou não; (`Fighter`, `SimpleFighter`)
 - Não se esqueça de fazer a sobrescrita (`override`) do(s) método(s) necessário(s);
-  - Como na "Dica de mestre" do requisito anterior (`PVP`), não esqueça de implementar uma lógica de luta para este requisito também. Lembre-se que, aqui, a luta é de uma pessoa personagem lutadora contra apenas um oponete ou uma legião deles !!!
+  - Como na "Dica de mestre" do requisito anterior (`PVP`), não esqueça de implementar uma lógica de luta para este requisito também;
+  - Lembre-se, aqui a luta é de uma personagem contra apenas um oponete ou uma legião deles. Logo, para a batalha ser finalizada, a personagem principal, ou seus oponentes, deverão ter perdido os seus respectivos pontos de vida (`lifePoints`).
 
 <br>
 
@@ -968,7 +969,7 @@ Algumas dicas se fazem necessárias para completar sua última missão no mundo 
 <br>
 
 > ⚠️ **Atenção**:
-> - Para que os testes funcionem corretamente, os objetos/métodos criados em `src/index.ts` devem ser exportados como explicado no requsito;
+> - Para que os testes funcionem corretamente, os objetos/métodos criados em `src/index.ts` devem ser exportados como explicado no requisito;
 
 <br>
 </details>
