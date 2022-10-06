@@ -95,3 +95,4 @@ jobs:
         with:
           evaluation-data: ${{ steps.evaluator.outputs.result }}
           environment: staging
+          token: ${{ secrets.GITHUB_TOKEN }}
