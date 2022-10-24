@@ -663,7 +663,7 @@ As dicas para completar essa *quest* são:
 - A classe `Character` também deve implementar os métodos estendidos da `interface Fighter`;
   - **`receiveDamage 😵`** este método recebe por parâmetro um valor (`attackPoints`) e as regras são:
     - Este valor deve ser decrescido de sua defesa (`defense`), assim causando um dano (`damage`);
-    - Se o dano for maior que `0`, você perde pontos de vida (`lifePoints`);
+    - Se o dano for maior que `0`, você perde pontos de vida (`lifePoints`). Se o dano calculado for igual a zero ou menor, você deve perder apenas `1` ponto de vida;
     - Ao receber o ataque e perder pontos de vida (`lifePoints`), e se sua vida chegar a `0` ou menos, você deve fixá-la com o valor `-1`;
     - Ao final sempre retorne o valor atualizado de seus pontos de vida.
   - **`attack 🪄`** este método recebe por parâmetro uma pessoa inimiga (`enemy`) e as regras são:

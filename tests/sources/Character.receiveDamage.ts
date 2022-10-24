@@ -3,7 +3,7 @@ import Character from '../../src/Character';
 const c1 = new Character('');
 const result = () => {
   let res = true;
-  for (let i = 0; i < 3; i++) {
+  for (let i = 1; i < 4; i++) {
     const previousLife = c1.lifePoints;
     if (previousLife <= 0) break;
     const life = c1.receiveDamage(10 ** i);
