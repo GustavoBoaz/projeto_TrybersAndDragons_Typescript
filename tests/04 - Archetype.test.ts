@@ -20,4 +20,7 @@ describe('04 - Classe Archetype', () => {
   it('O método energyType retorna um EnergyType', () => {
     expect('Archetype.energyType').toCompile();
   });
+  it('O método energyType da classe Archetype é abstrato', () => {
+    expect('Archetype.energyType.abstract').notToCompile();
+  });
 });
