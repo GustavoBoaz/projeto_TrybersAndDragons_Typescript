@@ -7,5 +7,4 @@ export default interface Fighter extends SimpleFighter {
 
   special?(enemy: Fighter): void;
   levelUp(): void;
-  receiveDamage(attackPoints: number): number;
 }
